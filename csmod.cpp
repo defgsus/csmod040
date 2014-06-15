@@ -371,7 +371,7 @@ void CSmodDestroy()
 //////////////////////////// CSaudioWindow ////////////////////////////////////////////////
 
 CSaudioWindow::CSaudioWindow(CSmod *parent)
-	: Fl_Window(820,330,"select audio device(s). close window to apply.")
+	: Fl_Window(820,330,"select audio device. close window to apply.")
 {
 	#if defined(CSMOD_DEBUGE) || (CSMOD_DEBUGI)
 	printf("CSaudioWindow::CSaudioWindow(0x%p)\n",parent);
@@ -1328,7 +1328,7 @@ void CSmod::setAudioDevice(int deviceIdx, int rate)
 
 		PaError err = Pa_OpenStream(
             &stream,
-            &paramIn,
+            paramIn.channelCount? &paramIn : 0,
             &paramOut,
 			sampleRate,
             bufferSize, // buffer size
