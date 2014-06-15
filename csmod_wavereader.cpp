@@ -185,7 +185,8 @@ void CSwaveReader::readBuffer(unsigned int bytepos)
 	buflength = e / nrchan * 8 / bitps;
 	if (e == 0)
 	{
- 		printf("waveReader: WAVE BUFFER READ ERROR (buflength=%d, datalength=%d, bytepos=%d, bufpos=%d, read=%d)\n",
+        printf("waveReader: WAVE BUFFER READ ERROR "
+               "(buflength=%d, datalength=%d, bytepos=%d, bufpos=%d, read=%ld)\n",
 			buflength, datalength, bytepos, p_bufpos, e);
 	}
 	// update position
@@ -207,7 +208,7 @@ bool CSwaveReader::getSamples(unsigned int sample, short int nrChan, float *samp
 {
 	if ((!file)||(!buf)) return false;
 
-	if (sample<0) return false;
+    //if (sample<0) return false;
 	if (sample>=datalength) return false;
 
 	if ((bufsize==0)||((int)pos==-1)) {

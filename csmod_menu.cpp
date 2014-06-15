@@ -64,7 +64,7 @@ void CSmodPopUp::hide()
 	if (CSactivePopUp==this) CSactivePopUp = 0;
 }
 
-bool CSmodPopUp::onMouseDown(int x, int y, int mk)
+bool CSmodPopUp::onMouseDown(int x, int y, int /*mk*/)
 {
 	if ((x<ox)||(x>ox+w)||(y<oy)||(y>oy+h)) return false;
 
@@ -87,7 +87,7 @@ bool CSmodPopUp::onMouseMove(int x, int y)
 	return true;
 }
 
-bool CSmodPopUp::onMouseUp(int x, int y)
+bool CSmodPopUp::onMouseUp(int /*x*/, int /*y*/)
 {
 	return false;
 }

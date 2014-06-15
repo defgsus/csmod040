@@ -10,7 +10,10 @@ CONFIG   -= app_bundle
 
 TEMPLATE = app
 
-LIBS += -lfftw3f -lportaudio -lpng -lfltk
+
+LIBS += -L/usr/local/lib \
+        -lfftw3f -lportaudio -lpng \
+        -lfltk_forms -lfltk -lXext -lXft -lfontconfig -lXinerama -lpthread -ldl -lm -lX11
 
 HEADERS += \
     csmodcontainer.h \
