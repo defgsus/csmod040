@@ -1,0 +1,9 @@
+container { 4 13 53 1.000000 1 
+module { "self organizing map" "self organizing map" "self organizing map" 1 404 115 426 400 properties { "modname" "self organizing map" "nrp" 2 "nrx" 8 "nry" 8 } val { "opa" 0.010000 } } 
+module { "oscillator" "oscillator" "oscillator" 1 133 319 120 230 properties { "modname" "oscillator" } val { "f" 1000.000000 } } 
+module { "oscillator" "oscillator1" "oscillator" 1 128 16 120 230 properties { "modname" "oscillator" } val { } } 
+connections { 
+"oscillator" "osqr" "self organizing map" "gs" 
+"oscillator1" "osin" "self organizing map" "pi0" 
+"oscillator1" "ocos" "self organizing map" "pi1" 
+} } 

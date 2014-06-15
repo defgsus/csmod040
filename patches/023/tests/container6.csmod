@@ -1,0 +1,57 @@
+container { 4 -87 -8 1.000000 1 
+module { "container" "container" "container" 2 351 109 120 155 properties { "modname" "container" }  c0n { 9 0 0 "act" "active" 0 0 "in1" "A" 0 0 "in2" "B" 0 0 "in3" "C" 0 0 "in4" "D" 1 0 "out1" "E" 1 0 "out2" "F" 1 0 "out3" "G" 1 0 "out4" "H"  } val { "in1" 1.000000 "in2" 2.000000 "in3" 3.000000 "in4" 4.000000 } 
+container { 4 -151 -68 1.000000 0 
+module { "container input" "in1" "container input" "A" 1 198 113 80 55 properties { "modname" "A" } val { } } 
+module { "container input" "in2" "container input1" "B" 1 198 187 80 55 properties { "modname" "B" } val { } } 
+module { "container input" "in3" "container input2" "C" 1 196 259 80 55 properties { "modname" "C" } val { } } 
+module { "container input" "in4" "container input3" "D" 1 196 331 80 55 properties { "modname" "D" } val { } } 
+module { "container output" "out1" "container output" "E" 1 665 108 80 55 properties { "modname" "E" } val { } } 
+module { "container output" "out2" "container output1" "F" 1 669 189 80 55 properties { "modname" "F" } val { } } 
+module { "container output" "out3" "container output2" "G" 1 672 266 80 55 properties { "modname" "G" } val { } } 
+module { "container output" "out4" "container output3" "H" 1 673 336 80 55 properties { "modname" "H" } val { } } 
+module { "container" "container" "container" 2 412 183 120 155 properties { "modname" "container" }  c0n { 9 0 0 "act" "active" 0 0 "in1" "in1" 0 0 "in2" "in2" 0 0 "in3" "in3" 0 0 "in4" "in4" 1 0 "out1" "out1" 1 0 "out2" "out2" 1 0 "out3" "out3" 1 0 "out4" "out4"  } val { } 
+container { 4 0 0 1.000000 0 
+module { "container input" "in1" "container input" "in1" 1 280 212 80 55 properties { "modname" "in1" } val { } } 
+module { "container input" "in2" "container input1" "in2" 1 290 222 80 55 properties { "modname" "in2" } val { } } 
+module { "container input" "in3" "container input2" "in3" 1 300 232 80 55 properties { "modname" "in3" } val { } } 
+module { "container input" "in4" "container input3" "in4" 1 310 242 80 55 properties { "modname" "in4" } val { } } 
+module { "container output" "out1" "container output" "out1" 1 440 158 80 55 properties { "modname" "out1" } val { } } 
+module { "container output" "out2" "container output1" "out2" 1 450 168 80 55 properties { "modname" "out2" } val { } } 
+module { "container output" "out3" "container output2" "out3" 1 460 178 80 55 properties { "modname" "out3" } val { } } 
+module { "container output" "out4" "container output3" "out4" 1 470 188 80 55 properties { "modname" "out4" } val { } } 
+connections { 
+"container input3" "out" "container output3" "in" 
+"container input2" "out" "container output2" "in" 
+"container input1" "out" "container output1" "in" 
+"container input" "out" "container output" "in" 
+} } 
+} 
+connections { 
+"container input" "out" "container" "in1" 
+"container input1" "out" "container" "in2" 
+"container input2" "out" "container" "in3" 
+"container input3" "out" "container" "in4" 
+"container" "out1" "container output" "in" 
+"container" "out2" "container output1" "in" 
+"container" "out3" "container output2" "in" 
+"container" "out4" "container output3" "in" 
+} } 
+} 
+module { "delay1 (1 sample)" "delay1 (1 sample)" "1" 1 155 136 120 55 properties { "modname" "1" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)1" "2" 1 159 203 120 55 properties { "modname" "2" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)2" "3" 1 160 271 120 55 properties { "modname" "3" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)3" "4" 1 161 332 120 55 properties { "modname" "4" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)4" "5" 1 551 145 120 55 properties { "modname" "5" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)5" "6" 1 555 212 120 55 properties { "modname" "6" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)6" "7" 1 556 280 120 55 properties { "modname" "7" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)7" "8" 1 557 341 120 55 properties { "modname" "8" } val { } } 
+connections { 
+"delay1 (1 sample)" "out" "container" "in1" 
+"delay1 (1 sample)1" "out" "container" "in2" 
+"delay1 (1 sample)2" "out" "container" "in3" 
+"delay1 (1 sample)3" "out" "container" "in4" 
+"container" "out1" "delay1 (1 sample)4" "in" 
+"container" "out2" "delay1 (1 sample)5" "in" 
+"container" "out3" "delay1 (1 sample)6" "in" 
+"container" "out4" "delay1 (1 sample)7" "in" 
+} } 

@@ -1,0 +1,1460 @@
+container { 4 2135 4162 0.880003 1 
+module { "audio out" "audio out" "audio out" 1 894 -1453 80 130 properties { "modname" "audio out" "nrchan" 2 } val { } } 
+module { "midi file" "midi file" "midi file" 1 -1256 645 120 205 properties { "modname" "midi file" "maxpoly" 1 "polytick" 24 "shift" 1 "fname" "./patches/liszt/ballade2.mid" } val { "vc" 2.000000 } } 
+module { "oscillator" "oscillator" "oscillator" 1 -1424 545 120 230 properties { "modname" "oscillator" } val { "f" 0.000000 } } 
+module { "sample & hold" "sample & hold" "sample & hold" 1 -2000 692 120 80 properties { "modname" "sample & hold" } val { } } 
+module { "follower" "follower" "follower" 1 -1714 595 120 105 properties { "modname" "follower" } val { "up" 0.020000 "dn" 0.020000 } } 
+module { "math" "math13" "math" 1 -1853 596 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in0" 700.000000 } } 
+module { "start gate" "start gate1" "start gate" 1 -1435 -11 84 55 properties { "modname" "start gate" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)6" "Z" 1 -769 -2307 120 55 properties { "modname" "Z" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)7" "X" 1 -772 -2437 120 55 properties { "modname" "X" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)8" "Y" 1 -771 -2373 120 55 properties { "modname" "Y" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)10" "mod size" 1 -773 -1796 120 55 properties { "modname" "mod size" } val { } } 
+module { "switch matrix" "switch matrix" "BEAT" 1 -1553 22 90 555 properties { "modname" "BEAT" "fadeb" 0 "float" 0 "nrin" 19 "nrout" 1 "offx" 0 "offy" 0 "singin" 1 "singout" 0 } val { "in0" 2.000000 "in1" 8.900000 "in2" 40.000000 "in3" 60.000000 "in4" 90.000000 "in5" 178.000000 "in6" 229.000000 "in7" 260.000000 "in8" 280.000000 "in9" 306.000000 "in10" 360.000000 "in11" 410.000000 "in12" 426.299988 "in13" 436.000000 "in14" 485.000000 "in15" 520.000000 "in16" 591.000000 "in17" 620.000000 "in18" 650.000000 } val { 32 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 } } 
+module { "value meter" "value meter2" "SONG POSITION" 1 -1275 463 160 55 properties { "modname" "SONG POSITION" "min" 0.000000 "max" 1.000000 "abs" 0 "nrchan" 1 } val { } } 
+module { "math" "math31" "math" 1 -1256 535 120 80 properties { "modname" "math" "mop" 3 "nrin" 2 } val { } } 
+module { "math" "math32" "CUR BEAT" 1 -2339 671 120 80 properties { "modname" "CUR BEAT" "mop" 3 "nrin" 2 } val { "in1" 960.000000 } } 
+module { "math" "math33" "math" 1 -1420 436 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 960.000000 } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)11" "subsamples (auto)" 1 -771 -1411 120 55 properties { "modname" "subsamples (auto)" } val { "in" 0.200000 } } 
+module { "switch" "switch" "START" 1 -1437 63 152 105 properties { "modname" "START" "mode" 1 } val { } val { 0 } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)12" "radius" 1 -775 -2021 120 55 properties { "modname" "radius" } val { } } 
+module { "compare" "compare" "compare" 1 -1888 1147 120 130 properties { "modname" "compare" } val { } } 
+module { "counter" "counter" "counter" 1 -1746 998 120 180 properties { "modname" "counter" } val { "dir" 3.000000 } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)13" "bright" 1 -781 -1011 120 55 properties { "modname" "bright" } val { } } 
+module { "oscillator (period)" "oscillator (period)" "oscillator (period)" 1 -1888 886 120 255 properties { "modname" "oscillator (period)" } val { "f" 37.000000 "p" -0.010000 "a" 0.500000 "o" 0.500000 "nrp" 38.000000 } } 
+module { "gate repeat" "gate repeat2" "MAINSYNC" 1 -1256 64 120 80 properties { "modname" "MAINSYNC" } val { "r" 100.000000 } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)21" "notes per z" 1 -773 -1957 120 55 properties { "modname" "notes per z" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)1" "attack lead" 1 -778 -1076 120 55 properties { "modname" "attack lead" } val { "in" 0.030000 } } 
+module { "timeline" "timeline" "phasemod2 bass" 3 -2108 -662 1080 204 properties { "modname" "phasemod2 bass" "lop" 0 } val { } points { 112 0.00937445 0 5.76409 -0.015525 7.34981 1.17394 7.74981 1.83496 7.99266 1.60947 9.02123 0.109474 16.2212 0.0916171 17.5641 1.84162 18.7355 1.35947 20.2212 0.395189 23.407 0.2375 26.4784 1.0375 29.4784 0.4375 31.6927 0.1375 87.4176 0.0336538 87.8857 3.26442 88.6212 3.2875 91.407 0.0875 124.897 0.0888293 128.772 0.511906 138.647 0.396522 141.397 0.819599 142.772 0.165752 148.397 0.165752 150.647 0.896522 155.522 0.704214 158.397 0.396522 178.647 0.165752 180.522 0.781137 183.522 0.273861 198.237 0.0150974 211.237 0.976136 226.397 0.773861 231.237 0.0540584 234.022 0.0846713 235.647 0.273861 245.147 0.436023 248.522 0.827915 279.147 0.638725 287.147 0.46305 300.897 0.287374 307.897 0.273861 311.022 0.719806 314.397 0.422509 316.897 0.354942 320.397 0.96305 322.647 1.00359 323.522 0.260347 331.897 0.260347 338.397 0.490077 342.522 0.50359 343.397 1.1117 347.182 1.04413 347.611 0.490077 354.897 0.449536 360.04 0.327915 362.182 0.0711578 372.611 0.0576443 379.397 1.00359 384.325 0.422509 389.182 0.179266 389.825 0.490077 393.04 0.219806 393.041 0.50359 395.54 0.287374 395.897 0.936023 398.611 0.719806 399.254 0.0171038 426.968 0.0171038 429.682 0.0441308 431.397 0.436023 434.254 0.422509 436.111 0.219806 443.611 0.219806 449.897 0.96305 451.04 0.936023 451.041 0.192779 453.111 0.219806 453.182 0.46305 454.54 0.490077 455.254 0.179266 456.897 0.192779 456.898 0.46305 458.825 0.46305 458.897 0.787374 462.325 0.787374 467.468 0.354942 471.611 0.0441308 502.397 0.0441308 508.111 0.530618 513.111 0.69278 519.468 1.17927 526.325 0.800888 536.182 0.638726 545.111 0.760347 547.182 0.206293 549.754 0.219806 551.325 0.760347 552.111 0.665752 553.825 0.192779 561.968 0.408996 564.397 0.949536 564.968 0.246833 580.254 0.260347 585.825 0.273861 587.754 0.868455 590.182 0.760347 591.754 0.354942 608.397 0.341428 615.611 0.598185 623.682 0.395482 627.04 0.192779 } view { 0 2 8 -1.74298 -51.1306 35 56 -3823.63 -53.875 47 26 -6669.55 -35.2657 14 74 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 } } 
+module { "math" "math36" "math" 1 -1562 592 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in0" 800.000000 } } 
+module { "compare" "compare1" "compare" 1 -1891 1283 120 130 properties { "modname" "compare" } val { "b" 2.000000 } } 
+module { "math" "math37" "math" 1 -1614 1197 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 7.000000 } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)25" "rotstart" 1 -771 -2123 120 55 properties { "modname" "rotstart" } val { "in" 2.300000 } } 
+module { "math" "math38" "math" 1 -1609 1070 120 105 properties { "modname" "math" "mop" 2 "nrin" 3 } val { "in2" 0.006000 } } 
+module { "oscillator" "oscillator2" "oscillator" 1 -962 -2467 120 230 properties { "modname" "oscillator" } val { "f" 0.040000 } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)3" "ROT X" 1 -772 -2195 120 55 properties { "modname" "ROT X" } val { } } 
+module { "multiplex in (NxN)" "multiplex in (NxN)" "multiplex in (NxN)" 1 -1050 663 120 255 properties { "modname" "multiplex in (NxN)" "nrchan" 4 "nrin" 2 } val { } } 
+module { "switch" "switch1" "PLAY MIDI" 1 -1455 878 152 105 properties { "modname" "PLAY MIDI" "mode" 0 } val { } val { 0 } } 
+module { "note in" "note in" "note in" 1 -1277 911 120 80 properties { "modname" "note in" } val { } } 
+module { "clipper soft" "clipper soft4" "clipper soft" 1 671 -1423 120 55 properties { "modname" "clipper soft" } val { } } 
+module { "clipper soft" "clipper soft5" "clipper soft" 1 673 -1361 120 55 properties { "modname" "clipper soft" } val { } } 
+module { "scope 3d" "scope 3d1" "scope 3d" 1 925 -2238 120 609 properties { "modname" "scope 3d" "camera" 1 "w" 512 "h" 512 "imode" 0 "serverstr" "scopeliszt" "clientstr" "" "sendbuf" 0 } val { "zd" 0.000000 "per" 0.000000 "r" 0.000000 "g" 0.000000 "b" 0.000000 "br" 0.000000 "opc" 0.300000 "f" 0.200000 "subsam" 6.000000 } } 
+module { "container" "container" "polysynth 3d" 2 230 -2176 120 605 properties { "modname" "polysynth 3d" }  c0n { 32 0 0 "act" "active" 0 0 "in1" "NOTE" 0 0 "in2" "GATE" 0 0 "in3" "MAINSYNC" 0 0 "in4" "attack" 0 0 "in5" "decay" 0 0 "in6" "phasemod" 0 0 "in7" "X" 0 0 "in8" "Y" 0 0 "in9" "Z" 0 0 "in10" "amp" 0 0 "in11" "radius" 0 0 "in12" "Z/notes" 0 0 "in13" "rot x" 0 0 "in14" "rot z start" 1 0 "out1" "1" 1 0 "out2" "2" 1 0 "out3" "3" 1 0 "out4" "4" 1 0 "out5" "5" 0 0 "in15" "modradius" 0 0 "in16" "bright" 0 0 "in17" "saturation" 0 0 "in18" "subsamples" 0 0 "in19" "screenpolynr" 0 0 "in20" "PRESET" 1 0 "out6" "MONO" 1 0 "out7" "X" 1 0 "out8" "Y" 1 0 "out9" "Z" 0 0 "in21" "R/notes" 0 0 "in22" "VPRESET"  } val { } 
+container { 4 260 259 0.940000 0 
+module { "value meter" "value meter" "value meter" 1 9 1309 160 130 properties { "modname" "value meter" "min" 0.000000 "max" 1.000000 "abs" 1 "nrchan" 4 } val { } } 
+module { "clipper soft" "clipper soft" "clipper soft" 1 144 1027 120 55 properties { "modname" "clipper soft" } val { } } 
+module { "clipper soft" "clipper soft1" "clipper soft" 1 143 1152 120 55 properties { "modname" "clipper soft" } val { } } 
+module { "s & h (poly)" "s & h (poly)" "s & h (poly)" 1 -392 -102 120 455 properties { "modname" "s & h (poly)" "nrout" 16 } val { "in" -24.000000 "nrv" 0.000000 } } 
+module { "select" "select" "multiplex in" 1 -247 -102 120 455 properties { "modname" "multiplex in" "nrin" 16 } val { } } 
+module { "scope 3d" "scope 3d" "scope 3d" 1 459 -230 120 484 properties { "modname" "scope 3d" "camera" 1 "w" 512 "h" 512 "imode" 0 "serverstr" "" "clientstr" "scopeliszt" "sendbuf" 0 } val { "zd" 0.000000 "per" 0.000000 "r" 0.000000 "g" 0.000000 "b" 0.000000 "br" 0.000000 "opc" 0.200000 "f" 0.200000 } } 
+module { "math" "math" "math" 1 89 6 120 80 properties { "modname" "math" "mop" 3 "nrin" 2 } val { "in1" 12.000000 } } 
+module { "counter (sample)" "counter (sample)" "counter (sample)" 1 -587 127 120 155 properties { "modname" "counter (sample)" } val { } } 
+module { "note to freq" "note to freq" "note to freq" 1 -1246 845 120 155 properties { "modname" "note to freq" } val { "ro" 15.900000 } } 
+module { "math" "math1" "math" 1 -94 -218 120 80 properties { "modname" "math" "mop" 3 "nrin" 2 } val { } } 
+module { "gate repeat" "gate repeat" "gate repeat" 1 -650 -116 120 80 properties { "modname" "gate repeat" } val { "r" 0.000000 } } 
+module { "HSB 2 RGB" "HSB 2 RGB" "HSB 2 RGB" 1 262 36 120 105 properties { "modname" "HSB 2 RGB" } val { "s" 0.000000 } } 
+module { "math" "math2" "math" 1 91 -130 120 105 properties { "modname" "math" "mop" 2 "nrin" 3 } val { } } 
+module { "math" "math3" "math" 1 93 -291 120 105 properties { "modname" "math" "mop" 2 "nrin" 3 } val { } } 
+module { "delay (sample)" "delay (sample)" "delay (sample)" 1 -1194 565 120 80 properties { "modname" "delay (sample)" "nrsam" 44100 } val { "sam" 5.000000 } } 
+module { "math" "math8" "math" 1 -584 1306 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" -1.000000 } } 
+module { "math" "math9" "math" 1 -586 1126 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" -1.000000 } } 
+module { "math" "math10" "math" 1 -584 1215 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" -1.000000 } } 
+module { "math" "math14" "math" 1 89 114 120 80 properties { "modname" "math" "mop" 3 "nrin" 2 } val { "in1" -120.000000 } } 
+module { "on rendering" "on rendering" "on rendering" 1 -436 945 84 55 properties { "modname" "on rendering" } val { } } 
+module { "math" "math29" "math" 1 -332 946 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 24.000000 } } 
+module { "select" "select4" "multiplex in" 1 -244 471 120 455 properties { "modname" "multiplex in" "nrin" 16 } val { } } 
+module { "synth (multi)" "synth (multi)" "synth (multiwave)" 1 -392 471 120 455 properties { "modname" "synth (multiwave)" "nrout" 16 "imienv" 0 } val { "nv" 0.000000 "de" 0.000000 "pw" 0.200000 } } 
+module { "abs" "abs1" "abs" 1 91 229 120 55 properties { "modname" "abs" } val { } } 
+module { "delay (sample)" "delay (sample)6" "delay (sample)" 1 -82 219 120 80 properties { "modname" "delay (sample)" "nrsam" 33000 } val { "sam" 2.000000 } } 
+module { "math" "math35" "math" 1 269 228 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)23" "phasemod" 1 -610 804 120 55 properties { "modname" "phasemod" } val { } } 
+module { "oscillator" "oscillator1" "oscillator" 1 -750 707 120 230 properties { "modname" "oscillator" } val { "f" 3.200000 "a" 0.000000 } } 
+module { "container" "container2" "note form (5)" 2 -488 1442 120 255 properties { "modname" "note form (5)" }  c0n { 12 0 0 "act" "active" 0 0 "in1" "NOTE" 0 0 "in2" "radius" 0 0 "in3" "Z/notes " 0 0 "in4" "x mod" 0 0 "in5" "y mod" 0 0 "in6" "rot x" 0 0 "in7" "rot start" 1 0 "out1" "X" 1 0 "out2" "Y" 1 0 "out3" "Z" 0 0 "in8" "r/notes"  } val { } 
+container { 4 3 106 1.000000 0 
+module { "container input" "in1" "container input" "NOTE" 1 149 213 80 55 properties { "modname" "NOTE" } val { } } 
+module { "container input" "in2" "container input1" "radius" 1 151 302 80 55 properties { "modname" "radius" } val { } } 
+module { "container input" "in3" "container input2" "Z/notes " 1 152 378 80 55 properties { "modname" "Z/notes " } val { } } 
+module { "container input" "in4" "container input3" "x mod" 1 417 -20 80 55 properties { "modname" "x mod" } val { } } 
+module { "container input" "in5" "container input4" "y mod" 1 418 52 80 55 properties { "modname" "y mod" } val { } } 
+module { "container input" "in6" "container input5" "rot x" 1 568 469 80 55 properties { "modname" "rot x" } val { } } 
+module { "math" "math" "math" 1 381 213 120 80 properties { "modname" "math" "mop" 3 "nrin" 2 } val { } } 
+module { "rotate" "rotate" "rotate" 1 567 216 120 105 properties { "modname" "rotate" } val { } } 
+module { "container input" "in7" "container input6" "rot start" 1 420 134 80 55 properties { "modname" "rot start" } val { } } 
+module { "math" "math1" "math" 1 383 338 120 80 properties { "modname" "math" "mop" 3 "nrin" 2 } val { } } 
+module { "rotate" "rotate1" "rotate" 1 736 298 120 105 properties { "modname" "rotate" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)" "delay (1 sample)" 1 737 217 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "container output" "out1" "container output" "X" 1 924 218 80 55 properties { "modname" "X" } val { } } 
+module { "container output" "out2" "container output1" "Y" 1 926 303 80 55 properties { "modname" "Y" } val { } } 
+module { "container output" "out3" "container output2" "Z" 1 928 394 80 55 properties { "modname" "Z" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)1" "delay (1 sample)" 1 566 346 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "container input" "in8" "container input7" "r/notes" 1 158 102 80 55 properties { "modname" "r/notes" } val { } } 
+connections { 
+"container input" "out" "math" "in0" 
+"math" "out" "rotate" "z" 
+"container input6" "out" "rotate" "z" 
+"container input3" "out" "rotate" "x" 
+"container input4" "out" "rotate" "y" 
+"container input1" "out" "rotate" "y" 
+"container input" "out" "math1" "in0" 
+"container input2" "out" "math1" "in1" 
+"rotate" "outx" "delay1 (1 sample)" "in" 
+"rotate" "outy" "rotate1" "x" 
+"math1" "out" "delay1 (1 sample)1" "in" 
+"container input5" "out" "rotate1" "z" 
+"delay1 (1 sample)" "out" "container output" "in" 
+"rotate1" "outx" "container output1" "in" 
+"rotate1" "outy" "container output2" "in" 
+"delay1 (1 sample)1" "out" "rotate1" "y" 
+"container input7" "out" "math" "in1" 
+} } 
+} 
+module { "container" "container3" "note form (5)" 2 258 -227 120 255 properties { "modname" "note form (5)" }  c0n { 12 0 0 "act" "active" 0 0 "in1" "NOTE" 0 0 "in2" "radius" 0 0 "in3" "Z/notes " 0 0 "in4" "x mod" 0 0 "in5" "y mod" 0 0 "in6" "rot x" 0 0 "in7" "rot start" 1 0 "out1" "X" 1 0 "out2" "Y" 1 0 "out3" "Z" 0 0 "in8" "R/notes"  } val { } 
+container { 4 3 106 1.000000 0 
+module { "container input" "in1" "container input" "NOTE" 1 149 213 80 55 properties { "modname" "NOTE" } val { } } 
+module { "container input" "in2" "container input1" "radius" 1 151 302 80 55 properties { "modname" "radius" } val { } } 
+module { "container input" "in3" "container input2" "Z/notes " 1 152 378 80 55 properties { "modname" "Z/notes " } val { } } 
+module { "container input" "in4" "container input3" "x mod" 1 418 -20 80 55 properties { "modname" "x mod" } val { } } 
+module { "container input" "in5" "container input4" "y mod" 1 419 52 80 55 properties { "modname" "y mod" } val { } } 
+module { "container input" "in6" "container input5" "rot x" 1 568 469 80 55 properties { "modname" "rot x" } val { } } 
+module { "math" "math" "math" 1 381 213 120 80 properties { "modname" "math" "mop" 3 "nrin" 2 } val { } } 
+module { "rotate" "rotate" "rotate" 1 567 216 120 105 properties { "modname" "rotate" } val { } } 
+module { "container input" "in7" "container input6" "rot start" 1 420 134 80 55 properties { "modname" "rot start" } val { } } 
+module { "math" "math1" "math" 1 383 338 120 80 properties { "modname" "math" "mop" 3 "nrin" 2 } val { } } 
+module { "rotate" "rotate1" "rotate" 1 736 298 120 105 properties { "modname" "rotate" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)" "delay (1 sample)" 1 737 217 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "container output" "out1" "container output" "X" 1 924 218 80 55 properties { "modname" "X" } val { } } 
+module { "container output" "out2" "container output1" "Y" 1 926 303 80 55 properties { "modname" "Y" } val { } } 
+module { "container output" "out3" "container output2" "Z" 1 928 394 80 55 properties { "modname" "Z" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)1" "delay (1 sample)" 1 566 346 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "container input" "in8" "container input7" "R/notes" 1 156 454 80 55 properties { "modname" "R/notes" } val { } } 
+connections { 
+"container input" "out" "math" "in0" 
+"math" "out" "rotate" "z" 
+"container input6" "out" "rotate" "z" 
+"container input3" "out" "rotate" "x" 
+"container input4" "out" "rotate" "y" 
+"container input1" "out" "rotate" "y" 
+"container input" "out" "math1" "in0" 
+"container input2" "out" "math1" "in1" 
+"rotate" "outx" "delay1 (1 sample)" "in" 
+"rotate" "outy" "rotate1" "x" 
+"math1" "out" "delay1 (1 sample)1" "in" 
+"container input5" "out" "rotate1" "z" 
+"delay1 (1 sample)" "out" "container output" "in" 
+"rotate1" "outx" "container output1" "in" 
+"rotate1" "outy" "container output2" "in" 
+"delay1 (1 sample)1" "out" "rotate1" "y" 
+"container input7" "out" "math" "in1" 
+} } 
+} 
+module { "delay (sample)" "delay (sample)7" "delay (sample)" 1 -85 10 120 80 properties { "modname" "delay (sample)" "nrsam" 33000 } val { "sam" 2.000000 } } 
+module { "container input" "in1" "container input" "NOTE" 1 -1350 749 80 55 properties { "modname" "NOTE" } val { } } 
+module { "container input" "in2" "container input1" "GATE" 1 -1350 633 80 55 properties { "modname" "GATE" } val { } } 
+module { "container input" "in3" "container input2" "MAINSYNC" 1 -1039 142 80 55 properties { "modname" "MAINSYNC" } val { } } 
+module { "container input" "in4" "container input3" "attack" 1 -1191 427 80 55 properties { "modname" "attack" } val { } } 
+module { "container input" "in5" "container input4" "decay" 1 -1191 492 80 55 properties { "modname" "decay" } val { } } 
+module { "container input" "in6" "container input5" "phasemod" 1 -1144 1022 80 55 properties { "modname" "phasemod" } val { } } 
+module { "container input" "in7" "container input6" "X" 1 -1143 1111 80 55 properties { "modname" "X" } val { } } 
+module { "container input" "in8" "container input7" "Y" 1 -1143 1176 80 55 properties { "modname" "Y" } val { } } 
+module { "container input" "in9" "container input8" "Z" 1 -1143 1241 80 55 properties { "modname" "Z" } val { } } 
+module { "container input" "in10" "container input9" "amp" 1 -681 1050 80 55 properties { "modname" "amp" } val { } } 
+module { "container input" "in11" "container input10" "radius" 1 -765 1482 80 55 properties { "modname" "radius" } val { } } 
+module { "container input" "in12" "container input11" "Z/notes" 1 -765 1547 80 55 properties { "modname" "Z/notes" } val { } } 
+module { "container input" "in13" "container input12" "rot x" 1 -765 1612 80 55 properties { "modname" "rot x" } val { } } 
+module { "container input" "in14" "container input13" "rot z start" 1 -764 1678 80 55 properties { "modname" "rot z start" } val { } } 
+module { "container output" "out1" "container output" "1" 1 398 1003 80 55 properties { "modname" "1" } val { } } 
+module { "container output" "out2" "container output1" "2" 1 399 1068 80 55 properties { "modname" "2" } val { } } 
+module { "container output" "out3" "container output2" "3" 1 402 1131 80 55 properties { "modname" "3" } val { } } 
+module { "container output" "out4" "container output3" "4" 1 403 1199 80 55 properties { "modname" "4" } val { } } 
+module { "container output" "out5" "container output4" "5" 1 405 1262 80 55 properties { "modname" "5" } val { } } 
+module { "delay (sample)" "delay (sample)1" "delay (sample)" 1 -1196 749 120 80 properties { "modname" "delay (sample)" "nrsam" 44100 } val { "sam" 4.000000 } } 
+module { "container input" "in15" "container input14" "modradius" 1 -221 -314 80 55 properties { "modname" "modradius" } val { } } 
+module { "container input" "in16" "container input15" "bright" 1 151 330 80 55 properties { "modname" "bright" } val { } } 
+module { "container input" "in17" "container input16" "saturation" 1 150 407 80 55 properties { "modname" "saturation" } val { } } 
+module { "container input" "in18" "container input17" "subsamples" 1 153 482 80 55 properties { "modname" "subsamples" } val { } } 
+module { "container input" "in19" "container input18" "screenpolynr" 1 -782 153 80 55 properties { "modname" "screenpolynr" } val { } } 
+module { "modulo" "modulo" "modulo" 1 -393 372 120 80 properties { "modname" "modulo" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)" "delay (1 sample)" 1 -391 -176 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "math" "math4" "math" 1 -929 923 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 1.300000 } } 
+module { "delay (sample)" "delay (sample)2" "delay (sample)" 1 -1085 845 120 80 properties { "modname" "delay (sample)" "nrsam" 44100 } val { "sam" 4.000000 } } 
+module { "math" "math5" "math" 1 -794 1346 120 80 properties { "modname" "math" "mop" 3 "nrin" 2 } val { "in0" 200.000000 "in1" 1.000000 } } 
+module { "math" "math6" "math" 1 -354 1336 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 0.400000 } } 
+module { "synth (filter/3d)" "synth (filter/3d)" "synth (filter/3d)" 1 -170 962 120 680 properties { "modname" "synth (filter/3d)" "nrout" 4 "imienv" 0 "mx0" -1.000000 "my0" -1.000000 "mz0" 0.200000 "mx1" 1.000000 "my1" -1.000000 "mz1" 0.200000 "mx2" 1.000000 "my2" 1.000000 "mz2" 0.200000 "mx3" -1.000000 "my3" 1.000000 "mz3" 0.200000 } val { "nv" 8.000000 "amp" 0.000000 "rad" 75.000000 "v" 0.000000 "de" 0.000000 "pw" 0.000000 "flt" 0.000000 "fenva" 0.001000 "fenvd" 0.001000 } } 
+module { "switch matrix" "switch matrix" "switch matrix" 1 307 1683 327 180 properties { "modname" "switch matrix" "fadeb" 1 "float" 1 "nrin" 4 "nrout" 10 "offx" 3 "offy" 0 "singin" 0 "singout" 0 } val { "in0" 1.000000 "in1" 4.000000 } val { 32 10 0 0 0 0 0.49 0 0.33 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0.95 0 0.47 0.92 0.13 0.29 0 0 0.39 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.98 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.21 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0.5 0 0 0.82 0.46 0.43 0 0 0.56 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0 0 0 0 0 0 0.02 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.11 0.28 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.11 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 0 0 0 0 0.81 0.16 0.65 0 0 0.51 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.28 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.23 0 0 0 0 0 0 0.51 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4 0 0 0 0.25 0.95 0.29 0 0 0 0.45 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.11 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5 0 0.49 0 0.48 0.3 0.35 -0.76 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.56 0 0 0 0 0 0 0 0.33 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6 0 0 0 0.14 0.97 0.42 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7 0 0.5 0 0.23 0.84 0.19 0.47 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.51 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.01 0.41 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8 0 0.79 0 0.24 0.76 0.16 0.25 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.47 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9 0 0.28 0 0.27 0.46 0.07 0.85 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0.58 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 } } 
+module { "math" "math7" "math" 1 -338 1207 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { } } 
+module { "container input" "in20" "container input19" "PRESET" 1 -14 1700 80 55 properties { "modname" "PRESET" } val { } } 
+module { "quantizer" "quantizer" "quantizer" 1 113 1702 120 80 properties { "modname" "quantizer" } val { "q" 1.000000 } } 
+module { "container output" "out6" "container output5" "MONO" 1 45 954 80 55 properties { "modname" "MONO" } val { } } 
+module { "container output" "out7" "container output6" "X" 1 461 -457 80 55 properties { "modname" "X" } val { } } 
+module { "container output" "out8" "container output7" "Y" 1 461 -391 80 55 properties { "modname" "Y" } val { } } 
+module { "container output" "out9" "container output8" "Z" 1 463 -330 80 55 properties { "modname" "Z" } val { } } 
+module { "delay (sample)" "delay (sample)3" "delay (sample)" 1 -1190 653 120 80 properties { "modname" "delay (sample)" "nrsam" 44100 } val { "sam" 4.000000 } } 
+module { "container input" "in21" "container input20" "R/notes" 1 -463 -372 80 55 properties { "modname" "R/notes" } val { } } 
+module { "follower (multi)" "follower (multi)" "follower (multi)" 1 609 -270 120 130 properties { "modname" "follower (multi)" "nrin" 2 } val { "up" 1.000000 "dn" 1.000000 } } 
+module { "oscillator" "oscillator" "oscillator" 1 -299 -627 120 230 properties { "modname" "oscillator" } val { "f" 0.000000 "a" 0.300000 "pw" 0.200000 } } 
+module { "multiplex in (NxN)" "multiplex in (NxN)" "multiplex in (NxN)" 1 -97 -554 120 205 properties { "modname" "multiplex in (NxN)" "nrchan" 2 "nrin" 3 } val { } } 
+module { "clipper soft" "clipper soft2" "clipper soft" 1 148 1086 120 55 properties { "modname" "clipper soft" } val { } } 
+module { "clipper soft" "clipper soft3" "clipper soft" 1 147 1211 120 55 properties { "modname" "clipper soft" } val { } } 
+module { "multiplex in (NxN)" "multiplex in (NxN)1" "multiplex in (NxN)" 1 89 -553 120 205 properties { "modname" "multiplex in (NxN)" "nrchan" 2 "nrin" 3 } val { } } 
+module { "math" "math11" "math" 1 -601 -515 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 50.000000 } } 
+module { "math" "math12" "math" 1 244 -433 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 20.000000 } } 
+module { "math" "math13" "math" 1 244 -534 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 20.000000 } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)1" "VPRESET" 1 -434 -755 120 55 properties { "modname" "VPRESET" } val { } } 
+module { "select" "select1" "multiplex in" 1 -443 -591 120 130 properties { "modname" "multiplex in" "nrin" 3 } val { "in1" 4.200000 } } 
+module { "container input" "in22" "container input21" "VPRESET" 1 -589 -738 80 55 properties { "modname" "VPRESET" } val { } } 
+module { "delay (sample)" "delay (sample)4" "delay (sample)" 1 -107 465 120 80 properties { "modname" "delay (sample)" "nrsam" 33000 } val { "sam" -2.000000 } } 
+connections { 
+"synth (filter/3d)" "outmic1" "value meter" "in1" 
+"synth (filter/3d)" "outmic3" "value meter" "in3" 
+"s & h (poly)" "out0" "select" "in0" 
+"s & h (poly)" "out1" "select" "in1" 
+"s & h (poly)" "out2" "select" "in2" 
+"s & h (poly)" "out3" "select" "in3" 
+"s & h (poly)" "out4" "select" "in4" 
+"s & h (poly)" "out5" "select" "in5" 
+"counter (sample)" "o" "delay1 (1 sample)" "in" 
+"delay (sample)2" "out" "synth (filter/3d)" "f" 
+"select" "out" "math1" "in0" 
+"gate repeat" "out" "s & h (poly)" "g" 
+"HSB 2 RGB" "r" "scope 3d" "r" 
+"HSB 2 RGB" "g" "scope 3d" "g" 
+"HSB 2 RGB" "bl" "scope 3d" "b" 
+"math" "out" "HSB 2 RGB" "h" 
+"delay (sample)" "out" "synth (filter/3d)" "g" 
+"synth (filter/3d)" "outmic0" "value meter" "in0" 
+"synth (filter/3d)" "outmic2" "value meter" "in2" 
+"math8" "out" "synth (filter/3d)" "cz" 
+"math9" "out" "synth (filter/3d)" "cx" 
+"math10" "out" "synth (filter/3d)" "cy" 
+"on rendering" "o" "math29" "in0" 
+"math29" "out" "synth (filter/3d)" "nv" 
+"synth (multi)" "out1" "select4" "in0" 
+"synth (multi)" "out2" "select4" "in1" 
+"synth (multi)" "out3" "select4" "in2" 
+"synth (multi)" "out4" "select4" "in3" 
+"synth (multi)" "out5" "select4" "in4" 
+"synth (multi)" "out6" "select4" "in5" 
+"delay (sample)4" "out" "multiplex in (NxN)1" "in0" 
+"delay (sample)4" "out" "multiplex in (NxN)1" "in32" 
+"delay (sample)" "out" "synth (multi)" "g" 
+"delay (sample)2" "out" "synth (multi)" "f" 
+"abs1" "out" "math35" "in0" 
+"delay1 (1 sample)23" "out" "synth (filter/3d)" "phm" 
+"delay1 (1 sample)23" "out" "synth (multi)" "phm" 
+"oscillator1" "osin" "delay1 (1 sample)23" "in" 
+"container2" "out1" "synth (filter/3d)" "x" 
+"container2" "out2" "synth (filter/3d)" "y" 
+"container2" "out3" "synth (filter/3d)" "z" 
+"container3" "out1" "scope 3d" "x" 
+"container3" "out2" "scope 3d" "y" 
+"container3" "out3" "scope 3d" "z" 
+"delay (sample)" "out" "synth (multi)" "v" 
+"select" "out" "container3" "in1" 
+"math3" "out" "container3" "in4" 
+"math2" "out" "container3" "in5" 
+"delay (sample)7" "out" "math" "in0" 
+"delay (sample)7" "out" "math14" "in0" 
+"select" "out" "delay (sample)7" "in" 
+"delay (sample)1" "out" "s & h (poly)" "in" 
+"container input2" "out" "gate repeat" "g" 
+"container input3" "out" "synth (multi)" "at" 
+"container input4" "out" "synth (multi)" "de" 
+"container input1" "out" "delay (sample)" "in" 
+"container input5" "out" "oscillator1" "a" 
+"container input2" "out" "synth (multi)" "p" 
+"container input2" "out" "synth (filter/3d)" "p" 
+"math35" "out" "scope 3d" "br" 
+"delay (sample)6" "out" "abs1" "in" 
+"container input6" "out" "math9" "in0" 
+"container input7" "out" "math10" "in0" 
+"container input8" "out" "math8" "in0" 
+"container input6" "out" "scope 3d" "x" 
+"container input7" "out" "scope 3d" "y" 
+"container input8" "out" "scope 3d" "z" 
+"container input3" "out" "synth (filter/3d)" "at" 
+"container input4" "out" "math6" "in0" 
+"container input9" "out" "synth (filter/3d)" "amp" 
+"container input10" "out" "container3" "in2" 
+"container input11" "out" "container3" "in3" 
+"container input12" "out" "container3" "in6" 
+"container input13" "out" "container3" "in7" 
+"container input10" "out" "container2" "in2" 
+"container input11" "out" "container2" "in3" 
+"container input12" "out" "container2" "in6" 
+"container input13" "out" "container2" "in7" 
+"delay (sample)1" "out" "container2" "in1" 
+"clipper soft" "o" "container output" "in" 
+"clipper soft1" "o" "container output1" "in" 
+"container input" "out" "delay (sample)1" "in" 
+"delay (sample)" "out" "s & h (poly)" "g" 
+"container input14" "out" "math3" "in1" 
+"container input14" "out" "math2" "in1" 
+"container input15" "out" "math35" "in1" 
+"container input16" "out" "HSB 2 RGB" "s" 
+"container input17" "out" "scope 3d" "suba" 
+"container input18" "out" "s & h (poly)" "nrv" 
+"container input18" "out" "counter (sample)" "max" 
+"container input18" "out" "synth (multi)" "nv" 
+"s & h (poly)" "out6" "select" "in6" 
+"s & h (poly)" "out7" "select" "in7" 
+"s & h (poly)" "out8" "select" "in8" 
+"s & h (poly)" "out9" "select" "in9" 
+"synth (multi)" "out7" "select4" "in6" 
+"synth (multi)" "out8" "select4" "in7" 
+"synth (multi)" "out9" "select4" "in8" 
+"synth (multi)" "out10" "select4" "in9" 
+"s & h (poly)" "out10" "select" "in10" 
+"s & h (poly)" "out11" "select" "in11" 
+"s & h (poly)" "out12" "select" "in12" 
+"s & h (poly)" "out13" "select" "in13" 
+"s & h (poly)" "out14" "select" "in14" 
+"s & h (poly)" "out15" "select" "in15" 
+"synth (multi)" "out11" "select4" "in10" 
+"synth (multi)" "out12" "select4" "in11" 
+"synth (multi)" "out13" "select4" "in12" 
+"synth (multi)" "out14" "select4" "in13" 
+"synth (multi)" "out15" "select4" "in14" 
+"synth (multi)" "out16" "select4" "in15" 
+"delay1 (1 sample)" "out" "select" "sel" 
+"modulo" "out" "select4" "sel" 
+"counter (sample)" "o" "modulo" "a" 
+"container input18" "out" "modulo" "b" 
+"container input18" "out" "gate repeat" "r" 
+"container input18" "out" "scope 3d" "subsam" 
+"container input2" "out" "s & h (poly)" "rst" 
+"math4" "out" "oscillator1" "f" 
+"container input5" "out" "math4" "in0" 
+"note to freq" "out" "delay (sample)2" "in" 
+"container input" "out" "note to freq" "n" 
+"note to freq" "out" "math5" "in1" 
+"math6" "out" "synth (filter/3d)" "de" 
+"math5" "out" "math6" "in1" 
+"synth (filter/3d)" "om" "multiplex in (NxN)" "in0" 
+"synth (filter/3d)" "outmic0" "clipper soft" "in" 
+"synth (filter/3d)" "outmic2" "clipper soft1" "in" 
+"switch matrix" "out9" "math7" "in1" 
+"container input19" "out" "quantizer" "in" 
+"switch matrix" "out3" "synth (filter/3d)" "flt" 
+"switch matrix" "out4" "synth (filter/3d)" "fltr" 
+"switch matrix" "out5" "synth (filter/3d)" "fltkf" 
+"math6" "out" "switch matrix" "in2" 
+"switch matrix" "out0" "synth (filter/3d)" "wf" 
+"switch matrix" "out1" "synth (filter/3d)" "pw" 
+"switch matrix" "out2" "synth (filter/3d)" "phm" 
+"switch matrix" "out6" "synth (filter/3d)" "fenv" 
+"switch matrix" "out7" "synth (filter/3d)" "fenva" 
+"switch matrix" "out8" "synth (filter/3d)" "fenvd" 
+"synth (multi)" "om" "switch matrix" "in3" 
+"switch matrix" "out0" "synth (multi)" "wf" 
+"container input19" "out" "switch matrix" "rb" 
+"synth (filter/3d)" "om" "container output5" "in" 
+"quantizer" "out" "switch matrix" "wb" 
+"container3" "out1" "container output6" "in" 
+"container3" "out2" "container output7" "in" 
+"container3" "out3" "container output8" "in" 
+"math7" "out" "synth (filter/3d)" "v" 
+"delay (sample)3" "out" "math7" "in0" 
+"container input1" "out" "delay (sample)3" "in" 
+"container input20" "out" "container3" "in8" 
+"container input20" "out" "container2" "in8" 
+"multiplex in (NxN)" "out0" "math3" "in0" 
+"multiplex in (NxN)" "out1" "math2" "in0" 
+"scope 3d" "outx" "follower (multi)" "in0" 
+"scope 3d" "outy" "follower (multi)" "in1" 
+"oscillator" "osin" "multiplex in (NxN)" "in1" 
+"oscillator" "ocos" "multiplex in (NxN)" "in33" 
+"clipper soft" "o" "oscillator" "p" 
+"synth (filter/3d)" "outmic1" "clipper soft2" "in" 
+"synth (filter/3d)" "outmic3" "clipper soft3" "in" 
+"multiplex in (NxN)1" "out0" "math3" "in2" 
+"multiplex in (NxN)1" "out1" "math2" "in2" 
+"clipper soft1" "o" "multiplex in (NxN)" "in32" 
+"oscillator" "ocos" "multiplex in (NxN)" "in34" 
+"delay (sample)4" "out" "multiplex in (NxN)1" "in1" 
+"delay (sample)4" "out" "multiplex in (NxN)1" "in33" 
+"oscillator" "osin" "multiplex in (NxN)" "in2" 
+"math11" "out" "select1" "in2" 
+"clipper soft3" "o" "math12" "in0" 
+"math12" "out" "multiplex in (NxN)1" "in34" 
+"clipper soft2" "o" "math13" "in0" 
+"math13" "out" "multiplex in (NxN)1" "in2" 
+"delay1 (1 sample)1" "out" "multiplex in (NxN)" "sel" 
+"delay1 (1 sample)1" "out" "multiplex in (NxN)1" "sel" 
+"delay1 (1 sample)1" "out" "select1" "sel" 
+"select1" "out" "oscillator" "f" 
+"scope 3d" "outx" "math11" "in0" 
+"clipper soft" "o" "multiplex in (NxN)" "in32" 
+"select4" "out" "delay (sample)6" "in" 
+"select4" "out" "delay (sample)4" "in" 
+"container input18" "out" "delay (sample)4" "sam" 
+"container input21" "out" "delay1 (1 sample)1" "in" 
+} } 
+} 
+module { "delay1 (1 sample)" "delay1 (1 sample)" "decay lead" 1 -641 -1075 120 55 properties { "modname" "decay lead" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)2" "amp lead" 1 -777 -1147 120 55 properties { "modname" "amp lead" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)4" "phase mod" 1 -640 -1146 120 55 properties { "modname" "phase mod" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)5" "saturation" 1 -642 -997 120 55 properties { "modname" "saturation" } val { "in" 0.080000 } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)9" "graphic polyphony" 1 -750 -1247 120 55 properties { "modname" "graphic polyphony" } val { "in" 6.000000 } } 
+module { "on rendering" "on rendering" "on rendering" 1 -1014 -1365 84 55 properties { "modname" "on rendering" } val { } } 
+module { "math" "math2" "math" 1 -898 -1265 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 10.000000 } } 
+module { "container" "container1" "polysynth 3d" 2 225 -1352 120 630 properties { "modname" "polysynth 3d" }  c0n { 33 0 0 "act" "active" 0 0 "in1" "NOTE" 0 0 "in2" "GATE" 0 0 "in3" "MAINSYNC" 0 0 "in4" "attack" 0 0 "in5" "decay" 0 0 "in6" "phasemod" 0 0 "in7" "X" 0 0 "in8" "Y" 0 0 "in9" "Z" 0 0 "in10" "amp" 0 0 "in11" "radius" 0 0 "in12" "Z/notes" 0 0 "in13" "rot x" 0 0 "in14" "rot z start" 1 0 "out1" "1" 1 0 "out2" "2" 1 0 "out3" "3" 1 0 "out4" "4" 1 0 "out5" "5" 0 0 "in15" "modradius" 0 0 "in16" "bright" 0 0 "in17" "saturation" 0 0 "in18" "subsamples" 0 0 "in19" "screenpolynr" 0 0 "in20" "phasemod2" 0 0 "in21" "PRESET 0-9" 1 0 "out6" "MONO" 1 0 "out7" "X" 1 0 "out8" "Y" 1 0 "out9" "Z" 0 0 "in22" "r/notes" 0 0 "in23" "VPRESET"  } val { } 
+container { 4 934 854 1.000000 0 
+module { "value meter" "value meter" "value meter" 1 80 1293 160 130 properties { "modname" "value meter" "min" 0.000000 "max" 1.000000 "abs" 1 "nrchan" 4 } val { } } 
+module { "clipper soft" "clipper soft" "clipper soft" 1 154 1078 120 55 properties { "modname" "clipper soft" } val { } } 
+module { "clipper soft" "clipper soft1" "clipper soft" 1 153 1139 120 55 properties { "modname" "clipper soft" } val { } } 
+module { "s & h (poly)" "s & h (poly)" "s & h (poly)" 1 -392 -102 120 455 properties { "modname" "s & h (poly)" "nrout" 16 } val { "in" -24.000000 "nrv" 0.000000 } } 
+module { "select" "select" "multiplex in" 1 -247 -102 120 455 properties { "modname" "multiplex in" "nrin" 16 } val { } } 
+module { "scope 3d" "scope 3d" "scope 3d" 1 459 -230 120 484 properties { "modname" "scope 3d" "camera" 1 "w" 512 "h" 512 "imode" 0 "serverstr" "" "clientstr" "scopeliszt" "sendbuf" 0 } val { "zd" 0.000000 "per" 0.000000 "r" 0.000000 "g" 0.000000 "b" 0.000000 "br" 0.000000 "opc" 0.200000 "f" 0.200000 } } 
+module { "math" "math" "math" 1 89 6 120 80 properties { "modname" "math" "mop" 3 "nrin" 2 } val { "in1" 12.000000 } } 
+module { "counter (sample)" "counter (sample)" "counter (sample)" 1 -587 127 120 155 properties { "modname" "counter (sample)" } val { } } 
+module { "note to freq" "note to freq" "note to freq" 1 -992 738 120 155 properties { "modname" "note to freq" } val { "ro" 15.900000 } } 
+module { "math" "math1" "math" 1 -558 -363 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in0" 10.000000 } } 
+module { "gate repeat" "gate repeat" "gate repeat" 1 -650 -116 120 80 properties { "modname" "gate repeat" } val { "r" 0.000000 } } 
+module { "HSB 2 RGB" "HSB 2 RGB" "HSB 2 RGB" 1 262 36 120 105 properties { "modname" "HSB 2 RGB" } val { "s" 0.000000 } } 
+module { "math" "math2" "math" 1 91 -130 120 105 properties { "modname" "math" "mop" 2 "nrin" 3 } val { } } 
+module { "math" "math3" "math" 1 95 -286 120 105 properties { "modname" "math" "mop" 2 "nrin" 3 } val { } } 
+module { "delay (sample)" "delay (sample)" "delay (sample)" 1 -1194 632 120 80 properties { "modname" "delay (sample)" "nrsam" 44100 } val { "sam" 5.000000 } } 
+module { "math" "math8" "math" 1 -584 1306 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" -1.000000 } } 
+module { "math" "math9" "math" 1 -586 1126 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" -1.000000 } } 
+module { "math" "math10" "math" 1 -584 1215 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" -1.000000 } } 
+module { "math" "math14" "math" 1 89 114 120 80 properties { "modname" "math" "mop" 3 "nrin" 2 } val { "in1" -120.000000 } } 
+module { "on rendering" "on rendering" "on rendering" 1 -436 945 84 55 properties { "modname" "on rendering" } val { } } 
+module { "math" "math29" "math" 1 -332 946 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 28.000000 } } 
+module { "select" "select4" "multiplex in" 1 -244 471 120 455 properties { "modname" "multiplex in" "nrin" 16 } val { } } 
+module { "synth (multi)" "synth (multi)" "synth (multiwave)" 1 -392 471 120 455 properties { "modname" "synth (multiwave)" "nrout" 16 "imienv" 0 } val { "nv" 0.000000 "de" 0.000000 "wf" 4.000000 "pw" 0.200000 } } 
+module { "abs" "abs1" "abs" 1 91 229 120 55 properties { "modname" "abs" } val { } } 
+module { "delay (sample)" "delay (sample)6" "delay (sample)" 1 -82 219 120 80 properties { "modname" "delay (sample)" "nrsam" 33000 } val { "sam" 2.000000 } } 
+module { "math" "math35" "math" 1 269 228 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)23" "phasemod" 1 -610 804 120 55 properties { "modname" "phasemod" } val { } } 
+module { "oscillator" "oscillator1" "oscillator" 1 -750 707 120 230 properties { "modname" "oscillator" } val { "f" 0.200000 "a" 0.000000 } } 
+module { "container" "container2" "note form (5)" 2 -488 1442 120 255 properties { "modname" "note form (5)" }  c0n { 12 0 0 "act" "active" 0 0 "in1" "NOTE" 0 0 "in2" "radius" 0 0 "in3" "Z/notes " 0 0 "in4" "x mod" 0 0 "in5" "y mod" 0 0 "in6" "rot x" 0 0 "in7" "rot start" 1 0 "out1" "X" 1 0 "out2" "Y" 1 0 "out3" "Z" 0 0 "in8" "r/notes"  } val { } 
+container { 4 3 106 1.000000 0 
+module { "container input" "in1" "container input" "NOTE" 1 149 213 80 55 properties { "modname" "NOTE" } val { } } 
+module { "container input" "in2" "container input1" "radius" 1 151 302 80 55 properties { "modname" "radius" } val { } } 
+module { "container input" "in3" "container input2" "Z/notes " 1 152 378 80 55 properties { "modname" "Z/notes " } val { } } 
+module { "container input" "in4" "container input3" "x mod" 1 417 -20 80 55 properties { "modname" "x mod" } val { } } 
+module { "container input" "in5" "container input4" "y mod" 1 418 52 80 55 properties { "modname" "y mod" } val { } } 
+module { "container input" "in6" "container input5" "rot x" 1 568 469 80 55 properties { "modname" "rot x" } val { } } 
+module { "math" "math" "math" 1 381 213 120 80 properties { "modname" "math" "mop" 3 "nrin" 2 } val { } } 
+module { "rotate" "rotate" "rotate" 1 567 216 120 105 properties { "modname" "rotate" } val { } } 
+module { "container input" "in7" "container input6" "rot start" 1 420 134 80 55 properties { "modname" "rot start" } val { } } 
+module { "math" "math1" "math" 1 383 338 120 80 properties { "modname" "math" "mop" 3 "nrin" 2 } val { } } 
+module { "rotate" "rotate1" "rotate" 1 736 298 120 105 properties { "modname" "rotate" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)" "delay (1 sample)" 1 737 217 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "container output" "out1" "container output" "X" 1 924 218 80 55 properties { "modname" "X" } val { } } 
+module { "container output" "out2" "container output1" "Y" 1 926 303 80 55 properties { "modname" "Y" } val { } } 
+module { "container output" "out3" "container output2" "Z" 1 928 394 80 55 properties { "modname" "Z" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)1" "delay (1 sample)" 1 566 346 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "container input" "in8" "container input7" "r/notes" 1 156 130 80 55 properties { "modname" "r/notes" } val { } } 
+connections { 
+"container input" "out" "math" "in0" 
+"math" "out" "rotate" "z" 
+"container input6" "out" "rotate" "z" 
+"container input3" "out" "rotate" "x" 
+"container input4" "out" "rotate" "y" 
+"container input1" "out" "rotate" "y" 
+"container input" "out" "math1" "in0" 
+"container input2" "out" "math1" "in1" 
+"rotate" "outx" "delay1 (1 sample)" "in" 
+"rotate" "outy" "rotate1" "x" 
+"math1" "out" "delay1 (1 sample)1" "in" 
+"container input5" "out" "rotate1" "z" 
+"delay1 (1 sample)" "out" "container output" "in" 
+"rotate1" "outx" "container output1" "in" 
+"rotate1" "outy" "container output2" "in" 
+"delay1 (1 sample)1" "out" "rotate1" "y" 
+"container input7" "out" "math" "in1" 
+} } 
+} 
+module { "container" "container3" "note form (5)" 2 258 -227 120 255 properties { "modname" "note form (5)" }  c0n { 12 0 0 "act" "active" 0 0 "in1" "NOTE" 0 0 "in2" "radius" 0 0 "in3" "Z/notes " 0 0 "in4" "x mod" 0 0 "in5" "y mod" 0 0 "in6" "rot x" 0 0 "in7" "rot start" 1 0 "out1" "X" 1 0 "out2" "Y" 1 0 "out3" "Z" 0 0 "in8" "r/notes"  } val { } 
+container { 4 3 106 1.000000 0 
+module { "container input" "in1" "container input" "NOTE" 1 149 213 80 55 properties { "modname" "NOTE" } val { } } 
+module { "container input" "in2" "container input1" "radius" 1 151 302 80 55 properties { "modname" "radius" } val { } } 
+module { "container input" "in3" "container input2" "Z/notes " 1 152 378 80 55 properties { "modname" "Z/notes " } val { } } 
+module { "container input" "in4" "container input3" "x mod" 1 417 -20 80 55 properties { "modname" "x mod" } val { } } 
+module { "container input" "in5" "container input4" "y mod" 1 418 52 80 55 properties { "modname" "y mod" } val { } } 
+module { "container input" "in6" "container input5" "rot x" 1 568 469 80 55 properties { "modname" "rot x" } val { } } 
+module { "math" "math" "math" 1 381 213 120 80 properties { "modname" "math" "mop" 3 "nrin" 2 } val { } } 
+module { "rotate" "rotate" "rotate" 1 567 216 120 105 properties { "modname" "rotate" } val { } } 
+module { "container input" "in7" "container input6" "rot start" 1 420 134 80 55 properties { "modname" "rot start" } val { } } 
+module { "math" "math1" "math" 1 383 338 120 80 properties { "modname" "math" "mop" 3 "nrin" 2 } val { } } 
+module { "rotate" "rotate1" "rotate" 1 736 298 120 105 properties { "modname" "rotate" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)" "delay (1 sample)" 1 737 217 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "container output" "out1" "container output" "X" 1 924 218 80 55 properties { "modname" "X" } val { } } 
+module { "container output" "out2" "container output1" "Y" 1 926 303 80 55 properties { "modname" "Y" } val { } } 
+module { "container output" "out3" "container output2" "Z" 1 928 394 80 55 properties { "modname" "Z" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)1" "delay (1 sample)" 1 566 346 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "container input" "in8" "container input7" "r/notes" 1 189 94 80 55 properties { "modname" "r/notes" } val { } } 
+connections { 
+"container input" "out" "math" "in0" 
+"math" "out" "rotate" "z" 
+"container input6" "out" "rotate" "z" 
+"container input3" "out" "rotate" "x" 
+"container input4" "out" "rotate" "y" 
+"container input1" "out" "rotate" "y" 
+"container input" "out" "math1" "in0" 
+"container input2" "out" "math1" "in1" 
+"rotate" "outx" "delay1 (1 sample)" "in" 
+"rotate" "outy" "rotate1" "x" 
+"math1" "out" "delay1 (1 sample)1" "in" 
+"container input5" "out" "rotate1" "z" 
+"delay1 (1 sample)" "out" "container output" "in" 
+"rotate1" "outx" "container output1" "in" 
+"rotate1" "outy" "container output2" "in" 
+"delay1 (1 sample)1" "out" "rotate1" "y" 
+"container input7" "out" "math" "in1" 
+} } 
+} 
+module { "delay (sample)" "delay (sample)7" "delay (sample)" 1 -85 10 120 80 properties { "modname" "delay (sample)" "nrsam" 33000 } val { "sam" 2.000000 } } 
+module { "container input" "in1" "container input" "NOTE" 1 -1350 749 80 55 properties { "modname" "NOTE" } val { } } 
+module { "container input" "in2" "container input1" "GATE" 1 -1350 633 80 55 properties { "modname" "GATE" } val { } } 
+module { "container input" "in3" "container input2" "MAINSYNC" 1 -1039 142 80 55 properties { "modname" "MAINSYNC" } val { } } 
+module { "container input" "in4" "container input3" "attack" 1 -1191 427 80 55 properties { "modname" "attack" } val { } } 
+module { "container input" "in5" "container input4" "decay" 1 -1191 492 80 55 properties { "modname" "decay" } val { } } 
+module { "container input" "in6" "container input5" "phasemod" 1 -1145 927 80 55 properties { "modname" "phasemod" } val { } } 
+module { "container input" "in7" "container input6" "X" 1 -1143 1111 80 55 properties { "modname" "X" } val { } } 
+module { "container input" "in8" "container input7" "Y" 1 -1143 1176 80 55 properties { "modname" "Y" } val { } } 
+module { "container input" "in9" "container input8" "Z" 1 -1143 1241 80 55 properties { "modname" "Z" } val { } } 
+module { "container input" "in10" "container input9" "amp" 1 -681 1050 80 55 properties { "modname" "amp" } val { } } 
+module { "container input" "in11" "container input10" "radius" 1 -765 1482 80 55 properties { "modname" "radius" } val { } } 
+module { "container input" "in12" "container input11" "Z/notes" 1 -765 1547 80 55 properties { "modname" "Z/notes" } val { } } 
+module { "container input" "in13" "container input12" "rot x" 1 -765 1612 80 55 properties { "modname" "rot x" } val { } } 
+module { "container input" "in14" "container input13" "rot z start" 1 -764 1678 80 55 properties { "modname" "rot z start" } val { } } 
+module { "container output" "out1" "container output" "1" 1 362 981 80 55 properties { "modname" "1" } val { } } 
+module { "container output" "out2" "container output1" "2" 1 363 1046 80 55 properties { "modname" "2" } val { } } 
+module { "container output" "out3" "container output2" "3" 1 366 1109 80 55 properties { "modname" "3" } val { } } 
+module { "container output" "out4" "container output3" "4" 1 367 1177 80 55 properties { "modname" "4" } val { } } 
+module { "container output" "out5" "container output4" "5" 1 369 1240 80 55 properties { "modname" "5" } val { } } 
+module { "delay (sample)" "delay (sample)1" "delay (sample)" 1 -1196 749 120 80 properties { "modname" "delay (sample)" "nrsam" 44100 } val { "sam" 4.000000 } } 
+module { "container input" "in15" "container input14" "modradius" 1 -221 -314 80 55 properties { "modname" "modradius" } val { } } 
+module { "container input" "in16" "container input15" "bright" 1 151 330 80 55 properties { "modname" "bright" } val { } } 
+module { "container input" "in17" "container input16" "saturation" 1 150 407 80 55 properties { "modname" "saturation" } val { } } 
+module { "container input" "in18" "container input17" "subsamples" 1 153 482 80 55 properties { "modname" "subsamples" } val { } } 
+module { "container input" "in19" "container input18" "screenpolynr" 1 -782 153 80 55 properties { "modname" "screenpolynr" } val { } } 
+module { "modulo" "modulo" "modulo" 1 -393 372 120 80 properties { "modname" "modulo" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)" "delay (1 sample)" 1 -391 -176 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "math" "math4" "math" 1 -327 1397 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 0.140000 } } 
+module { "oscillator" "oscillator" "oscillator" 1 -1037 1376 120 230 properties { "modname" "oscillator" } val { "f" 2.200000 "a" 0.000000 } } 
+module { "container input" "in20" "container input19" "phasemod2" 1 -1319 1469 80 55 properties { "modname" "phasemod2" } val { } } 
+module { "math" "math5" "math" 1 -1201 1535 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 1.500000 } } 
+module { "synth (filter/3d)" "synth (filter/3d)" "synth (filter/3d)" 1 -169 994 120 680 properties { "modname" "synth (filter/3d)" "nrout" 4 "imienv" 0 "mx0" -1.000000 "my0" -1.000000 "mz0" 0.200000 "mx1" 1.000000 "my1" -1.000000 "mz1" 0.200000 "mx2" 1.000000 "my2" 1.000000 "mz2" 0.200000 "mx3" -1.000000 "my3" 1.000000 "mz3" 0.200000 } val { "amp" 0.000000 "rad" 75.000000 "at" 0.020000 "de" 0.000000 "pw" 0.000000 "flt" 0.000000 "fenva" 0.010000 "fenvd" 0.020000 } } 
+module { "switch matrix" "switch matrix" "SOUND PRESET" 1 -501 1713 315 180 properties { "modname" "SOUND PRESET" "fadeb" 1 "float" 1 "nrin" 4 "nrout" 10 "offx" 0 "offy" 0 "singin" 0 "singout" 0 } val { "in0" 1.000000 "in3" 4.000000 } val { 32 10 0 0 0.5 1 0 0 0 0 0 0.49 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0.87 0.21 0.61 0.1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0.22 0.34 0.5 0.07 0.31 0 0 0.68 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.14 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 0 0.07 0.55 0.25 0 0.38 0 0 0.41 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0.32 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4 0 0.3 0.26 0.88 0.03 0.36 0 0 0.55 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.35 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.75 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5 0 0.19 0.41 0.74 0.15 0.3 0 0 0.56 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.17 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6 0 0 0.35 0.89 0.11 0.26 0 0 0.51 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.14 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7 0 0 0.12 0.8 0.38 0.42 0 0 0.61 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.93 0 0 -0.15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8 0 0 0.46 0 0.16 0.42 0 0 0.71 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.09 0.19 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9 0 0.38 0.18 0 0 0.78 0 0 0.82 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.61 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)1" "delay (1 sample)" 1 -726 1777 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "math" "math6" "math" 1 -334 1059 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { } } 
+module { "math" "math7" "math" 1 -678 1849 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 2.000000 } } 
+module { "container input" "in21" "container input20" "PRESET 0-9" 1 -887 1855 80 55 properties { "modname" "PRESET 0-9" } val { } } 
+module { "container output" "out6" "container output5" "MONO" 1 74 807 80 55 properties { "modname" "MONO" } val { } } 
+module { "container output" "out7" "container output6" "X" 1 459 -453 80 55 properties { "modname" "X" } val { } } 
+module { "container output" "out8" "container output7" "Y" 1 461 -390 80 55 properties { "modname" "Y" } val { } } 
+module { "container output" "out9" "container output8" "Z" 1 464 -324 80 55 properties { "modname" "Z" } val { } } 
+module { "container input" "in22" "container input21" "r/notes" 1 -368 -311 80 55 properties { "modname" "r/notes" } val { } } 
+module { "multiplex in (NxN)" "multiplex in (NxN)" "multiplex in (NxN)" 1 -73 -510 120 205 properties { "modname" "multiplex in (NxN)" "nrchan" 2 "nrin" 3 } val { } } 
+module { "oscillator" "oscillator2" "oscillator" 1 -333 -571 120 230 properties { "modname" "oscillator" } val { "f" 0.000000 "a" 0.400000 } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)2" "VPRESET" 1 -452 -667 120 55 properties { "modname" "VPRESET" } val { } } 
+module { "select" "select1" "multiplex in" 1 -496 -521 120 130 properties { "modname" "multiplex in" "nrin" 3 } val { "in0" -60.000000 "in1" -60.000000 } } 
+module { "container input" "in23" "container input22" "VPRESET" 1 -604 -654 80 55 properties { "modname" "VPRESET" } val { } } 
+connections { 
+"synth (filter/3d)" "outmic1" "value meter" "in1" 
+"synth (filter/3d)" "outmic3" "value meter" "in3" 
+"s & h (poly)" "out0" "select" "in0" 
+"s & h (poly)" "out1" "select" "in1" 
+"s & h (poly)" "out2" "select" "in2" 
+"s & h (poly)" "out3" "select" "in3" 
+"s & h (poly)" "out4" "select" "in4" 
+"s & h (poly)" "out5" "select" "in5" 
+"counter (sample)" "o" "delay1 (1 sample)" "in" 
+"note to freq" "out" "synth (filter/3d)" "f" 
+"clipper soft1" "o" "multiplex in (NxN)" "in32" 
+"clipper soft" "o" "multiplex in (NxN)" "in32" 
+"synth (filter/3d)" "om" "multiplex in (NxN)" "in0" 
+"gate repeat" "out" "s & h (poly)" "g" 
+"HSB 2 RGB" "r" "scope 3d" "r" 
+"HSB 2 RGB" "g" "scope 3d" "g" 
+"HSB 2 RGB" "bl" "scope 3d" "b" 
+"math" "out" "HSB 2 RGB" "h" 
+"delay (sample)" "out" "synth (filter/3d)" "g" 
+"synth (filter/3d)" "outmic0" "value meter" "in0" 
+"synth (filter/3d)" "outmic2" "value meter" "in2" 
+"math8" "out" "synth (filter/3d)" "cz" 
+"math9" "out" "synth (filter/3d)" "cx" 
+"math10" "out" "synth (filter/3d)" "cy" 
+"on rendering" "o" "math29" "in0" 
+"math29" "out" "synth (filter/3d)" "nv" 
+"synth (multi)" "out1" "select4" "in0" 
+"synth (multi)" "out2" "select4" "in1" 
+"synth (multi)" "out3" "select4" "in2" 
+"synth (multi)" "out4" "select4" "in3" 
+"synth (multi)" "out5" "select4" "in4" 
+"synth (multi)" "out6" "select4" "in5" 
+"select4" "out" "math3" "in2" 
+"select4" "out" "math2" "in2" 
+"delay (sample)" "out" "synth (multi)" "g" 
+"note to freq" "out" "synth (multi)" "f" 
+"abs1" "out" "math35" "in0" 
+"delay1 (1 sample)23" "out" "synth (filter/3d)" "phm" 
+"delay1 (1 sample)23" "out" "synth (multi)" "phm" 
+"oscillator1" "osin" "delay1 (1 sample)23" "in" 
+"note to freq" "out" "oscillator1" "f" 
+"delay (sample)" "out" "synth (filter/3d)" "v" 
+"container2" "out1" "synth (filter/3d)" "x" 
+"container2" "out2" "synth (filter/3d)" "y" 
+"container2" "out3" "synth (filter/3d)" "z" 
+"container3" "out1" "scope 3d" "x" 
+"container3" "out2" "scope 3d" "y" 
+"container3" "out3" "scope 3d" "z" 
+"delay (sample)" "out" "synth (multi)" "v" 
+"select" "out" "container3" "in1" 
+"math3" "out" "container3" "in4" 
+"math2" "out" "container3" "in5" 
+"delay (sample)7" "out" "math" "in0" 
+"delay (sample)7" "out" "math14" "in0" 
+"select" "out" "delay (sample)7" "in" 
+"delay (sample)1" "out" "s & h (poly)" "in" 
+"container input2" "out" "gate repeat" "g" 
+"container input3" "out" "synth (multi)" "at" 
+"container input4" "out" "synth (multi)" "de" 
+"delay (sample)1" "out" "note to freq" "n" 
+"container input1" "out" "delay (sample)" "in" 
+"container input5" "out" "oscillator1" "a" 
+"container input2" "out" "synth (multi)" "p" 
+"container input2" "out" "synth (filter/3d)" "p" 
+"math35" "out" "scope 3d" "br" 
+"delay (sample)6" "out" "abs1" "in" 
+"select4" "out" "delay (sample)6" "in" 
+"container input6" "out" "math9" "in0" 
+"container input7" "out" "math10" "in0" 
+"container input8" "out" "math8" "in0" 
+"container input6" "out" "scope 3d" "x" 
+"container input7" "out" "scope 3d" "y" 
+"container input8" "out" "scope 3d" "z" 
+"container input3" "out" "synth (filter/3d)" "at" 
+"container input4" "out" "synth (filter/3d)" "de" 
+"container input10" "out" "container3" "in2" 
+"container input11" "out" "container3" "in3" 
+"container input12" "out" "container3" "in6" 
+"container input13" "out" "container3" "in7" 
+"container input10" "out" "container2" "in2" 
+"container input11" "out" "container2" "in3" 
+"container input12" "out" "container2" "in6" 
+"container input13" "out" "container2" "in7" 
+"delay (sample)1" "out" "container2" "in1" 
+"clipper soft" "o" "container output" "in" 
+"clipper soft1" "o" "container output1" "in" 
+"container input" "out" "delay (sample)1" "in" 
+"delay (sample)" "out" "s & h (poly)" "g" 
+"container input14" "out" "math3" "in1" 
+"container input14" "out" "math2" "in1" 
+"container input15" "out" "math35" "in1" 
+"container input16" "out" "HSB 2 RGB" "s" 
+"container input17" "out" "scope 3d" "suba" 
+"container input18" "out" "s & h (poly)" "nrv" 
+"container input18" "out" "counter (sample)" "max" 
+"container input18" "out" "synth (multi)" "nv" 
+"s & h (poly)" "out6" "select" "in6" 
+"s & h (poly)" "out7" "select" "in7" 
+"s & h (poly)" "out8" "select" "in8" 
+"s & h (poly)" "out9" "select" "in9" 
+"synth (multi)" "out7" "select4" "in6" 
+"synth (multi)" "out8" "select4" "in7" 
+"synth (multi)" "out9" "select4" "in8" 
+"synth (multi)" "out10" "select4" "in9" 
+"s & h (poly)" "out10" "select" "in10" 
+"s & h (poly)" "out11" "select" "in11" 
+"s & h (poly)" "out12" "select" "in12" 
+"s & h (poly)" "out13" "select" "in13" 
+"s & h (poly)" "out14" "select" "in14" 
+"s & h (poly)" "out15" "select" "in15" 
+"synth (multi)" "out11" "select4" "in10" 
+"synth (multi)" "out12" "select4" "in11" 
+"synth (multi)" "out13" "select4" "in12" 
+"synth (multi)" "out14" "select4" "in13" 
+"synth (multi)" "out15" "select4" "in14" 
+"synth (multi)" "out16" "select4" "in15" 
+"delay1 (1 sample)" "out" "select" "sel" 
+"modulo" "out" "select4" "sel" 
+"counter (sample)" "o" "modulo" "a" 
+"container input18" "out" "modulo" "b" 
+"container input18" "out" "gate repeat" "r" 
+"container input18" "out" "scope 3d" "subsam" 
+"container input2" "out" "s & h (poly)" "rst" 
+"math4" "out" "synth (filter/3d)" "pw" 
+"delay1 (1 sample)23" "out" "math4" "in0" 
+"math4" "out" "synth (multi)" "pw" 
+"container input19" "out" "oscillator" "a" 
+"container input19" "out" "math5" "in0" 
+"math5" "out" "oscillator" "f" 
+"oscillator" "osin" "synth (filter/3d)" "phm" 
+"oscillator" "osin" "synth (multi)" "phm" 
+"synth (filter/3d)" "outmic0" "clipper soft" "in" 
+"synth (filter/3d)" "outmic2" "clipper soft1" "in" 
+"delay1 (1 sample)1" "out" "switch matrix" "rb" 
+"switch matrix" "out0" "synth (filter/3d)" "wf" 
+"switch matrix" "out1" "synth (filter/3d)" "pw" 
+"switch matrix" "out2" "synth (filter/3d)" "flt" 
+"switch matrix" "out3" "synth (filter/3d)" "fltr" 
+"switch matrix" "out4" "synth (filter/3d)" "fltkf" 
+"switch matrix" "out5" "synth (filter/3d)" "fenv" 
+"switch matrix" "out6" "synth (filter/3d)" "fenva" 
+"switch matrix" "out7" "synth (filter/3d)" "fenvd" 
+"switch matrix" "out8" "math6" "in1" 
+"math6" "out" "synth (filter/3d)" "amp" 
+"container input9" "out" "math6" "in0" 
+"synth (multi)" "om" "switch matrix" "in2" 
+"switch matrix" "out9" "synth (filter/3d)" "phm" 
+"container input4" "out" "math7" "in0" 
+"math7" "out" "switch matrix" "in1" 
+"container input20" "out" "delay1 (1 sample)1" "in" 
+"synth (filter/3d)" "om" "container output5" "in" 
+"container3" "out1" "container output6" "in" 
+"container3" "out2" "container output7" "in" 
+"container3" "out3" "container output8" "in" 
+"delay1 (1 sample)1" "out" "switch matrix" "wb" 
+"container input21" "out" "container2" "in8" 
+"container input21" "out" "container3" "in8" 
+"multiplex in (NxN)" "out0" "math3" "in0" 
+"multiplex in (NxN)" "out1" "math2" "in0" 
+"oscillator2" "osin" "multiplex in (NxN)" "in1" 
+"oscillator2" "ocos" "multiplex in (NxN)" "in33" 
+"delay1 (1 sample)2" "out" "multiplex in (NxN)" "sel" 
+"oscillator2" "osin" "multiplex in (NxN)" "in2" 
+"delay1 (1 sample)2" "out" "select1" "sel" 
+"select1" "out" "oscillator2" "f" 
+"math1" "out" "select1" "in2" 
+"scope 3d" "outx" "math1" "in1" 
+"oscillator2" "ocos" "multiplex in (NxN)" "in34" 
+"container input22" "out" "delay1 (1 sample)2" "in" 
+} } 
+} 
+module { "delay1 (1 sample)" "delay1 (1 sample)14" "attack bass" 1 -786 -732 120 55 properties { "modname" "attack bass" } val { "in" 0.030000 } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)15" "decay bass" 1 -649 -731 120 55 properties { "modname" "decay bass" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)16" "amp bass" 1 -785 -803 120 55 properties { "modname" "amp bass" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)17" "phase mod" 1 -648 -802 120 55 properties { "modname" "phase mod" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)18" "saturation" 1 -649 -652 120 55 properties { "modname" "saturation" } val { } } 
+module { "timeline" "timeline1" "speed" 3 -2837 779 797 276 properties { "modname" "speed" "lop" 0 } val { } points { 102 0.0801521 0.995995 0.0811521 0.547549 2.98909 0.162074 3.12545 0.162074 6.19364 0.162074 8.64818 0.190007 17.23 0.245873 28.48 0.444589 39.38 0.650196 50.1936 0.994476 51.2391 0.692801 51.7845 0.441404 52.4436 0.469337 53.4664 0.329672 54.3073 0.642521 56.3768 0.783638 58.9152 0.798564 89.4302 1.01469 89.9302 0.40721 90.94 1.03345 97.3945 1.09083 103.849 1.06624 139.122 1.11542 140.485 0.95968 141.108 0.146397 141.828 0.372664 141.917 0.708664 146.007 0.900664 147.608 0.888116 148.223 0.500056 148.723 0.910504 154.792 0.916664 172.492 0.977668 176.94 1.00066 178.167 0.892664 179.882 0.828664 225.239 1.06866 244.024 1.15666 246.453 1.17266 247.31 1.06866 248.81 1.14066 253.239 1.26866 260.453 1.27666 261.882 0.900664 263.525 0.332664 264.596 0.140664 266.739 0.732664 268.382 0.828664 268.524 0.460664 269.096 0.780664 272.408 0.88662 286.317 0.927604 288.81 0.900664 292.226 0.86203 300.596 0.948664 306.739 0.876664 330.31 0.980664 386.009 1.12794 389.524 1.02866 390.096 0.716664 414.31 1.00466 415.167 0.900664 427.167 0.940664 427.311 0.572664 435.524 0.788664 440.382 0.868664 451.239 0.876664 452.524 0.844664 465.453 0.916664 466.31 0.932664 467.024 0.228664 467.667 0.788664 485.31 0.924664 487.453 0.828664 500.096 0.828664 505.31 0.932664 541.381 0.972664 544.739 0.956664 545.739 0.892664 547.667 0.868664 548.31 0.836664 548.381 0.900664 552.239 0.892664 565.453 0.948664 568.31 0.916664 593.239 0.964664 600.667 0.924664 619.667 0.916664 620.739 0.948664 630.382 0.964664 631.31 0.884664 666.81 1.09266 668.464 0.899742 670.498 0.326708 670.981 0.495248 672.602 0.663787 674.843 0.708731 676.981 0.731203 680.981 0.630079 686.154 0.708731 695.384 0.848529 722.009 1.12794 } view { 2 3 8 -2011.52 -117.011 44 179 -2896.49 -50.1676 11 122 -7340.34 -123.583 14 125 -19473.5 -48.077 29 89 -6102.8 -162.008 26 134 0 0 320 80 0 0 320 80 0 0 320 80 } } 
+module { "timeline" "timeline2" "decay bass" 3 -2111 -1091 1090 204 properties { "modname" "decay bass" "lop" 0 } val { } points { 60 0.0518905 12.771 89.987 7.40738 90.7261 4.80738 91.4652 24.2074 92.5956 11.8074 138.095 6.28238 141.096 11.4074 156.096 11.2824 167.596 5.03239 175.596 5.03239 178.422 3.20739 192.639 3.80739 208.415 4.6042 219.297 10.0042 225.591 4.6042 262.65 4.4042 262.768 17.4042 263.768 16.6042 264.944 10.4042 270.297 6.4042 282.297 4.8042 287.415 8.4042 290.297 8.4042 291.003 22.2042 292.238 6.2042 306.596 10.4074 335.096 10.0324 337.096 3.53239 374.596 2.78239 388.179 2.8042 388.65 7.2042 389.003 19.4042 393.532 13.8042 397.591 19.6042 398.826 8.4042 399.238 2.8042 414.003 2.4042 422.474 1.6042 426.474 1.6042 429.415 6.4042 434.705 5.88161 434.886 4.05808 442.977 3.17573 450.474 1.0042 451.003 5.4042 459.415 4.2042 501.886 4.29337 504.886 3.41102 508.977 2.41102 540.795 1.64632 568.432 2.64632 578.886 2.23455 593.523 2.3522 606.159 2.52867 612.977 1.88161 617.704 4.01972 620.886 1.41102 663.614 1.46985 675.25 4.52867 677.705 11.5875 } view { 0 2 8 -1601.7 -56.0369 23 5 -6145.05 -45.021 17 5 -6926.75 -137.987 11 17 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 } } 
+module { "timeline" "timeline3" "decay lead" 3 -2059 -2314 1047 212 properties { "modname" "decay lead" "lop" 0 } val { } points { 110 0.0953688 16.5892 14.3645 19.6941 14.5419 29.9441 14.9785 26.0239 19.2092 25.8811 28.6268 24.8191 41.1672 17.7347 46.0422 13.9347 54.3246 13.7441 55.0169 8.14412 80.5554 8.19411 98.5507 10.1532 106.369 16.2441 135.005 15.7896 138.369 15.5168 140.824 7.78955 150.667 1.93466 151.105 10.3097 151.917 1.18466 154.594 1.34412 154.841 4.06912 168.127 2.31912 173.341 6.06912 176.198 11.4441 182.283 6.01256 196.106 5.41255 200.198 6.31912 201.577 2.61256 229.808 10.7608 237.055 7.56912 238.341 5.19412 245.627 4.06912 249.698 4.31912 251.912 7.06912 254.412 6.81912 255.912 8.19412 263.198 5.69412 263.698 3.44412 264.642 10.7896 267.005 3.06231 273.187 1.9714 273.913 3.31912 277.198 3.81912 278.555 6.19412 293.308 3.51082 304.841 10.9441 315.198 10.6941 322.913 5.94412 323.188 3.93755 330.365 4.18755 349.694 6.41256 357.777 11.9376 363.953 16.8126 377.484 14.6941 384.071 12.3126 386.27 11.8191 389.198 11.9441 389.913 4.31912 415.577 9.61255 427.626 9.19412 427.627 2.44412 432.841 3.81912 434.555 7.56912 434.841 3.69412 434.88 1.01955 442.698 1.06912 442.77 4.94412 451.555 1.91266 451.951 2.86571 456.341 3.06912 461.555 5.06912 462.522 2.82724 467.1 3.2698 470.009 4.05551 471.827 9.91266 484.627 6.06912 485.27 11.9441 485.879 5.76082 488.827 2.62695 499.093 4.88582 504.665 10.1358 507.022 7.13582 507.77 3.44412 523.841 3.19412 538.912 6.81912 541.841 5.81912 544.879 7.01082 557.698 5.56912 558.984 3.44412 570.127 4.19412 585.412 5.69412 591.518 6.41256 593.047 3.61256 604.912 4.31912 611.341 9.56912 615.698 2.06912 620.282 2.91266 631.055 2.81912 632.484 4.81912 637.984 6.56912 638.698 3.06912 645.736 4.01082 655.308 3.88582 662.379 0.88582 671.236 8.13582 671.451 3.76082 676.484 6.56912 677.341 8.81256 691.593 11.8858 695.022 18.2608 } view { 0 2 8 -1157.06 -96.685 11 11 -11080.8 -59.0628 17 5 -4765.1 -60.7772 11 14 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 } } 
+module { "timeline" "timeline4" "phasemod bass" 3 -2110 -879 1086 207 properties { "modname" "phasemod bass" "lop" 0 } val { } points { 43 -0.104501 0.405566 3.32407 0.0192023 21.2455 1.58303 33.3955 1.13622 45.0954 0.00856456 47.8362 0.00904765 50.7607 0.860111 51.4777 2.51969 51.8551 0.00904765 103.596 0.00856383 108.742 0.365124 113.117 0.205124 126.096 -0.0127128 178.117 0.00512398 179.465 0.2125 237.595 0.0375 245.117 0.0875 256.03 0.325 260.987 0.0875 264.617 0.126435 267.242 0.86414 279.682 0.225 283.204 0.025 286.378 0.3125 291.242 0.305124 305.492 -0.014876 354.492 0.025124 356.117 0.175 363.117 0.065124 370.769 0.1875 373.595 0.075 389.617 0.00348463 398.595 0.0125 401.987 0.325 418.242 0.446108 422.867 0.601845 425.367 0.429714 427.595 0.0125 435.552 0.025 436.03 0.1625 443.726 0.2 450.421 0.575 451.247 0 } view { 0 2 8 -1995.32 -74.4252 53 47 -1923.94 -43.4251 8 122 -9557.69 -39 23 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 } } 
+module { "timeline" "timeline5" "amplitude lead" 3 -2056 -2536 1046 217 properties { "modname" "amplitude lead" "lop" 0 } val { "a" 0.150000 } points { 51 -9.73071 0.514657 13.1696 3.01315 33.1696 2.95655 54.5695 1.71126 59.3304 2.89994 62.4609 4.40938 67.3686 3.10749 69.5913 2.01315 93.0696 1.39051 95.5696 3.59805 104.07 3.52258 117.275 2.8975 138.623 1.42691 141.401 1.34864 142.05 0.122829 142.225 0.171216 142.441 1.33251 156.57 1.06975 166.57 1.23956 195.57 1.40938 202.07 1.88107 212.07 2.03202 254.522 0.600215 266.07 0.843338 303.57 0.692394 306.57 1.10749 324.57 1.56032 368.57 1.08862 403.522 0.843458 418.122 0.829945 426.07 1.44711 448.57 1.05088 466.27 0.254658 497.57 0.522583 505.522 0.83034 523.522 0.872894 535.922 0.89417 537.322 2.06438 558.57 1.16409 569.522 0.863053 571.57 1.25843 587.57 1.2773 596.57 0.994281 635.922 0.963053 644.122 0.979277 646.722 0.872894 661.722 1.14949 678.57 0.975413 687.07 1.06975 690.122 1.81305 698.322 3.55374 } view { 1 2 8 -2086.6 -157.697 23 53 -2665.61 -58.026 5 47 -10188.7 -93.6154 74 62 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 } } 
+module { "timeline" "timeline6" "amplitude bass" 3 -2109 -1302 1089 204 properties { "modname" "amplitude bass" "lop" 0 } val { "a" 0.150000 } points { 23 -0.230499 0.514658 6.51951 1.21421 12.7195 0.569975 21.3195 0.377667 35.5195 0.319975 57.7195 0.473821 59.9205 0.944975 93.2695 0.854658 96.7196 0.848821 99.5196 0.714206 128.92 0.714206 141.719 0.887283 149.919 1.35844 176.92 1.29113 179.52 0.944975 337.33 1.01708 339.146 1.54639 359.646 1.56619 362.561 1.43643 376.646 1.20975 436.146 1.08104 470.646 1.11074 485.542 1.21063 } view { 2 2 8 249.402 -58.2774 5 104 -3512.33 -115.059 8 62 -518.292 -66.185 2 101 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 } } 
+module { "timeline" "timeline7" "brightness bass" 3 -2100 -1513 1067 204 properties { "modname" "brightness bass" "lop" 0 } val { } points { 10 -0.230499 0.33466 1.5695 0.128786 8.7695 0.184861 21.3695 0.0903758 37.1695 0.0793868 57.1695 0.20576 73.3695 0.178288 81.3695 0.299167 89.9695 0.37609 162.37 0.32664 } view { 0 2 8 367.152 -54.4484 5 182 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 } } 
+module { "timeline" "timeline8" "brightness lead" 3 -2049 -2754 1039 213 properties { "modname" "brightness lead" "lop" 0 } val { } points { 3 -9.73071 0.514657 2.7695 0.634658 130.27 0.354658 } view { 0 2 8 64.461 -69.7329 2 50 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)19" "bright" 1 -787 -657 120 55 properties { "modname" "bright" } val { } } 
+module { "container" "container2" "all notes display" 2 537 -2918 120 580 properties { "modname" "all notes display" }  c0n { 22 0 0 "act" "active" 0 0 "in1" "MAINSYNC" 0 0 "in2" "X" 0 0 "in3" "Y" 0 0 "in4" "Z" 0 0 "in5" "radius" 0 0 "in6" "Z/notes" 0 0 "in7" "rot x" 0 0 "in8" "rot z start" 0 0 "in9" "size" 0 0 "in10" "bright" 0 0 "in11" "saturation" 0 0 "in12" "subsamples" 0 0 "in13" "nr notes" 0 0 "in14" "AUDIO" 0 0 "in15" "X1" 0 0 "in16" "Y1" 0 0 "in17" "Z1" 0 0 "in18" "X2" 0 0 "in19" "Y2" 0 0 "in20" "Z2" 0 0 "in21" "R/notes"  } val { "act" 0.000000 } 
+container { 4 182 613 1.000000 0 
+module { "scope 3d" "scope 3d" "scope 3d" 1 1381 -270 120 484 properties { "modname" "scope 3d" "camera" 1 "w" 512 "h" 512 "imode" 0 "serverstr" "" "clientstr" "scopeliszt" "sendbuf" 0 } val { "zd" 0.000000 "per" 0.000000 "r" 0.000000 "g" 0.000000 "b" 0.000000 "br" 0.300000 "opc" 0.200000 "f" 0.200000 } } 
+module { "HSB 2 RGB" "HSB 2 RGB" "HSB 2 RGB" 1 262 36 120 105 properties { "modname" "HSB 2 RGB" } val { "s" 0.000000 "b" 0.000000 } } 
+module { "math" "math35" "math" 1 115 231 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { } } 
+module { "container" "container3" "note form (5)" 2 228 -225 120 205 properties { "modname" "note form (5)" }  c0n { 10 0 0 "act" "active" 0 0 "in1" "NOTE" 0 0 "in2" "radius" 0 0 "in3" "Z/notes " 0 0 "in4" "rot x" 0 0 "in5" "rot start" 1 0 "out1" "X" 1 0 "out2" "Y" 1 0 "out3" "Z" 0 0 "in6" "R/notes"  } val { } 
+container { 4 3 106 1.000000 0 
+module { "container input" "in1" "container input" "NOTE" 1 149 213 80 55 properties { "modname" "NOTE" } val { } } 
+module { "container input" "in2" "container input1" "radius" 1 151 302 80 55 properties { "modname" "radius" } val { } } 
+module { "container input" "in3" "container input2" "Z/notes " 1 152 378 80 55 properties { "modname" "Z/notes " } val { } } 
+module { "container input" "in4" "container input5" "rot x" 1 568 469 80 55 properties { "modname" "rot x" } val { } } 
+module { "math" "math" "math" 1 381 213 120 80 properties { "modname" "math" "mop" 3 "nrin" 2 } val { } } 
+module { "rotate" "rotate" "rotate" 1 567 216 120 105 properties { "modname" "rotate" } val { } } 
+module { "container input" "in5" "container input6" "rot start" 1 420 134 80 55 properties { "modname" "rot start" } val { } } 
+module { "math" "math1" "math" 1 383 338 120 80 properties { "modname" "math" "mop" 3 "nrin" 2 } val { } } 
+module { "rotate" "rotate1" "rotate" 1 736 298 120 105 properties { "modname" "rotate" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)" "delay (1 sample)" 1 737 217 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "container output" "out1" "container output" "X" 1 924 218 80 55 properties { "modname" "X" } val { } } 
+module { "container output" "out2" "container output1" "Y" 1 926 303 80 55 properties { "modname" "Y" } val { } } 
+module { "container output" "out3" "container output2" "Z" 1 928 394 80 55 properties { "modname" "Z" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)1" "delay (1 sample)" 1 566 346 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "container input" "in6" "container input3" "R/notes" 1 251 146 80 55 properties { "modname" "R/notes" } val { } } 
+connections { 
+"container input" "out" "math" "in0" 
+"math" "out" "rotate" "z" 
+"container input6" "out" "rotate" "z" 
+"container input1" "out" "rotate" "y" 
+"container input" "out" "math1" "in0" 
+"container input2" "out" "math1" "in1" 
+"rotate" "outx" "delay1 (1 sample)" "in" 
+"rotate" "outy" "rotate1" "x" 
+"math1" "out" "delay1 (1 sample)1" "in" 
+"container input5" "out" "rotate1" "z" 
+"delay1 (1 sample)" "out" "container output" "in" 
+"rotate1" "outx" "container output1" "in" 
+"rotate1" "outy" "container output2" "in" 
+"delay1 (1 sample)1" "out" "rotate1" "y" 
+"container input3" "out" "math" "in1" 
+} } 
+} 
+module { "container input" "in1" "container input2" "MAINSYNC" 1 -491 227 80 55 properties { "modname" "MAINSYNC" } val { } } 
+module { "container input" "in2" "container input6" "X" 1 300 -511 80 55 properties { "modname" "X" } val { } } 
+module { "container input" "in3" "container input7" "Y" 1 300 -446 80 55 properties { "modname" "Y" } val { } } 
+module { "container input" "in4" "container input8" "Z" 1 300 -381 80 55 properties { "modname" "Z" } val { } } 
+module { "container input" "in5" "container input10" "radius" 1 -244 -249 80 55 properties { "modname" "radius" } val { } } 
+module { "container input" "in6" "container input11" "Z/notes" 1 -244 -184 80 55 properties { "modname" "Z/notes" } val { } } 
+module { "container input" "in7" "container input12" "rot x" 1 -244 -119 80 55 properties { "modname" "rot x" } val { } } 
+module { "container input" "in8" "container input13" "rot z start" 1 -243 -53 80 55 properties { "modname" "rot z start" } val { } } 
+module { "container input" "in9" "container input14" "size" 1 486 -553 80 55 properties { "modname" "size" } val { } } 
+module { "container input" "in10" "container input15" "bright" 1 -18 218 80 55 properties { "modname" "bright" } val { } } 
+module { "container input" "in11" "container input16" "saturation" 1 137 124 80 55 properties { "modname" "saturation" } val { } } 
+module { "container input" "in12" "container input17" "subsamples" 1 301 267 80 55 properties { "modname" "subsamples" } val { } } 
+module { "counter (sample)" "counter (sample)" "counter (sample)" 1 -197 94 120 155 properties { "modname" "counter (sample)" } val { } } 
+module { "container input" "in13" "container input" "nr notes" 1 -403 46 80 55 properties { "modname" "nr notes" } val { } } 
+module { "oscillator" "oscillator" "oscillator" 1 831 -585 120 230 properties { "modname" "oscillator" } val { "f" 40.123001 "a" 0.000000 } } 
+module { "delay (sample)" "delay (sample)" "delay (sample)" 1 -25 88 120 80 properties { "modname" "delay (sample)" "nrsam" 11000 } val { "sam" 2.000000 } } 
+module { "math" "math" "math" 1 117 25 120 80 properties { "modname" "math" "mop" 3 "nrin" 2 } val { "in1" 12.000000 } } 
+module { "container input" "in14" "container input1" "AUDIO" 1 -332 340 80 55 properties { "modname" "AUDIO" } val { } } 
+module { "abs" "abs" "abs" 1 -224 338 120 55 properties { "modname" "abs" } val { } } 
+module { "follower" "follower" "follower" 1 -74 300 120 105 properties { "modname" "follower" } val { "dn" 0.030000 } } 
+module { "container input" "in15" "container input3" "X1" 1 703 -344 80 55 properties { "modname" "X1" } val { } } 
+module { "container input" "in16" "container input4" "Y1" 1 706 -279 80 55 properties { "modname" "Y1" } val { } } 
+module { "container input" "in17" "container input5" "Z1" 1 706 -215 80 55 properties { "modname" "Z1" } val { } } 
+module { "container input" "in18" "container input9" "X2" 1 628 -138 80 55 properties { "modname" "X2" } val { } } 
+module { "container input" "in19" "container input18" "Y2" 1 631 -73 80 55 properties { "modname" "Y2" } val { } } 
+module { "container input" "in20" "container input19" "Z2" 1 633 -9 80 55 properties { "modname" "Z2" } val { } } 
+module { "distance factor" "distance factor" "distance factor" 1 826 -225 120 230 properties { "modname" "distance factor" } val { "amp" 100.000000 "pow" 2.700000 } } 
+module { "distance factor" "distance factor1" "distance factor" 1 828 14 120 230 properties { "modname" "distance factor" } val { "amp" 100.000000 "pow" 2.700000 } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)" "delay (1 sample)" 1 1019 -276 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)1" "delay (1 sample)" 1 1022 -216 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)2" "delay (1 sample)" 1 1023 -157 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)3" "delay (1 sample)" 1 1025 -76 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)4" "delay (1 sample)" 1 1029 75 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)5" "delay (1 sample)" 1 1388 -396 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "math" "math1" "math" 1 1170 -470 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { } } 
+module { "math" "math2" "math" 1 1170 -385 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { } } 
+module { "math" "math3" "math" 1 637 -516 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { } } 
+module { "delay (sample)" "delay (sample)1" "delay (sample)" 1 449 -4 120 80 properties { "modname" "delay (sample)" "nrsam" 9000 } val { "sam" 2.000000 } } 
+module { "delay (sample)" "delay (sample)2" "delay (sample)" 1 450 84 120 80 properties { "modname" "delay (sample)" "nrsam" 9000 } val { "sam" 2.000000 } } 
+module { "delay (sample)" "delay (sample)3" "delay (sample)" 1 452 171 120 80 properties { "modname" "delay (sample)" "nrsam" 9000 } val { "sam" 2.000000 } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)6" "delay (1 sample)" 1 1167 -275 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)7" "delay (1 sample)" 1 1170 -215 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)8" "delay (1 sample)" 1 1171 -156 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)9" "delay (1 sample)" 1 1173 -75 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)10" "delay (1 sample)" 1 1177 76 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "clipper hard" "clipper hard" "clipper hard" 1 1018 -396 120 105 properties { "modname" "clipper hard" } val { "mi" 0.000000 } } 
+module { "clipper hard" "clipper hard1" "clipper hard" 1 1015 -512 120 105 properties { "modname" "clipper hard" } val { "mi" 0.000000 } } 
+module { "container input" "in21" "container input20" "R/notes" 1 97 -294 80 55 properties { "modname" "R/notes" } val { } } 
+connections { 
+"delay (sample)1" "out" "scope 3d" "r" 
+"delay (sample)2" "out" "scope 3d" "g" 
+"delay (sample)3" "out" "scope 3d" "b" 
+"delay1 (1 sample)6" "out" "scope 3d" "x" 
+"delay1 (1 sample)7" "out" "scope 3d" "y" 
+"delay1 (1 sample)8" "out" "scope 3d" "z" 
+"container input6" "out" "scope 3d" "x" 
+"container input7" "out" "scope 3d" "y" 
+"container input8" "out" "scope 3d" "z" 
+"container input10" "out" "container3" "in2" 
+"container input11" "out" "container3" "in3" 
+"container input16" "out" "HSB 2 RGB" "s" 
+"container input17" "out" "scope 3d" "suba" 
+"container input" "out" "counter (sample)" "max" 
+"container input2" "out" "counter (sample)" "rst" 
+"container input12" "out" "container3" "in4" 
+"container input13" "out" "container3" "in5" 
+"counter (sample)" "o" "container3" "in1" 
+"math3" "out" "oscillator" "a" 
+"container input" "out" "oscillator" "f" 
+"container input2" "out" "oscillator" "rst" 
+"delay (sample)" "out" "math" "in0" 
+"counter (sample)" "o" "delay (sample)" "in" 
+"container input" "out" "scope 3d" "subsam" 
+"math" "out" "HSB 2 RGB" "h" 
+"container input15" "out" "math35" "in0" 
+"container input1" "out" "abs" "in" 
+"follower" "out" "math35" "in1" 
+"abs" "out" "follower" "in" 
+"container3" "out1" "distance factor" "x1" 
+"container3" "out2" "distance factor" "y1" 
+"container3" "out3" "distance factor" "z1" 
+"container input9" "out" "distance factor1" "x1" 
+"container input18" "out" "distance factor1" "y1" 
+"container input19" "out" "distance factor1" "z1" 
+"container3" "out1" "distance factor1" "x2" 
+"container3" "out2" "distance factor1" "y2" 
+"container3" "out3" "distance factor1" "z2" 
+"delay1 (1 sample)10" "out" "scope 3d" "br" 
+"container input3" "out" "distance factor" "x2" 
+"container input4" "out" "distance factor" "y2" 
+"container input5" "out" "distance factor" "z2" 
+"delay1 (1 sample)9" "out" "scope 3d" "br" 
+"math35" "out" "HSB 2 RGB" "b" 
+"distance factor" "ox" "delay1 (1 sample)" "in" 
+"distance factor" "oy" "delay1 (1 sample)1" "in" 
+"distance factor" "oz" "delay1 (1 sample)2" "in" 
+"distance factor" "out" "delay1 (1 sample)3" "in" 
+"distance factor1" "out" "delay1 (1 sample)4" "in" 
+"oscillator" "osin" "math1" "in0" 
+"math1" "out" "scope 3d" "x" 
+"distance factor" "out" "clipper hard1" "in" 
+"math2" "out" "scope 3d" "y" 
+"oscillator" "ocos" "math2" "in0" 
+"distance factor" "out" "clipper hard" "in" 
+"follower" "out" "math3" "in1" 
+"container input14" "out" "math3" "in0" 
+"HSB 2 RGB" "r" "delay (sample)1" "in" 
+"HSB 2 RGB" "g" "delay (sample)2" "in" 
+"HSB 2 RGB" "bl" "delay (sample)3" "in" 
+"delay1 (1 sample)3" "out" "delay1 (1 sample)9" "in" 
+"delay1 (1 sample)4" "out" "delay1 (1 sample)10" "in" 
+"delay1 (1 sample)2" "out" "delay1 (1 sample)8" "in" 
+"delay1 (1 sample)1" "out" "delay1 (1 sample)7" "in" 
+"delay1 (1 sample)" "out" "delay1 (1 sample)6" "in" 
+"clipper hard" "o" "math2" "in1" 
+"clipper hard1" "o" "math1" "in1" 
+"distance factor1" "out" "clipper hard1" "in" 
+"distance factor1" "out" "clipper hard" "in" 
+"container input20" "out" "container3" "in6" 
+} } 
+} 
+module { "container" "container3" "STARSPHERE" 2 172 -3241 120 255 properties { "modname" "STARSPHERE" }  c0n { 9 0 0 "act" "active" 0 0 "in1" "Z" 0 0 "in2" "X" 0 0 "in3" "Y" 0 0 "in4" "rotx" 0 0 "in5" "brightness" 0 0 "in6" "radius" 0 0 "in7" "AUDIO" 0 0 "in8" "rot z (start)"  } val { "act" 0.000000 } 
+container { 4 -133 2288 0.970000 0 
+module { "scope 3d" "scope 3d2" "scope 3d" 1 942 -2313 120 484 properties { "modname" "scope 3d" "camera" 1 "w" 512 "h" 512 "imode" 0 "serverstr" "" "clientstr" "scopeliszt" "sendbuf" 0 } val { "zd" 0.000000 "per" 0.000000 "r" 0.800000 "b" 0.900000 "br" 0.000000 "f" 0.030000 } } 
+module { "star sphere" "star sphere1" "star sphere" 1 371 -2230 120 155 properties { "modname" "star sphere" } val { "nr" 0.000000 "rad" 0.000000 "vrad" 20.000000 } } 
+module { "math" "math5" "math" 1 211 -2230 120 80 properties { "modname" "math" "mop" 3 "nrin" 2 } val { "in1" 30.000000 } } 
+module { "container input" "in1" "container input" "Z" 1 236 -2442 80 55 properties { "modname" "Z" } val { } } 
+module { "container input" "in2" "container input1" "X" 1 233 -2591 80 55 properties { "modname" "X" } val { } } 
+module { "container input" "in3" "container input2" "Y" 1 236 -2518 80 55 properties { "modname" "Y" } val { } } 
+module { "container input" "in4" "container input4" "rotx" 1 -122 -2162 80 55 properties { "modname" "rotx" } val { } } 
+module { "container input" "in5" "container input5" "brightness" 1 85 -2016 80 55 properties { "modname" "brightness" } val { } } 
+module { "container input" "in6" "container input3" "radius" 1 -122 -2233 80 55 properties { "modname" "radius" } val { } } 
+module { "container input" "in7" "container input6" "AUDIO" 1 -181 -1909 80 55 properties { "modname" "AUDIO" } val { } } 
+module { "math" "math1" "math" 1 224 -1998 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 0.400000 } } 
+module { "abs" "abs" "abs" 1 -77 -1916 120 55 properties { "modname" "abs" } val { } } 
+module { "follower" "follower" "follower" 1 79 -1943 120 105 properties { "modname" "follower" } val { "up" 0.100000 "dn" 0.030000 } } 
+module { "rotate" "rotate" "rotate" 1 743 -2237 120 105 properties { "modname" "rotate" } val { "z" 0.314000 } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)" "delay (1 sample)" 1 742 -2308 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "container input" "in8" "container input7" "rot z (start)" 1 238 -2375 80 55 properties { "modname" "rot z (start)" } val { } } 
+module { "rotate" "rotate1" "rotate" 1 541 -2235 120 105 properties { "modname" "rotate" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)1" "delay (1 sample)" 1 540 -2306 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "math" "math2" "math" 1 372 -2330 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" -1.000000 } } 
+module { "oscillator" "oscillator" "oscillator" 1 505 -2069 120 230 properties { "modname" "oscillator" } val { "f" 0.100000 "a" 0.500000 "o" 0.500000 } } 
+module { "math" "math3" "math" 1 786 -1968 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { } } 
+module { "math" "math4" "math" 1 233 -1903 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 0.600000 } } 
+module { "math" "math6" "math" 1 647 -2076 120 80 properties { "modname" "math" "mop" 1 "nrin" 2 } val { "in0" 1.000000 } } 
+module { "sample rate" "sample rate" "sample rate" 1 5 -2267 84 55 properties { "modname" "sample rate" } val { } } 
+module { "power" "power" "power" 1 642 -1973 120 80 properties { "modname" "power" } val { "b" 10.000000 } } 
+module { "power" "power1" "power" 1 783 -2073 120 80 properties { "modname" "power" } val { "b" 2.500000 } } 
+module { "scope 3d" "scope 3d" "scope 3d" 1 935 -1719 120 484 properties { "modname" "scope 3d" "camera" 1 "w" 512 "h" 512 "imode" 0 "serverstr" "" "clientstr" "scopeliszt" "sendbuf" 0 } val { "zd" 0.000000 "per" 0.000000 "r" 0.910000 "g" 0.900000 "b" 0.800000 "br" 0.000000 "opc" 0.200000 "f" 0.030000 } } 
+module { "star sphere" "star sphere" "star sphere" 1 364 -1636 120 155 properties { "modname" "star sphere" } val { "nr" 0.000000 "rad" 50.000000 "vrad" 50.000000 } } 
+module { "math" "math" "math" 1 204 -1636 120 80 properties { "modname" "math" "mop" 3 "nrin" 2 } val { "in1" 30.000000 } } 
+module { "rotate" "rotate2" "rotate" 1 736 -1643 120 105 properties { "modname" "rotate" } val { "z" 0.314000 } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)2" "delay (1 sample)" 1 735 -1714 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "rotate" "rotate3" "rotate" 1 534 -1641 120 105 properties { "modname" "rotate" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)3" "delay (1 sample)" 1 533 -1712 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "math" "math7" "math" 1 365 -1736 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" -0.900000 } } 
+module { "math" "math8" "math" 1 653 -1432 120 105 properties { "modname" "math" "mop" 2 "nrin" 3 } val { "in1" 0.094000 } } 
+module { "math" "math9" "math" 1 425 -1403 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 1.000000 } } 
+module { "math" "math10" "math" 1 558 -1804 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 0.930000 } } 
+connections { 
+"container input" "out" "scope 3d2" "z" 
+"container input4" "out" "rotate" "z" 
+"container input3" "out" "star sphere1" "rad" 
+"follower" "out" "math1" "in1" 
+"container input5" "out" "math1" "in0" 
+"container input6" "out" "abs" "in" 
+"abs" "out" "follower" "in" 
+"delay1 (1 sample)" "out" "scope 3d2" "x" 
+"rotate" "outy" "scope 3d2" "z" 
+"container input2" "out" "scope 3d2" "y" 
+"rotate1" "outx" "delay1 (1 sample)" "in" 
+"delay1 (1 sample)1" "out" "rotate" "x" 
+"rotate1" "outy" "rotate" "y" 
+"rotate" "outx" "scope 3d2" "y" 
+"container input1" "out" "scope 3d2" "x" 
+"star sphere1" "y" "delay1 (1 sample)1" "in" 
+"star sphere1" "x" "rotate1" "x" 
+"star sphere1" "z" "rotate1" "y" 
+"math2" "out" "rotate1" "z" 
+"container input7" "out" "math2" "in0" 
+"star sphere1" "obr" "oscillator" "p" 
+"math1" "out" "math3" "in1" 
+"power" "out" "math3" "in0" 
+"math3" "out" "scope 3d2" "br" 
+"follower" "out" "math4" "in0" 
+"math4" "out" "oscillator" "f" 
+"power1" "out" "scope 3d2" "opc" 
+"sample rate" "o" "math5" "in0" 
+"oscillator" "osin" "power" "a" 
+"oscillator" "osin" "math6" "in1" 
+"math6" "out" "power1" "a" 
+"delay1 (1 sample)2" "out" "scope 3d" "x" 
+"rotate2" "outy" "scope 3d" "z" 
+"rotate3" "outx" "delay1 (1 sample)2" "in" 
+"delay1 (1 sample)3" "out" "rotate2" "x" 
+"rotate3" "outy" "rotate2" "y" 
+"rotate2" "outx" "scope 3d" "y" 
+"star sphere" "y" "delay1 (1 sample)3" "in" 
+"star sphere" "x" "rotate3" "x" 
+"star sphere" "z" "rotate3" "y" 
+"math7" "out" "rotate3" "z" 
+"math" "out" "star sphere" "nr" 
+"container input1" "out" "scope 3d" "x" 
+"container input2" "out" "scope 3d" "y" 
+"container input" "out" "scope 3d" "z" 
+"sample rate" "o" "math" "in0" 
+"math8" "out" "scope 3d" "br" 
+"container input5" "out" "math9" "in0" 
+"follower" "out" "math9" "in1" 
+"math9" "out" "math8" "in0" 
+"container input7" "out" "math7" "in0" 
+"math10" "out" "rotate2" "z" 
+"container input4" "out" "math10" "in0" 
+"container input3" "out" "star sphere" "vrad" 
+"star sphere" "obr" "math8" "in2" 
+"math5" "out" "star sphere1" "nr" 
+} } 
+} 
+module { "delay1 (1 sample)" "delay1 (1 sample)20" "bright stars" 1 -736 -3095 120 55 properties { "modname" "bright stars" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)22" "bright all notes" 1 -771 -2697 120 55 properties { "modname" "bright all notes" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)23" "size all notes" 1 -772 -2765 120 55 properties { "modname" "size all notes" } val { "in" 0.200000 } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)24" "saturation all notes" 1 -772 -2631 120 55 properties { "modname" "saturation all notes" } val { "in" 0.100000 } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)26" "NR all notes" 1 -772 -2829 120 55 properties { "modname" "NR all notes" } val { "in" 72.000000 } } 
+module { "note in" "note in1" "note in" 1 -2649 53 120 80 properties { "modname" "note in" } val { } } 
+module { "compare" "compare2" "compare" 1 -2502 52 120 130 properties { "modname" "compare" } val { "b" 49.000000 } } 
+module { "gate hold" "gate hold" "gate hold" 1 -2503 198 120 105 properties { "modname" "gate hold" } val { "hs" 900.000000 } } 
+module { "select" "select" "multiplex in" 1 -1740 356 120 130 properties { "modname" "multiplex in" "nrin" 3 } val { "in1" -2.000000 "in2" 1.000000 } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)27" "delay (1 sample)" 1 -1827 153 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "sample & hold" "sample & hold1" "sample & hold" 1 -2081 270 120 80 properties { "modname" "sample & hold" } val { } } 
+module { "logic" "logic" "logic" 1 -2322 153 120 80 properties { "modname" "logic" "mop" 0 "nrin" 2 } val { } } 
+module { "timeline" "timeline9" "phasemod lead" 3 -2057 -2097 1053 215 properties { "modname" "phasemod lead" "lop" 0 } val { } points { 106 0.269501 -0.00534195 9.4195 0.610452 10.3695 0.164799 11.7195 0.15393 12.2695 0.947408 12.7195 0.90393 13.1695 0.632191 14.3195 0.588712 15.5695 1.33871 16.8195 0.784365 18.7695 0.132191 22.2195 0.14306 24.0695 0.980017 25.3195 0.208278 31.4695 0.295567 32.4195 0.306104 33.0695 0.306104 33.3195 0.621321 34.5695 0.925669 37.5195 0.458278 50.7695 0.099582 53.5257 0.099582 54.0923 1.11777 54.3849 0.000121397 58.9695 0.0669733 63.8484 0.368819 74.432 0.980017 82.0257 0.762626 87.2132 1.03436 88.0882 0.719147 89.9632 0.0126255 98.2757 0.0126255 101.619 0.0452342 104.432 0.240886 106.619 0.15393 109.151 0.00175592 129.263 0.00175592 137.913 0.00175592 142.563 0.762626 145.813 0.208278 154.263 0.240886 160.413 0.958278 164.713 0.599582 174.613 0.262625 178.463 0.686539 179.613 0.0778429 184.713 0.621321 187.563 0.816973 194.563 1.14306 199.913 1.71915 214.113 1.09958 220.013 0.675669 253.46 -0.0158072 284.66 0.430139 293.461 0.524733 304.66 -0.00229366 329.461 0.0247334 339.26 0.0247334 341.461 0.28149 354.06 0.28149 356.26 0.0112198 425.861 0.0112198 428.26 0.267977 444.26 0.403112 450.861 0.349058 450.862 -0.00229366 457.66 0.0348685 467.861 1.48487 474.861 1.49737 478.461 0.709868 485.66 0.709868 488.461 0.422368 498.461 0.159868 503.461 1.45987 503.462 0.809868 511.061 0.872368 513.461 1.34737 525.26 1.92237 531.86 1.53487 538.26 0.997368 547.86 0.547368 569.461 0.559868 572.26 1.02237 574.661 1.05987 577.86 1.44737 582.26 1.05987 588.26 0.884868 602.461 1.14737 606.461 0.872368 613.461 1.97237 619.661 1.83487 625.06 1.27237 631.86 0.872368 635.26 0.884868 643.461 2.34737 645.86 2.82237 650.661 2.82237 655.86 2.43487 659.661 1.50987 666.26 0.984868 674.26 0.359868 683.86 0.472368 686.661 1.54737 688.661 1.52237 691.661 1.07237 696.461 0.497368 } view { 1 2 8 -4823.26 -29.1615 20 92 -2191.3 -93.7895 5 80 -2104.78 -66.6539 41 56 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 } } 
+module { "compare" "compare3" "compare" 1 -2501 317 120 130 properties { "modname" "compare" } val { "b" 51.000000 } } 
+module { "logic" "logic1" "logic" 1 -2321 296 120 80 properties { "modname" "logic" "mop" 0 "nrin" 2 } val { } } 
+module { "math" "math1" "math" 1 -2082 369 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in0" 2.000000 } } 
+module { "timeline" "timeline10" "timeline" 3 -3089 -1027 448 204 properties { "modname" "timeline" "lop" 0 } val { } points { 1 0.00937445 0 } view { 0 3 8 11.8969 -1 11 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 } } 
+module { "timeline" "timeline11" "stars brightness" 3 -2322 -4358 1030 230 properties { "modname" "stars brightness" "lop" 0 } val { "a" 2.000000 } points { 47 0.00937445 0 26.9185 0 27.5548 0.0625 29.5548 0.125 44.6019 0.1 52.05 0.1375 54.0157 0.4625 60.6018 0.5625 62.6018 0.9 83.395 0.4375 86.257 0.325 90.2915 0.3 92.4639 0.3875 96.1536 0.4875 100.119 0.9375 107.843 1.075 119.292 0.9875 127.533 0.6375 136.947 0.4875 140.451 0.396779 141.253 0.307493 141.523 0.0396357 141.88 -0.138936 148.291 0 153.084 0.225 157.119 0.6625 167.602 0.5625 176.671 0.175 201.809 0.218207 211.951 0.414636 227.256 0.416434 259.256 0.467282 265.671 0.1625 398.878 0.85 399.774 0.1375 416.636 0.1375 427.153 0.125 427.636 0.425 464.257 0.4125 468.291 -0.0125 497.257 -0.05 500.326 0.35 506.74 -0.0375 595.256 -0.00729486 623.256 0.111349 683.256 0.280841 716.256 0.00965429 } view { 2 2 8 -13785.5 15 29 80 -12977.7 -23.2196 74 56 -681.512 -59.5696 2 59 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 } } 
+module { "timeline" "timeline12" "POS Z" 3 -2236 -3871 1026 215 properties { "modname" "POS Z" "lop" 0 } val { } points { 113 -0.0533237 0.925 53.278 1.54313 54.8957 2.18598 57.4251 5.90027 58.9986 8.75741 62.26 9.58295 69.0319 -1.08456 75.3848 -2.98456 80.2083 -2.58456 87.2672 1.46544 88.7312 8.98295 89.3082 12.858 90.3466 19.608 91.7697 23.733 95.462 37.483 100.128 31.033 104.578 22.533 109.329 7.53295 116.879 1.03295 138.879 0.0329514 140.379 -3.96705 141.194 -17.167 141.658 -45.917 141.684 -17.9502 141.711 2.54976 141.759 3.04976 144.716 3.04977 146.997 2.54977 153.725 1.12119 158.582 7.62119 164.011 7.62119 169.082 2.62119 175.276 8.04977 176.918 9.28884 186.938 10.0498 199.188 6.04975 203.563 3.54975 204.402 11.6473 205.352 16.433 210.102 16.0044 211.552 14.433 216.602 13.5758 220.729 11.8888 226.604 10.0888 231.299 24.3048 234.229 34.2888 239.405 35.1229 242.589 32.032 245.484 27.7593 249.799 25.6684 258.979 32.8888 262.589 20.3048 263.161 17.5888 263.562 22.3957 264.668 22.8502 264.878 18.2138 265.273 13.3048 266.326 11.3048 267.405 12.3048 268.194 17.2138 273.229 17.0888 275.313 14.8498 278.845 13.0498 283.907 15.9317 307.479 2.28884 336.186 4.03203 339.854 11.6888 345.729 22.2888 352.729 30.8888 362.479 27.8888 378.794 24.5684 385.371 14.7684 388.602 10.5684 389.409 8.36839 390.717 1.16839 391.755 -0.431609 395.063 0.768391 399.525 3.76839 413.979 3.48884 431.063 3.24976 439.313 -6.75024 444.484 1.84976 449.486 3.16839 452.555 10.6498 457.178 3.96839 462.178 6.96839 481.752 6.26839 486.902 5.79013 496.102 4.00442 507.802 3.14727 532.627 3.24976 538.198 9.04976 543.269 15.4498 556.769 20.0498 580.198 27.4498 604.984 25.4498 612.412 20.2498 622.984 9.04976 637.252 2.00441 644.627 4.64976 647.459 4.20441 651.198 5.24976 658.055 11.4498 668.832 9.35789 671.201 3.40441 673.198 4.64976 678.412 7.24976 684.555 10.6498 694.912 13.2498 697.177 19.4293 702.073 91.4293 704.487 135.929 706.59 238.429 } view { 2 3 8 -9366.91 -21.6038 68 14 -22610.1 -10.0221 35 5 -18814.1 -104.01 29 14 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)28" "PRESET 0-9" 1 -642 -552 120 55 properties { "modname" "PRESET 0-9" } val { } } 
+module { "timeline" "timeline13" "preset  bass" 3 -2102 -433 1081 204 properties { "modname" "preset  bass" "lop" 0 } val { } points { 62 0.00937445 0 38.1257 0.0653413 43.853 0.418282 43.854 6.00652 46.4894 6.00652 51.4439 5.53005 51.5575 3.78005 59.853 4.00652 69.0348 4.12416 69.2166 0.947694 78.5803 2.00652 79.4894 4.06534 91.053 1.88887 140.944 1.35946 141.551 1.04286 148.005 7.9 155.944 7.94769 155.945 5.06534 173.308 5.06534 175.762 0.947694 176.551 2.4 259.278 2.47143 262.915 1.47143 268.096 5.11429 303.187 1.4 303.188 3.9 329.278 3.9 347.096 4.9 355.824 5.04286 356.005 7.97143 361.187 8.11429 361.188 3.68571 398.096 3.68571 399.461 5.47143 426.915 5.47143 426.916 6.11429 434.823 6.18571 434.824 4.11429 448.005 3.97143 451.824 3.68571 462.096 3.75714 467.187 3.18571 467.188 7.32857 486.005 7.4 486.551 4.04286 520.915 4.04286 520.916 2.04286 536.733 2.04286 536.734 0.971428 561.915 0.542857 569.369 0.685714 589.278 0.757143 592.187 0.471428 607.551 0.471428 619.915 0.4 620.005 1.97143 626.824 2.32857 633.096 2.9 675.642 2.82857 675.643 1.82857 687.096 1.75714 693.096 1.25714 } view { 0 1 8 -1898.53 -73.6009 44 20 -6900.06 -58.6 11 14 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)29" "PRESET 0-9" 1 -770 -1724 120 55 properties { "modname" "PRESET 0-9" } val { } } 
+module { "timeline" "timeline14" "preset lead" 3 -2088 -211 1067 204 properties { "modname" "preset lead" "lop" 0 } val { } points { 104 0.00937445 0 13.1912 0.0449501 14.9185 2.13757 17.6457 2.29495 17.6467 0.0449501 23.1003 0.64495 24.9185 0.44495 29.6457 0.19495 29.9829 1.58489 33.6934 1.29918 34.0618 1.72775 35.1003 1.43066 35.1013 0.230664 43.4639 0.459236 49.6457 0.497815 51.2986 0.442035 51.3775 0.656321 53.746 0.799178 54.0094 4.13757 59.7356 4.15968 59.7366 8.95575 68.7431 8.98321 68.7441 4.94203 73.1933 5.22775 73.2431 6.72775 79.4038 6.87061 79.4048 5.58489 84.6538 5.75632 89.0288 4.68489 96.373 1.77394 102.555 1.72564 108.737 1.66314 114.464 1.44439 117.646 1.68303 121.282 1.38189 125.737 1.4103 126.555 1.63189 129.191 1.75689 131.009 1.47564 132.464 1.19439 136.009 0.773937 138.191 0.410301 139.386 0.218506 139.656 5.14454 141.799 6.05363 156.226 6.10086 156.227 1.98321 174.904 2.18489 178.243 2.21851 178.442 9.05363 228.654 9.18489 228.655 8.04204 263.227 8.05363 265.727 5.96272 295.584 6.7809 304.799 6.7809 305.584 8.32635 322.941 8.41726 322.942 4.68999 360.37 4.68999 360.513 7.32635 373.441 7.05363 381.156 7.50817 385.156 7.23545 388.37 7.14454 390.37 3.41726 398.941 3.23545 398.942 6.05363 413.441 6.05363 421.87 5.41726 422.87 4.96272 426.299 5.05363 426.3 2.87181 451.156 3.05363 451.227 4.05363 467.013 3.96272 467.084 7.05363 475.799 6.41726 477.156 5.14454 486.584 5.14454 486.799 2.05363 493.727 1.96272 498.727 2.14454 502.441 3.05363 531.084 3.05363 537.87 2.05363 544.941 2.14454 544.942 1.41726 580.941 1.87181 581.084 5.23545 591.227 5.41726 591.37 4.05363 605.156 4.14454 612.869 4.68999 612.87 8.05363 630.513 8.05363 635.656 9.23545 644.013 9.14454 644.014 7.32635 652.441 7.23545 675.941 7.32635 676.799 8.23545 682.513 8.41726 689.656 8.96272 } view { 1 1 8 -1419.35 -58.1885 38 14 -5655.18 -50.5899 14 11 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 } } 
+module { "timeline" "timeline15" "modsize" 3 -2237 -3376 1074 233 properties { "modname" "modsize" "lop" 0 } val { } points { 25 -0.990627 5.93214 5.91846 5.9355 10.1912 9.99433 14.9185 10.4649 15.0415 12.1013 20.0415 11.4649 47.5548 6.75903 53.1003 6.70021 56.0094 2.40609 59.1591 2.73764 60.6885 20.374 68.4532 20.5558 70.4532 7.01036 91.8062 7.01036 92.8062 4.374 125.336 5.64673 141.512 5.82855 141.576 0.046727 143.862 0.046727 144.462 1.44673 148.205 0.046727 148.548 18.4467 155.983 11.5558 157.336 9.374 267.417 6.00027 } view { 0 2 8 -4672.17 -24.2336 35 5 -4293.08 -25.003 17 11 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 } } 
+module { "timeline" "timeline16" "rot X" 3 -2234 -3627 1022 219 properties { "modname" "rot X" "lop" 0 } val { "sm" 3.000000 } points { 48 -0.203412 -0.00235157 52.6754 0.00548543 54.3764 0.0200943 58.4139 0.143045 60.6027 0.302367 64.6335 0.238143 68.8244 0.0530316 79.2983 0.0105212 91.8201 0.0877744 98.6975 0.384074 107.152 0.378669 114.516 0.0597499 121.152 -0.0105204 148.948 0.0178019 170.683 -0.0483725 177.879 -0.188899 184.879 -0.118629 192.686 -0.0650203 203.061 -0.151061 204.167 -0.22269 205.052 -0.370979 206.436 -0.435617 216.663 -0.497988 243.425 -0.507818 286.698 -0.432142 319.698 -0.00511499 370.561 0.088826 381.061 0.00640845 391.061 0.0393755 416.163 0.112539 433.561 0.0723425 457.561 -0.202383 483.561 -0.0760091 498.561 0.127288 528.561 0.0613535 539.058 -0.224843 545.306 -0.350619 576.058 -0.401314 605.806 -0.413777 614.306 -0.31904 627.183 -0.115599 634.058 0.0440646 644.663 -0.114346 651.591 -0.222454 659.306 -0.249481 661.806 -0.262994 667.163 -0.695427 671.591 -0.911643 } view { 2 3 8 -4418.46 24.7563 8 119 -6651.34 176.567 26 263 -8584.28 -18.5384 14 74 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 } } 
+module { "follower" "follower1" "follower" 1 -1182 -3828 120 105 properties { "modname" "follower" } val { "up" 0.010000 "dn" 0.010000 } } 
+module { "follower" "follower2" "follower" 1 -1189 -3569 120 105 properties { "modname" "follower" } val { "up" 0.006000 "dn" 0.006000 } } 
+module { "timeline" "timeline17" "NOTES brightness" 3 -2316 -4116 1022 216 properties { "modname" "NOTES brightness" "lop" 0 } val { "a" 0.700000 } points { 31 -0.0188283 -0.026461 123.498 -0.013474 125.464 0.155357 132.602 0.259253 138.257 0.389123 141.326 0.441071 141.567 -0.0654221 174.154 -0.0586538 185.602 0.506007 286.859 0.418269 292.624 0.202885 298.742 0.125962 307.801 -0.0740385 378.86 -0.0894231 395.33 0.3875 398.624 0.7875 399.33 0.00288462 425.977 -0.0586538 427.33 0.156731 444.389 0.741346 466.33 0.5875 468.036 -0.0278846 536.565 -0.0278846 542.859 0.295192 548.801 -0.0278846 561.565 -0.0278846 591.683 -0.0125 619.742 0.402885 656.154 0.3875 664.506 0.310577 671.33 -0.0125 } view { 1 2 8 -5882.45 -8.9625 29 77 -11102.6 -19.1875 17 65 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)30" "radius stars" 1 -735 -3030 120 55 properties { "modname" "radius stars" } val { } } 
+module { "timeline" "timeline18" "stars radius" 3 -1259 -4342 897 207 properties { "modname" "stars radius" "lop" 0 } val { } points { 10 -1.37611 9.95536 60.1239 1.83036 76.1239 5.23036 92.1239 1.63036 119.624 32.6304 297.624 32.8304 344.624 32.6304 374.624 -2.16964 426.715 -1.56964 428.124 56.6304 } view { 1 2 8 -3693.45 -43.9625 29 77 -18365.5 -220.152 44 5 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 } } 
+module { "timeline" "timeline19" "POS Y" 3 -1030 -3867 967 204 properties { "modname" "POS Y" "lop" 0 } val { } points { 72 -0.0226685 0.00261741 87.023 -2.01635 89.523 -11.5163 95.173 -16.5163 105.923 -10.0163 108.123 -3.51635 110.823 -1.01635 149.45 -2.21635 155.996 -9.21635 163.359 -13.6163 169.429 -19.985 175.907 -35.785 181.098 -37.185 182.966 -32.585 184.65 -25.785 188.44 -18.785 193.973 -16.5163 200.321 -14.0163 204.147 -26.0163 205.342 -16.385 207.603 -6.985 212.603 -4.785 217.124 -1.985 225.176 -0.17373 230.676 0.22627 239.016 1.48365 279.814 -0.616348 298.086 -7.21635 313.776 -9.57373 327.926 -5.77373 340.945 -4.76464 360.773 -1.01635 368.029 -11.0215 373.591 -13.5215 385.029 -9.0215 388.641 -5.47593 390.902 -0.547356 394.376 -0.37373 401.966 -1.69797 418.51 -0.580322 433.987 -0.047357 440.943 -5.54736 444.77 -7.04736 448.667 -9.66164 451.758 -14.6616 456.303 -14.0616 465.303 -13.0616 484.248 -9.26164 492.291 -5.38664 500.639 -0.386642 527.465 -3.38664 533.291 -11.3866 538.596 -13.3866 544.335 -9.76164 555.552 -11.5116 576.77 -12.3866 590.639 -16.2616 597.161 -16.5116 602.03 -14.2616 619.758 -16.2616 628.161 -9.13664 634.94 -0.461639 642.303 -6.26164 649.212 -17.2616 660.576 -28.2616 664.212 -2.76164 672.394 -3.46164 684.857 -10.2616 688.303 -12.8616 699.212 -22.2616 709.303 -126.762 720.303 -135.762 } view { 1 3 8 -4618.86 55.925 23 5 -7143.33 41.5233 11 2 -1830.55 11.8655 5 17 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 } } 
+module { "follower" "follower3" "follower" 1 67 -3690 120 105 properties { "modname" "follower" } val { "up" 0.010000 "dn" 0.010000 } } 
+module { "timeline" "timeline20" "notes per z" 3 -2233 -3101 1073 218 properties { "modname" "notes per z" "lop" 0 } val { } points { 10 0.00937271 6.99107 161.464 6.99107 171.555 5.99107 178.827 1.5625 262.955 2.2665 267.83 5.48389 381.33 5.57085 402.705 3.83172 637.08 3.83174 655.08 2.39696 } view { 1 2 8 -1889.1 -2.875 11 14 -4639.64 -88.13 8 23 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 } } 
+module { "container" "container4" "SEQ VIEW " 2 705 -1995 120 305 properties { "modname" "SEQ VIEW " }  c0n { 11 0 0 "act" "active" 0 0 "in1" "NOTE" 0 0 "in2" "GATE" 0 0 "in3" "MAINSYNC" 0 0 "in5" "decay" 0 0 "in7" "X" 0 0 "in8" "Y" 0 0 "in9" "Z" 0 0 "in16" "bright" 0 0 "in17" "saturation" 0 0 "in11" "rot x"  } val { "act" 0.000000 } 
+container { 4 650 -1111 1.020000 0 
+module { "scope 3d" "scope 3d" "scope 3d" 1 1258 -137 120 484 properties { "modname" "scope 3d" "camera" 1 "w" 512 "h" 512 "imode" 0 "serverstr" "" "clientstr" "scopeliszt" "sendbuf" 0 } val { "zd" 2.000000 "per" 0.000000 "r" 0.000000 "g" 0.000000 "b" 0.000000 "br" 0.000000 "opc" 1.000000 "f" 0.004000 "smt" 1.000000 } } 
+module { "counter (sample)" "counter (sample)" "counter (sample)" 1 -830 249 120 155 properties { "modname" "counter (sample)" } val { } } 
+module { "HSB 2 RGB" "HSB 2 RGB" "HSB 2 RGB" 1 920 135 120 105 properties { "modname" "HSB 2 RGB" } val { "s" 0.230000 "b" 0.000000 } } 
+module { "delay (sample)" "delay (sample)" "delay (sample)" 1 -1033 638 120 80 properties { "modname" "delay (sample)" "nrsam" 44100 } val { "sam" 0.000000 } } 
+module { "select" "select4" "multiplex in" 1 -49 471 120 255 properties { "modname" "multiplex in" "nrin" 8 } val { } } 
+module { "math" "math35" "math" 1 922 502 120 105 properties { "modname" "math" "mop" 2 "nrin" 3 } val { "in0" 0.050000 } } 
+module { "container input" "in1" "container input" "NOTE" 1 -1189 755 80 55 properties { "modname" "NOTE" } val { } } 
+module { "container input" "in2" "container input1" "GATE" 1 -1189 639 80 55 properties { "modname" "GATE" } val { } } 
+module { "container input" "in3" "container input2" "MAINSYNC" 1 -983 -116 80 55 properties { "modname" "MAINSYNC" } val { } } 
+module { "container input" "in5" "container input4" "decay" 1 -1215 1309 80 55 properties { "modname" "decay" } val { } } 
+module { "container input" "in7" "container input6" "X" 1 1040 -371 80 55 properties { "modname" "X" } val { } } 
+module { "container input" "in8" "container input7" "Y" 1 1040 -306 80 55 properties { "modname" "Y" } val { } } 
+module { "container input" "in9" "container input8" "Z" 1 1040 -241 80 55 properties { "modname" "Z" } val { } } 
+module { "container input" "in16" "container input15" "bright" 1 664 468 80 55 properties { "modname" "bright" } val { } } 
+module { "container input" "in17" "container input16" "saturation" 1 663 382 80 55 properties { "modname" "saturation" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)" "nr voices" 1 -1062 291 120 55 properties { "modname" "nr voices" } val { "in" 8.000000 } } 
+module { "delay" "delay" "delay" 1 -392 497 120 155 properties { "modname" "delay" "nrsec" 23.000000 "qual" 1 } val { "sec" 0.000000 } } 
+module { "s & h (poly)" "s & h (poly)" "s & h (poly)" 1 -765 687 120 255 properties { "modname" "s & h (poly)" "nrout" 8 } val { "nrv" 0.000000 } } 
+module { "math" "math4" "math" 1 -1033 752 120 80 properties { "modname" "math" "mop" 3 "nrin" 2 } val { "in1" -8.000000 } } 
+module { "delay" "delay1" "delay" 1 -390 666 120 155 properties { "modname" "delay" "nrsec" 23.000000 "qual" 1 } val { "sec" 0.000000 } } 
+module { "delay" "delay2" "delay" 1 -388 832 120 155 properties { "modname" "delay" "nrsec" 23.000000 "qual" 1 } val { "sec" 0.000000 } } 
+module { "delay" "delay3" "delay" 1 -386 998 120 155 properties { "modname" "delay" "nrsec" 23.000000 "qual" 1 } val { "sec" 0.000000 } } 
+module { "rotate" "rotate" "rotate" 1 928 -24 120 105 properties { "modname" "rotate" } val { "y" 17.400000 "z" 0.750000 } } 
+module { "math" "math" "math" 1 -387 310 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 23.000000 } } 
+module { "start gate" "start gate" "start gate" 1 -1033 987 84 55 properties { "modname" "start gate" } val { } } 
+module { "envelope AD (multi)" "envelope AD (multi)" "envelope AD (multi)" 1 59 1244 120 505 properties { "modname" "envelope AD (multi)" "nrout" 8 } val { "a" 0.010000 "d" 0.000000 } } 
+module { "on change" "on change" "on change" 1 -120 1285 120 55 properties { "modname" "on change" } val { } } 
+module { "on change" "on change1" "on change" 1 -118 1355 120 55 properties { "modname" "on change" } val { } } 
+module { "delay" "delay4" "delay" 1 251 1008 120 155 properties { "modname" "delay" "nrsec" 23.000000 "qual" 1 } val { "sec" 0.000000 } } 
+module { "select" "select" "multiplex in" 1 451 1187 120 255 properties { "modname" "multiplex in" "nrin" 8 } val { } } 
+module { "delay" "delay5" "delay" 1 253 1169 120 155 properties { "modname" "delay" "nrsec" 23.000000 "qual" 1 } val { "sec" 0.000000 } } 
+module { "delay" "delay6" "delay" 1 254 1334 120 155 properties { "modname" "delay" "nrsec" 23.000000 "qual" 1 } val { "sec" 0.000000 } } 
+module { "delay" "delay7" "delay" 1 254 1501 120 155 properties { "modname" "delay" "nrsec" 23.000000 "qual" 1 } val { "sec" 0.000000 } } 
+module { "on change" "on change2" "on change" 1 -113 1428 120 55 properties { "modname" "on change" } val { } } 
+module { "on change" "on change3" "on change" 1 -111 1498 120 55 properties { "modname" "on change" } val { } } 
+module { "container input" "in11" "container input5" "rot x" 1 914 -239 80 55 properties { "modname" "rot x" } val { } } 
+module { "rotate" "rotate1" "rotate" 1 1079 -67 120 105 properties { "modname" "rotate" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)1" "delay (1 sample)" 1 1090 83 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)2" "delay (1 sample)" 1 1092 145 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)3" "delay (1 sample)" 1 1094 204 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)4" "delay (1 sample)" 1 1073 503 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)5" "delay (1 sample)" 1 1077 -136 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "math" "math1" "math" 1 609 200 120 80 properties { "modname" "math" "mop" 1 "nrin" 2 } val { "in0" 1.000000 } } 
+module { "math" "math2" "math" 1 922 256 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { } } 
+module { "delay" "delay8" "delay" 1 -385 1197 120 155 properties { "modname" "delay" "nrsec" 23.000000 "qual" 1 } val { "sec" 0.000000 } } 
+module { "delay" "delay9" "delay" 1 -383 1366 120 155 properties { "modname" "delay" "nrsec" 23.000000 "qual" 1 } val { "sec" 0.000000 } } 
+module { "delay" "delay10" "delay" 1 -381 1532 120 155 properties { "modname" "delay" "nrsec" 23.000000 "qual" 1 } val { "sec" 0.000000 } } 
+module { "delay" "delay11" "delay" 1 -379 1698 120 155 properties { "modname" "delay" "nrsec" 23.000000 "qual" 1 } val { "sec" 0.000000 } } 
+module { "on change" "on change4" "on change" 1 -110 1601 120 55 properties { "modname" "on change" } val { } } 
+module { "on change" "on change5" "on change" 1 -108 1671 120 55 properties { "modname" "on change" } val { } } 
+module { "on change" "on change6" "on change" 1 -103 1744 120 55 properties { "modname" "on change" } val { } } 
+module { "on change" "on change7" "on change" 1 -101 1814 120 55 properties { "modname" "on change" } val { } } 
+module { "delay" "delay12" "delay" 1 259 1694 120 155 properties { "modname" "delay" "nrsec" 23.000000 "qual" 1 } val { "sec" 0.000000 } } 
+module { "delay" "delay13" "delay" 1 261 1855 120 155 properties { "modname" "delay" "nrsec" 23.000000 "qual" 1 } val { "sec" 0.000000 } } 
+module { "delay" "delay14" "delay" 1 262 2020 120 155 properties { "modname" "delay" "nrsec" 23.000000 "qual" 1 } val { "sec" 0.000000 } } 
+module { "delay" "delay15" "delay" 1 262 2187 120 155 properties { "modname" "delay" "nrsec" 23.000000 "qual" 1 } val { "sec" 0.000000 } } 
+module { "math" "math3" "math" 1 923 352 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in0" 1.000000 } } 
+module { "delay (sample)" "delay (sample)1" "delay (sample)" 1 1094 336 120 80 properties { "modname" "delay (sample)" "nrsam" 44100 } val { "sam" 2.000000 } } 
+module { "counter (sample)" "counter (sample)1" "counter (sample)" 1 164 49 120 155 properties { "modname" "counter (sample)" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)6" "NR SAMPLES" 1 -12 142 120 55 properties { "modname" "NR SAMPLES" } val { } } 
+module { "math" "math5" "math" 1 312 89 120 80 properties { "modname" "math" "mop" 3 "nrin" 2 } val { } } 
+module { "sample rate" "sample rate" "sample rate" 1 -214 17 84 55 properties { "modname" "sample rate" } val { } } 
+module { "math" "math6" "math" 1 -56 40 120 80 properties { "modname" "math" "mop" 3 "nrin" 2 } val { "in1" 30.000000 } } 
+module { "delay (sample)" "delay (sample)2" "delay (sample)" 1 -1023 1305 120 80 properties { "modname" "delay (sample)" "nrsam" 44100 } val { "sam" 2.000000 } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)7" "delay (1 sample)" 1 929 -107 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+connections { 
+"delay1 (1 sample)1" "out" "scope 3d" "r" 
+"delay1 (1 sample)2" "out" "scope 3d" "g" 
+"delay1 (1 sample)3" "out" "scope 3d" "b" 
+"container input1" "out" "delay (sample)" "in" 
+"container input6" "out" "scope 3d" "x" 
+"container input7" "out" "scope 3d" "y" 
+"container input8" "out" "scope 3d" "z" 
+"container input" "out" "math4" "in0" 
+"container input16" "out" "HSB 2 RGB" "s" 
+"counter (sample)" "o" "select4" "sel" 
+"delay1 (1 sample)" "out" "s & h (poly)" "nrv" 
+"math4" "out" "s & h (poly)" "in" 
+"delay (sample)" "out" "s & h (poly)" "g" 
+"s & h (poly)" "out0" "delay" "in" 
+"delay" "out" "select4" "in0" 
+"s & h (poly)" "out1" "delay1" "in" 
+"s & h (poly)" "out2" "delay2" "in" 
+"s & h (poly)" "out3" "delay3" "in" 
+"delay1" "out" "select4" "in1" 
+"delay2" "out" "select4" "in2" 
+"delay3" "out" "select4" "in3" 
+"rotate1" "outx" "scope 3d" "y" 
+"select4" "out" "rotate" "y" 
+"math5" "out" "rotate" "z" 
+"math5" "out" "math" "in0" 
+"math" "out" "delay" "sec" 
+"math" "out" "delay1" "sec" 
+"math" "out" "delay2" "sec" 
+"math" "out" "delay3" "sec" 
+"start gate" "o" "delay" "rst" 
+"start gate" "o" "delay1" "rst" 
+"start gate" "o" "delay2" "rst" 
+"start gate" "o" "delay3" "rst" 
+"start gate" "o" "s & h (poly)" "rst" 
+"s & h (poly)" "out0" "on change" "i" 
+"on change" "o" "envelope AD (multi)" "rst0" 
+"s & h (poly)" "out1" "on change1" "i" 
+"on change1" "o" "envelope AD (multi)" "rst1" 
+"envelope AD (multi)" "out0" "delay4" "in" 
+"delay4" "out" "select" "in0" 
+"counter (sample)" "o" "select" "sel" 
+"select" "out" "HSB 2 RGB" "b" 
+"math" "out" "delay4" "sec" 
+"delay (sample)2" "out" "envelope AD (multi)" "d" 
+"s & h (poly)" "out2" "on change2" "i" 
+"s & h (poly)" "out3" "on change3" "i" 
+"on change2" "o" "envelope AD (multi)" "rst2" 
+"on change3" "o" "envelope AD (multi)" "rst3" 
+"envelope AD (multi)" "out1" "delay5" "in" 
+"envelope AD (multi)" "out2" "delay6" "in" 
+"envelope AD (multi)" "out3" "delay7" "in" 
+"delay5" "out" "select" "in1" 
+"delay6" "out" "select" "in2" 
+"delay7" "out" "select" "in3" 
+"math" "out" "delay5" "sec" 
+"math" "out" "delay6" "sec" 
+"math" "out" "delay7" "sec" 
+"start gate" "o" "delay4" "rst" 
+"start gate" "o" "delay5" "rst" 
+"start gate" "o" "delay6" "rst" 
+"start gate" "o" "delay7" "rst" 
+"select" "out" "math35" "in1" 
+"math35" "out" "delay1 (1 sample)4" "in" 
+"select4" "out" "HSB 2 RGB" "h" 
+"rotate1" "outy" "scope 3d" "z" 
+"rotate" "outy" "rotate1" "x" 
+"container input5" "out" "rotate1" "z" 
+"HSB 2 RGB" "bl" "delay1 (1 sample)3" "in" 
+"HSB 2 RGB" "g" "delay1 (1 sample)2" "in" 
+"HSB 2 RGB" "r" "delay1 (1 sample)1" "in" 
+"rotate" "outx" "delay1 (1 sample)5" "in" 
+"delay1 (1 sample)5" "out" "scope 3d" "x" 
+"math5" "out" "math1" "in1" 
+"math1" "out" "math2" "in0" 
+"select" "out" "math35" "in2" 
+"s & h (poly)" "out4" "delay8" "in" 
+"s & h (poly)" "out5" "delay9" "in" 
+"s & h (poly)" "out6" "delay10" "in" 
+"s & h (poly)" "out7" "delay11" "in" 
+"delay8" "out" "select4" "in4" 
+"delay9" "out" "select4" "in5" 
+"delay10" "out" "select4" "in6" 
+"delay11" "out" "select4" "in7" 
+"start gate" "o" "delay8" "rst" 
+"start gate" "o" "delay9" "rst" 
+"start gate" "o" "delay10" "rst" 
+"start gate" "o" "delay11" "rst" 
+"s & h (poly)" "out4" "on change4" "i" 
+"s & h (poly)" "out5" "on change5" "i" 
+"s & h (poly)" "out6" "on change6" "i" 
+"s & h (poly)" "out7" "on change7" "i" 
+"on change4" "o" "envelope AD (multi)" "rst4" 
+"on change5" "o" "envelope AD (multi)" "rst5" 
+"on change6" "o" "envelope AD (multi)" "rst6" 
+"on change7" "o" "envelope AD (multi)" "rst7" 
+"envelope AD (multi)" "out4" "delay12" "in" 
+"envelope AD (multi)" "out5" "delay13" "in" 
+"envelope AD (multi)" "out6" "delay14" "in" 
+"envelope AD (multi)" "out7" "delay15" "in" 
+"delay12" "out" "select" "in4" 
+"delay13" "out" "select" "in5" 
+"delay14" "out" "select" "in6" 
+"delay15" "out" "select" "in7" 
+"math" "out" "delay12" "sec" 
+"math" "out" "delay13" "sec" 
+"math" "out" "delay14" "sec" 
+"math" "out" "delay15" "sec" 
+"start gate" "o" "delay12" "rst" 
+"start gate" "o" "delay13" "rst" 
+"start gate" "o" "delay14" "rst" 
+"start gate" "o" "delay15" "rst" 
+"math" "out" "delay8" "sec" 
+"math" "out" "delay9" "sec" 
+"math" "out" "delay10" "sec" 
+"math" "out" "delay11" "sec" 
+"container input15" "out" "math2" "in1" 
+"math2" "out" "delay (sample)1" "in" 
+"delay (sample)1" "out" "scope 3d" "br" 
+"delay1 (1 sample)6" "out" "counter (sample)1" "max" 
+"counter (sample)1" "o" "math5" "in0" 
+"delay1 (1 sample)6" "out" "math5" "in1" 
+"sample rate" "o" "math6" "in0" 
+"math6" "out" "delay1 (1 sample)6" "in" 
+"container input4" "out" "delay (sample)2" "in" 
+"delay1 (1 sample)6" "out" "scope 3d" "subsam" 
+"delay1 (1 sample)" "out" "counter (sample)" "max" 
+"select" "out" "delay1 (1 sample)7" "in" 
+"delay1 (1 sample)7" "out" "rotate1" "y" 
+} } 
+} 
+module { "midi merger" "midi merger" "midi merger" 1 -663 646 120 155 properties { "modname" "midi merger" "nrin" 2 } val { } } 
+module { "timeline" "timeline21" "rot z start" 3 -3263 -3349 942 229 properties { "modname" "rot z start" "lop" 0 } val { } points { 16 0.00937445 0 181.009 -0.0100013 189.134 0.0885903 196.634 0.257604 206.259 0.328027 220.759 0.102675 225.884 0.00408323 307.259 0.0181677 315.759 0.0604877 329.384 0.135959 343.884 0.0463368 354.134 -0.0857387 366.134 -0.0338519 376.384 0.0699217 384.884 0.0227518 389.759 0.00388392 } view { 1 3 8 11.8969 -1 11 80 -2428.07 9.17661 8 212 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 } } 
+module { "timeline" "timeline22" "SEQ brightness" 3 -2310 -4610 1016 208 properties { "modname" "SEQ brightness" "lop" 0 } val { } points { 31 0.463919 0.225 1.2821 -0.0375 58.6457 -0.025 60.1912 0.1125 71.5548 0.5375 118.918 0.3875 131.828 0.125 145.191 -0.025 218.555 -0.0375 224.1 0.0875 262.191 0.825 343.191 0.6375 353.373 0.1875 356.009 0.025 389.373 0.0625 390.646 0.3125 392.646 0.3375 394.646 0.5875 397.282 0.5625 400.555 0.7375 427.191 0.525 427.828 0.0375 439.1 0.05 454.191 0.2625 467.282 0.7625 522.464 0.7875 560.628 0.747115 636.327 0.7625 674.827 0.5125 685.327 0.275 706.827 -0.0125 } view { 0 2 8 -981.655 -70 2 80 0 0 320 80 -731.256 -31.5625 2 65 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)31" "bright SEQ" 1 -735 -2961 120 55 properties { "modname" "bright SEQ" } val { } } 
+module { "merger" "merger" "merger" 1 471 -1695 120 205 properties { "modname" "merger" "nrin" 2 "nrpar" 3 } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)32" "notes per rotate" 1 -770 -1889 120 55 properties { "modname" "notes per rotate" } val { "in" 12.000000 } } 
+module { "timeline" "timeline23" "notes / rotate" 3 -1021 -3603 957 214 properties { "modname" "notes / rotate" "lop" 0 } val { "sm" 3.000000 } points { 4 0.00937445 0 387.162 -0.00288696 439.162 43.9543 471.233 20.5542 } view { 1 2 8 11.8969 -1 11 80 -6483.26 -32.1085 14 2 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 } } 
+module { "timeline" "timeline24" "notes / radius" 3 -1015 -3377 946 206 properties { "modname" "notes / radius" "lop" 0 } val { "sm" 3.000000 } points { 9 -0.990627 5.00288 400.284 4.90426 406.166 6.60426 413.166 8.50426 424.162 4.95426 439.813 2.80426 450.401 2.75426 454.46 4.50426 467.931 5.00426 } view { 1 2 8 135.897 -70.075 11 26 -6530.82 -90.0851 17 20 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)33" "VPRESET" 1 -762 -2537 120 55 properties { "modname" "VPRESET" } val { } } 
+module { "timeline" "timeline25" "VPRESET" 3 -29 -3517 1006 204 properties { "modname" "VPRESET" "lop" 0 } val { "sm" 3.000000 } points { 95 -1.26336 0.464423 11.0094 -0.035577 14.2821 0.0028845 15.4639 1.00288 24.4639 0.349038 27.373 0.0028845 53.6457 0.0028845 54.7366 1.04135 58.1912 0.233654 60.2821 0.041346 61.5548 1.8875 72.2821 1.92596 73.5548 0.0028845 86.2821 0.0028845 87.5548 1.07981 89.7366 1.07981 91.0094 0.0028845 136.918 0.0423855 138.009 1.00288 141.464 1.04135 142.282 0.028872 159.737 0.0423855 162.828 0.988331 176.464 0.988331 185.009 0.461304 200.555 0.447791 206.373 0.055899 212.555 0.447791 223.918 0.0153585 229.464 0.0423855 239.1 1.00185 245.737 1.01536 247.373 0.36671 261.918 0.204548 264.191 0.961304 265.282 0.00184497 267.555 0.00184497 268.282 0.974818 269.464 0.974818 271.282 0.00184497 286.1 0.028872 288.1 1.82617 293.373 1.81266 294.1 0.13698 302.373 0.164007 308.1 1.00185 319.464 1.00185 334.555 0.40725 343.009 0.285629 353.646 0.150494 360.828 0.0153585 366.373 0.0153585 375.1 0.245088 387.646 0.555899 395.009 1.52887 398.555 1.51536 399.009 0.258602 411.009 0.218061 411.282 0.555899 421.464 0.528872 425.828 1.5559 426.918 1.98833 429.191 2.00185 434.373 1.69103 435.282 0.731575 444.828 0.326169 449.918 0.245088 452.009 1.48833 468.191 0.0423856 476.282 0.0558991 477.737 0.974818 497.737 0.974818 503.828 2.04239 506.373 2.01536 509.282 1.00185 520.646 1.24509 528.555 0.812656 534.555 1.00185 542.191 1.2586 544.737 1.2586 545.373 1.97482 556.191 1.94779 573.1 1.01536 579.918 1.00185 588.646 0.988332 593.918 0.745088 605.555 0.569413 614.282 1.31266 619.191 1.9613 620.1 0.0964397 627.646 1.00185 652.646 1.98833 667.464 1.9613 670.737 1.19103 675.738 1.01536 } view { 0 2 8 -6951.1 -138.137 11 74 -7584.82 -86.0851 17 20 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 } } 
+module { "timeline" "timeline26" "saturation" 3 -1217 -4600 1146 217 properties { "modname" "saturation" "lop" 0 } val { } points { 95 0.191191 0.0375 59.373 0.05 62.1283 0.192935 70.5829 0.0571881 91.6738 0.0526632 102.401 0.152211 106.674 0.102437 120.401 0.0752876 128.401 0.0707627 134.464 0.1 138.646 0.1875 141.373 0.2875 143.646 0.9875 144.555 0.1375 149.646 0.1375 151.583 0.192935 152.555 0.1125 154.646 0.15 156.282 0.225 161.947 0.16126 163.464 0.1375 173.555 0.05 178.31 0.0436134 178.947 0.0798125 190.373 0.0875 208.464 0.0875 213.401 0.138636 216.856 0.0933872 223.219 0.0752876 229.918 0.05 252.737 0.0625 271.555 0.125 283.373 0.0625 303.953 0.0631579 307.203 0.120574 319.578 0.0918661 324.953 0.0679426 333.856 0.0526632 341.583 0.143161 350.492 0.0933872 356.703 0.0870814 366.953 0.0918661 370.828 0.149282 387.856 0.0662379 398.219 0.111487 416.31 0.0752876 435.703 0.0344498 441.31 0.0888623 445.583 0.106962 451.625 0.0268057 451.712 0.382476 452.308 0.372065 452.962 0.0814246 453.7 0.0628882 453.837 0.38763 454.347 0.386843 454.737 0.0835067 455.687 0.0835067 455.837 0.377321 456.193 0.381917 456.762 0.0680428 457.6 0.0731975 457.825 0.336084 458.039 0.32773 458.5 0.0525789 459.7 0.0525789 459.912 0.480414 460.347 0.308026 460.348 0.0715724 461.687 0.0628882 461.825 0.501033 463.154 0.0715724 473.163 0.0807426 503.592 0.0275511 509.674 0.0752876 525.856 0.120536 541.377 0.192445 544.52 0.176487 546.092 0.0807426 568.234 0.139253 571.401 0.297007 580.02 0.399892 582.449 0.293509 585.663 0.240317 592.806 0.0967001 609.02 0.123296 620.092 0.0754235 638.02 0.0647852 654.765 0.0979121 658.947 0.441803 671.592 0.0647852 674.306 0.165849 678.377 0.171168 682.806 0.123296 696.52 0.0435086 } view { 1 2 8 -8891.28 -54.1796 14 188 -6806.41 -48.6386 11 221 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 0 0 320 80 } } 
+connections { 
+"oscillator" "osqr" "midi file" "g" 
+"gate repeat2" "out" "midi file" "rst" 
+"follower" "out" "math36" "in0" 
+"math13" "out" "follower" "in" 
+"math33" "out" "midi file" "rstp" 
+"midi file" "len" "math31" "in1" 
+"midi file" "tick" "math31" "in0" 
+"math31" "out" "value meter2" "in0" 
+"midi file" "tick" "math32" "in0" 
+"switch matrix" "out0" "select" "in0" 
+"start gate1" "o" "switch" "g" 
+"math32" "out" "compare" "a" 
+"compare" "oe" "oscillator (period)" "rst" 
+"oscillator (period)" "osqr" "counter" "gate" 
+"gate repeat2" "out" "counter" "rst" 
+"midi file" "n0_0" "multiplex in (NxN)" "in0" 
+"midi file" "n1_0" "multiplex in (NxN)" "in64" 
+"switch" "out" "gate repeat2" "g" 
+"midi file" "g0_0" "multiplex in (NxN)" "in32" 
+"math36" "out" "oscillator" "f" 
+"math32" "out" "compare1" "a" 
+"compare1" "os" "math37" "in0" 
+"counter" "o" "math37" "in1" 
+"counter" "o" "math38" "in0" 
+"oscillator (period)" "osqr" "math38" "in1" 
+"oscillator2" "osin" "delay1 (1 sample)7" "in" 
+"oscillator2" "ocos" "delay1 (1 sample)8" "in" 
+"midi file" "g1_0" "multiplex in (NxN)" "in96" 
+"switch1" "out" "multiplex in (NxN)" "sel" 
+"note in" "n" "multiplex in (NxN)" "in65" 
+"note in" "g" "multiplex in (NxN)" "in97" 
+"clipper soft4" "o" "audio out" "in0" 
+"clipper soft5" "o" "audio out" "in1" 
+"container" "out1" "clipper soft4" "in" 
+"container" "out2" "clipper soft5" "in" 
+"delay1 (1 sample)12" "out" "container" "in11" 
+"delay1 (1 sample)21" "out" "container" "in12" 
+"delay1 (1 sample)3" "out" "container" "in13" 
+"delay1 (1 sample)1" "out" "container" "in4" 
+"delay1 (1 sample)" "out" "container" "in5" 
+"delay1 (1 sample)4" "out" "container" "in6" 
+"delay1 (1 sample)7" "out" "container" "in7" 
+"delay1 (1 sample)8" "out" "container" "in8" 
+"delay1 (1 sample)6" "out" "container" "in9" 
+"delay1 (1 sample)2" "out" "container" "in10" 
+"gate repeat2" "out" "container" "in3" 
+"delay1 (1 sample)10" "out" "container" "in15" 
+"delay1 (1 sample)25" "out" "container" "in14" 
+"delay1 (1 sample)13" "out" "container" "in16" 
+"delay1 (1 sample)5" "out" "container" "in17" 
+"delay1 (1 sample)11" "out" "container" "in18" 
+"delay1 (1 sample)9" "out" "container" "in19" 
+"math2" "out" "delay1 (1 sample)9" "in" 
+"on rendering" "o" "math2" "in0" 
+"delay1 (1 sample)16" "out" "container1" "in10" 
+"delay1 (1 sample)14" "out" "container1" "in4" 
+"delay1 (1 sample)15" "out" "container1" "in5" 
+"delay1 (1 sample)17" "out" "container1" "in6" 
+"delay1 (1 sample)7" "out" "container1" "in7" 
+"delay1 (1 sample)8" "out" "container1" "in8" 
+"delay1 (1 sample)6" "out" "container1" "in9" 
+"gate repeat2" "out" "container1" "in3" 
+"delay1 (1 sample)12" "out" "container1" "in11" 
+"delay1 (1 sample)21" "out" "container1" "in12" 
+"delay1 (1 sample)3" "out" "container1" "in13" 
+"delay1 (1 sample)25" "out" "container1" "in14" 
+"delay1 (1 sample)10" "out" "container1" "in15" 
+"delay1 (1 sample)11" "out" "container1" "in18" 
+"delay1 (1 sample)9" "out" "container1" "in19" 
+"container1" "out1" "clipper soft4" "in" 
+"container1" "out2" "clipper soft5" "in" 
+"multiplex in (NxN)" "out2" "container1" "in1" 
+"multiplex in (NxN)" "out3" "container1" "in2" 
+"multiplex in (NxN)" "out0" "container" "in1" 
+"multiplex in (NxN)" "out1" "container" "in2" 
+"delay1 (1 sample)18" "out" "container1" "in17" 
+"timeline1" "oc" "math36" "in1" 
+"math32" "out" "timeline1" "po" 
+"math32" "out" "timeline2" "po" 
+"timeline2" "os1" "delay1 (1 sample)15" "in" 
+"gate repeat2" "out" "oscillator2" "rst" 
+"math32" "out" "timeline3" "po" 
+"timeline3" "os1" "delay1 (1 sample)" "in" 
+"timeline4" "os1" "delay1 (1 sample)17" "in" 
+"math32" "out" "timeline4" "po" 
+"math32" "out" "timeline5" "po" 
+"timeline5" "os1" "delay1 (1 sample)2" "in" 
+"timeline6" "os1" "delay1 (1 sample)16" "in" 
+"delay1 (1 sample)19" "out" "container1" "in16" 
+"timeline7" "os1" "delay1 (1 sample)19" "in" 
+"timeline8" "os1" "delay1 (1 sample)13" "in" 
+"math32" "out" "timeline6" "po" 
+"math32" "out" "timeline7" "po" 
+"gate repeat2" "out" "container2" "in1" 
+"delay1 (1 sample)7" "out" "container2" "in2" 
+"delay1 (1 sample)8" "out" "container2" "in3" 
+"delay1 (1 sample)6" "out" "container2" "in4" 
+"delay1 (1 sample)21" "out" "container2" "in6" 
+"delay1 (1 sample)12" "out" "container2" "in5" 
+"delay1 (1 sample)3" "out" "container2" "in7" 
+"delay1 (1 sample)25" "out" "container2" "in8" 
+"delay1 (1 sample)11" "out" "container2" "in12" 
+"delay1 (1 sample)23" "out" "container2" "in9" 
+"delay1 (1 sample)22" "out" "container2" "in10" 
+"delay1 (1 sample)24" "out" "container2" "in11" 
+"delay1 (1 sample)26" "out" "container2" "in13" 
+"delay1 (1 sample)22" "out" "container2" "act" 
+"delay1 (1 sample)20" "out" "container3" "act" 
+"note in1" "n" "compare2" "a" 
+"note in1" "g" "gate hold" "g" 
+"select" "out" "math33" "in0" 
+"logic" "out" "select" "sel" 
+"logic" "out" "delay1 (1 sample)27" "in" 
+"delay1 (1 sample)27" "out" "switch" "g" 
+"math32" "out" "sample & hold1" "in" 
+"logic" "out" "sample & hold1" "rst" 
+"compare2" "oe" "logic" "in0" 
+"math32" "out" "timeline9" "po" 
+"timeline9" "os1" "delay1 (1 sample)4" "in" 
+"note in1" "n" "compare3" "a" 
+"compare3" "oe" "logic1" "in1" 
+"gate hold" "out" "logic1" "in0" 
+"logic1" "out" "delay1 (1 sample)27" "in" 
+"logic1" "out" "sample & hold1" "rst" 
+"logic1" "out" "math1" "in1" 
+"math1" "out" "select" "sel" 
+"sample & hold1" "o" "select" "in2" 
+"sample & hold1" "o" "select" "in1" 
+"gate hold" "out" "logic" "in1" 
+"math32" "out" "timeline8" "po" 
+"math32" "out" "timeline" "po" 
+"timeline" "os1" "container1" "in20" 
+"sample & hold" "o" "math13" "in1" 
+"delay1 (1 sample)7" "out" "container3" "in2" 
+"delay1 (1 sample)8" "out" "container3" "in3" 
+"delay1 (1 sample)6" "out" "container3" "in1" 
+"delay1 (1 sample)3" "out" "container3" "in4" 
+"delay1 (1 sample)20" "out" "container3" "in5" 
+"timeline11" "os1" "delay1 (1 sample)20" "in" 
+"math32" "out" "timeline11" "po" 
+"follower1" "out" "delay1 (1 sample)6" "in" 
+"math32" "out" "timeline12" "po" 
+"delay1 (1 sample)28" "out" "container1" "in21" 
+"timeline13" "ol" "delay1 (1 sample)28" "in" 
+"math32" "out" "timeline13" "po" 
+"timeline14" "ol" "delay1 (1 sample)29" "in" 
+"delay1 (1 sample)29" "out" "container" "in20" 
+"math32" "out" "timeline14" "po" 
+"timeline15" "os1" "delay1 (1 sample)10" "in" 
+"math32" "out" "timeline15" "po" 
+"math32" "out" "timeline16" "po" 
+"follower2" "out" "delay1 (1 sample)3" "in" 
+"timeline12" "oc" "follower1" "in" 
+"timeline16" "oc" "follower2" "in" 
+"math32" "out" "timeline17" "po" 
+"timeline17" "os1" "delay1 (1 sample)22" "in" 
+"delay1 (1 sample)30" "out" "container3" "in6" 
+"math32" "out" "timeline18" "po" 
+"timeline18" "os1" "delay1 (1 sample)30" "in" 
+"container1" "out6" "container2" "in14" 
+"container" "out6" "container2" "in14" 
+"container1" "out6" "container3" "in7" 
+"container" "out6" "container3" "in7" 
+"timeline19" "oc" "follower3" "in" 
+"follower3" "out" "delay1 (1 sample)8" "in" 
+"math32" "out" "timeline19" "po" 
+"timeline20" "os1" "delay1 (1 sample)21" "in" 
+"math32" "out" "timeline20" "po" 
+"multiplex in (NxN)" "out0" "midi merger" "n0" 
+"multiplex in (NxN)" "out1" "midi merger" "g0" 
+"gate repeat2" "out" "container4" "in3" 
+"delay1 (1 sample)7" "out" "container4" "in7" 
+"delay1 (1 sample)8" "out" "container4" "in8" 
+"delay1 (1 sample)6" "out" "container4" "in9" 
+"delay1 (1 sample)3" "out" "container4" "in11" 
+"multiplex in (NxN)" "out2" "midi merger" "n1" 
+"multiplex in (NxN)" "out3" "midi merger" "g1" 
+"midi merger" "outg" "sample & hold" "in" 
+"midi merger" "outg" "sample & hold" "rst" 
+"math32" "out" "timeline21" "po" 
+"timeline21" "oc" "delay1 (1 sample)25" "in" 
+"delay1 (1 sample)25" "out" "container3" "in8" 
+"delay1 (1 sample)31" "out" "container4" "act" 
+"delay1 (1 sample)31" "out" "container4" "in16" 
+"timeline22" "os1" "delay1 (1 sample)31" "in" 
+"math32" "out" "timeline22" "po" 
+"multiplex in (NxN)" "out1" "merger" "p0_0" 
+"multiplex in (NxN)" "out0" "merger" "p0_1" 
+"multiplex in (NxN)" "out3" "merger" "p1_0" 
+"multiplex in (NxN)" "out2" "merger" "p1_1" 
+"delay1 (1 sample)15" "out" "merger" "p1_2" 
+"delay1 (1 sample)" "out" "merger" "p0_2" 
+"merger" "out0" "container4" "in2" 
+"merger" "out1" "container4" "in1" 
+"merger" "out2" "container4" "in5" 
+"container" "out7" "container2" "in15" 
+"container" "out8" "container2" "in16" 
+"container" "out9" "container2" "in17" 
+"container1" "out7" "container2" "in18" 
+"container1" "out8" "container2" "in19" 
+"container1" "out9" "container2" "in20" 
+"delay1 (1 sample)32" "out" "container" "in21" 
+"delay1 (1 sample)32" "out" "container2" "in21" 
+"delay1 (1 sample)32" "out" "container1" "in22" 
+"timeline23" "os1" "delay1 (1 sample)32" "in" 
+"math32" "out" "timeline23" "po" 
+"math32" "out" "timeline24" "po" 
+"timeline24" "os1" "delay1 (1 sample)12" "in" 
+"delay1 (1 sample)33" "out" "container" "in22" 
+"delay1 (1 sample)33" "out" "container1" "in23" 
+"math32" "out" "timeline25" "po" 
+"timeline25" "os1" "delay1 (1 sample)33" "in" 
+"timeline26" "os1" "delay1 (1 sample)24" "in" 
+"timeline26" "os1" "delay1 (1 sample)5" "in" 
+"timeline26" "os1" "delay1 (1 sample)18" "in" 
+"math32" "out" "timeline26" "po" 
+} } 

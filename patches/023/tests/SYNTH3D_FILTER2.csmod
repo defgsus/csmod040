@@ -1,0 +1,31 @@
+container { 4 283 43 1.000000 1 
+module { "audio out" "audio out" "audio out" 1 583 23 80 130 properties { "modname" "audio out" "nrchan" 2 } val { } } 
+module { "oscillator" "oscillator" "oscillator" 1 68 406 120 230 properties { "modname" "oscillator" } val { "f" 0.300000 "a" 30.000000 } } 
+module { "value meter" "value meter" "value meter" 1 510 190 160 130 properties { "modname" "value meter" "min" 0.000000 "max" 1.000000 "abs" 1 "nrchan" 4 } val { } } 
+module { "clipper soft" "clipper soft" "clipper soft" 1 435 43 120 55 properties { "modname" "clipper soft" } val { } } 
+module { "clipper soft" "clipper soft1" "clipper soft" 1 434 104 120 55 properties { "modname" "clipper soft" } val { } } 
+module { "oscillator" "oscillator1" "oscillator" 1 -65 -3 120 230 properties { "modname" "oscillator" } val { "f" 2.200000 } } 
+module { "oscillator" "oscillator2" "oscillator" 1 -89 290 120 230 properties { "modname" "oscillator" } val { "f" 1.234500 "a" 500.000000 "o" 600.000000 } } 
+module { "oscillator" "oscillator3" "oscillator" 1 -256 76 120 230 properties { "modname" "oscillator" } val { "f" 6789.500000 "a" 3.000000 } } 
+module { "synth (filter/3d)" "synth (filter/3d)" "synth (filter/3d)" 1 243 -10 120 680 properties { "modname" "synth (filter/3d)" "nrout" 4 "imienv" 0 "mx0" -1.000000 "my0" -1.000000 "mz0" 0.200000 "mx1" 1.000000 "my1" -1.000000 "mz1" 0.200000 "mx2" 1.000000 "my2" 1.000000 "mz2" 0.200000 "mx3" -1.000000 "my3" 1.000000 "mz3" 0.200000 } val { "nv" 32.000000 "amp" 0.060000 "de" 5.000000 "wf" 4.000000 "pw" 0.030000 "flt" 0.000000 "fltr" 0.930000 "fltkf" 0.300000 "fenv" 0.500000 "fenva" 0.080000 "fenvd" 0.100000 } } 
+module { "gate repeat" "gate repeat" "gate repeat" 1 100 126 120 80 properties { "modname" "gate repeat" } val { "r" 7.000000 } } 
+module { "oscillator" "oscillator4" "oscillator" 1 -252 477 120 230 properties { "modname" "oscillator" } val { "f" 5789.399902 "a" 0.300000 } } 
+module { "oscillator" "oscillator5" "oscillator" 1 425 435 120 230 properties { "modname" "oscillator" } val { "f" 1531.229980 "a" 4.000000 "o" 4.000000 } } 
+connections { 
+"synth (filter/3d)" "outmic0" "clipper soft" "in" 
+"synth (filter/3d)" "outmic0" "value meter" "in0" 
+"synth (filter/3d)" "outmic1" "value meter" "in1" 
+"synth (filter/3d)" "outmic2" "value meter" "in2" 
+"synth (filter/3d)" "outmic3" "value meter" "in3" 
+"synth (filter/3d)" "outmic2" "clipper soft1" "in" 
+"clipper soft1" "o" "audio out" "in1" 
+"clipper soft" "o" "audio out" "in0" 
+"oscillator" "osin" "synth (filter/3d)" "x" 
+"oscillator1" "osin" "gate repeat" "g" 
+"oscillator" "ocos" "synth (filter/3d)" "y" 
+"oscillator2" "osin" "synth (filter/3d)" "f" 
+"gate repeat" "out" "synth (filter/3d)" "g" 
+"oscillator3" "osin" "synth (filter/3d)" "f" 
+"oscillator4" "osin" "oscillator" "p" 
+"oscillator5" "osin" "synth (filter/3d)" "fenvd" 
+} } 

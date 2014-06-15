@@ -1,0 +1,50 @@
+container { 4 416 71 1.000000 1 
+module { "counter (float)" "counter (float)" "counter (float)" 1 358 121 120 155 properties { "modname" "counter (float)" } val { } } 
+module { "scope 3d" "scope 3d" "scope 3d" 1 609 34 120 609 properties { "modname" "scope 3d" "w" 512 "h" 512 "serverstr" "" "clientstr" "" "camera" 0 "imode" 0 "sendbuf" 0 } val { } } 
+module { "logic" "logic" "logic" 1 35 -12 120 105 properties { "modname" "logic" "mop" 1 "nrin" 3 } val { } } 
+module { "sample & hold" "sample & hold" "sample & hold" 1 193 122 120 80 properties { "modname" "sample & hold" } val { } } 
+module { "math" "math" "math" 1 196 240 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" -1.000000 } } 
+module { "switch" "switch" "start" 1 -328 -47 152 105 properties { "modname" "start" "mode" 1 } val { } val { 0 } } 
+module { "math" "math1" "math" 1 -130 172 120 105 properties { "modname" "math" "mop" 2 "nrin" 3 } val { "in1" 1.010000 } } 
+module { "select" "select" "multiplex in" 1 35 127 120 105 properties { "modname" "multiplex in" "nrin" 2 } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)" "delay (1 sample)" 1 -180 87 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "counter (float)" "counter (float)1" "counter (float)" 1 359 450 120 155 properties { "modname" "counter (float)" } val { } } 
+module { "logic" "logic1" "logic" 1 36 317 120 105 properties { "modname" "logic" "mop" 1 "nrin" 3 } val { } } 
+module { "sample & hold" "sample & hold1" "sample & hold" 1 194 451 120 80 properties { "modname" "sample & hold" } val { } } 
+module { "math" "math2" "math" 1 197 569 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" -1.000000 } } 
+module { "math" "math3" "math" 1 -129 501 120 105 properties { "modname" "math" "mop" 2 "nrin" 3 } val { "in1" 1.618300 } } 
+module { "select" "select1" "multiplex in" 1 36 456 120 105 properties { "modname" "multiplex in" "nrin" 2 } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)1" "init speed" 1 -350 275 120 55 properties { "modname" "init speed" } val { "in" 0.000100 } } 
+module { "start gate" "start gate" "start gate" 1 -371 85 84 55 properties { "modname" "start gate" } val { } } 
+connections { 
+"counter (float)" "out" "scope 3d" "x" 
+"counter (float)" "gmi" "logic" "in0" 
+"counter (float)" "gma" "logic" "in1" 
+"sample & hold" "o" "counter (float)" "dir" 
+"sample & hold" "o" "math" "in0" 
+"logic" "out" "sample & hold" "rst" 
+"switch" "out" "counter (float)" "rst" 
+"switch" "out" "math1" "in0" 
+"select" "out" "sample & hold" "in" 
+"math1" "out" "select" "in1" 
+"math" "out" "select" "in0" 
+"switch" "out" "delay1 (1 sample)" "in" 
+"delay1 (1 sample)" "out" "select" "sel" 
+"delay1 (1 sample)" "out" "logic" "in2" 
+"counter (float)1" "gmi" "logic1" "in0" 
+"counter (float)1" "gma" "logic1" "in1" 
+"sample & hold1" "o" "counter (float)1" "dir" 
+"sample & hold1" "o" "math2" "in0" 
+"logic1" "out" "sample & hold1" "rst" 
+"select1" "out" "sample & hold1" "in" 
+"math3" "out" "select1" "in1" 
+"math2" "out" "select1" "in0" 
+"delay1 (1 sample)" "out" "logic1" "in2" 
+"switch" "out" "math3" "in0" 
+"counter (float)1" "out" "scope 3d" "y" 
+"switch" "out" "counter (float)1" "rst" 
+"delay1 (1 sample)" "out" "select1" "sel" 
+"delay1 (1 sample)1" "out" "math3" "in2" 
+"delay1 (1 sample)1" "out" "math1" "in2" 
+"start gate" "o" "switch" "g" 
+} } 

@@ -1,0 +1,36 @@
+container { 4 135 304 0.900000 1 
+module { "scope 3d" "scope 3d" "scope 3d" 1 792 -245 120 609 properties { "modname" "scope 3d" "camera" 0 "w" 512 "h" 512 "imode" 0 "serverstr" "" "clientstr" "" "sendbuf" 0 } val { "per" 0.000000 "r" 0.000000 "g" 0.000000 "b" 0.000000 "br" 1.000000 "opc" 1.000000 "f" 0.000000 "suba" 0.020000 } } 
+module { "audio out" "audio out" "audio out" 1 972 119 80 130 properties { "modname" "audio out" "nrchan" 2 } val { "a" 0.300000 } } 
+module { "counter (sample)" "counter (sample)" "counter (sample)" 1 -39 -248 120 155 properties { "modname" "counter (sample)" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)" "WIDTH/HEIGHT" 1 -239 -259 120 55 properties { "modname" "WIDTH/HEIGHT" } val { "in" 512.000000 } } 
+module { "counter" "counter1" "counter" 1 117 -207 120 180 properties { "modname" "counter" } val { } } 
+module { "math" "math" "X" 1 275 -214 120 80 properties { "modname" "X" "mop" 3 "nrin" 2 } val { } } 
+module { "math" "math1" "Y" 1 275 -115 120 80 properties { "modname" "Y" "mop" 3 "nrin" 2 } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)1" "delay (1 sample)" 1 121 -277 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "math" "math2" "math" 1 -218 -92 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" -0.500000 } } 
+module { "math" "math3" "math" 1 -216 -180 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 0.500000 } } 
+module { "start gate" "start gate" "start gate" 1 -272 64 84 55 properties { "modname" "start gate" } val { } } 
+module { "neuronal net" "neuronal net" "neuronal net" 1 466 17 120 275 properties { "modname" "neuronal net" "nrin" 2 "nrhid" 20 "nrout" 3 "act" 1 } val { "ra" 1.000000 "lr" 0.000000 } } 
+connections { 
+"delay1 (1 sample)" "out" "counter (sample)" "max" 
+"counter (sample)" "om" "counter1" "gate" 
+"delay1 (1 sample)" "out" "counter1" "max" 
+"counter (sample)" "o" "delay1 (1 sample)1" "in" 
+"counter1" "o" "math1" "in0" 
+"delay1 (1 sample)1" "out" "math" "in0" 
+"math2" "out" "math" "in0" 
+"math2" "out" "math1" "in0" 
+"math" "out" "scope 3d" "x" 
+"math1" "out" "scope 3d" "y" 
+"delay1 (1 sample)" "out" "math3" "in0" 
+"delay1 (1 sample)" "out" "math2" "in0" 
+"math3" "out" "math" "in1" 
+"math3" "out" "math1" "in1" 
+"start gate" "o" "counter (sample)" "rst" 
+"start gate" "o" "counter1" "rst" 
+"neuronal net" "out0" "scope 3d" "r" 
+"neuronal net" "out1" "scope 3d" "g" 
+"neuronal net" "out2" "scope 3d" "b" 
+"math" "out" "neuronal net" "in0" 
+"math1" "out" "neuronal net" "in1" 
+} } 

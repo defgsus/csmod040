@@ -1,0 +1,90 @@
+container { 4 -29 -217 0.810000 1 
+module { "scope 3d" "scope 3d" "scope 3d" 1 825 559 120 609 properties { "modname" "scope 3d" "camera" 1 "w" 512 "h" 512 "imode" 0 "serverstr" "" "clientstr" "" "sendbuf" 0 } val { "zd" 10.500000 "per" 0.000000 "r" 0.100000 "b" 0.500000 "br" 0.300000 "subsam" 1.000000 "smtg" 0.400000 } } 
+module { "container" "container1" "CS FORM" 2 257 716 120 80 properties { "modname" "CS FORM" }  c0n { 3 0 0 "act" "active" 1 0 "out1" "X" 1 0 "out2" "Y"  } val { } 
+container { 4 212 -125 1.030000 0 
+module { "container output" "out1" "container output" "X" 1 429 -211 80 55 properties { "modname" "X" } val { } } 
+module { "container output" "out2" "container output1" "Y" 1 430 -126 80 55 properties { "modname" "Y" } val { } } 
+module { "math" "math" "math" 1 -143 291 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { } } 
+module { "math" "math1" "math" 1 177 295 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { } } 
+module { "select" "select" "select" 1 -144 384 120 430 properties { "modname" "select" "nrin" 15 } val { "in0" 0.500000 "in2" 1.500000 "in3" 1.500000 "in4" 0.500000 "in7" 0.500000 "in9" 1.500000 "in10" 0.970000 "in11" 1.000000 "in12" 2.000000 "in13" 1.300000 } } 
+module { "select" "select1" "select" 1 179 387 120 430 properties { "modname" "select" "nrin" 15 } val { "in0" 0.500000 "in1" 1.000000 "in2" 0.500000 "in3" 1.000000 "in4" 0.500000 "in6" 1.000000 "in7" -1.200000 "in9" 0.500000 "in10" 0.600000 "in11" 2.000000 "in12" 1.000000 "in13" 0.700000 } } 
+module { "select" "select3" "select" 1 -10 386 120 430 properties { "modname" "select" "nrin" 15 } val { "in0" 225.000000 "in2" 90.000000 "in3" -90.000000 "in4" 45.000000 "in7" 90.000000 "in9" 90.000000 "in10" -20.000000 "in12" -90.000000 "in13" -30.000000 } } 
+module { "select" "select4" "select" 1 320 389 120 430 properties { "modname" "select" "nrin" 15 } val { "in0" 125.000000 "in2" 90.000000 "in4" -45.000000 "in7" 30.000000 "in9" 90.000000 "in11" 90.000000 } } 
+module { "math" "math3" "math" 1 -10 290 120 80 properties { "modname" "math" "mop" 3 "nrin" 2 } val { "in1" 360.000000 } } 
+module { "math" "math4" "math" 1 320 294 120 80 properties { "modname" "math" "mop" 3 "nrin" 2 } val { "in1" 360.000000 } } 
+module { "oscillator table" "oscillator table" "oscillator table" 1 -68 93 120 155 properties { "modname" "oscillator table" } val { "f" 0.000000 "a" 0.000000 } } 
+module { "oscillator table" "oscillator table1" "oscillator table" 1 250 102 120 155 properties { "modname" "oscillator table" } val { "f" 0.000000 "a" 0.000000 } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)" "delay (1 sample)" 1 -286 79 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "rotate" "rotate" "rotate" 1 268 -167 120 105 properties { "modname" "rotate" } val { "y" 7.000000 } } 
+module { "counter (sample)" "counter (sample)" "counter (sample)" 1 -604 27 120 155 properties { "modname" "counter (sample)" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)1" "sam per letter" 1 -744 65 120 55 properties { "modname" "sam per letter" } val { "in" 400.000000 } } 
+module { "math" "math2" "math" 1 -432 62 120 80 properties { "modname" "math" "mop" 3 "nrin" 2 } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)2" "nr letters" 1 -750 304 120 55 properties { "modname" "nr letters" } val { "in" 15.000000 } } 
+module { "counter" "counter" "counter" 1 -430 204 120 180 properties { "modname" "counter" } val { } } 
+module { "math" "math5" "math" 1 -279 -115 120 80 properties { "modname" "math" "mop" 3 "nrin" 2 } val { } } 
+module { "math" "math6" "math" 1 -467 -90 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" -1.000000 } } 
+module { "delay (sample)" "delay (sample)" "delay (sample)" 1 -50 -140 120 80 properties { "modname" "delay (sample)" "nrsam" 44100 } val { } } 
+module { "clipper soft" "clipper soft" "clipper soft" 1 88 -3 120 55 properties { "modname" "clipper soft" } val { } } 
+module { "clipper soft" "clipper soft1" "clipper soft" 1 284 -5 120 55 properties { "modname" "clipper soft" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)3" "eckig" 1 507 299 120 55 properties { "modname" "eckig" } val { "in" 1.000000 } } 
+module { "select" "select2" "select" 1 509 391 120 430 properties { "modname" "select" "nrin" 15 } val { "in0" 1.000000 "in2" 0.400000 "in3" 0.600000 "in4" 2.000000 "in6" 1.000000 "in7" 0.300000 "in9" 0.500000 "in10" 1.400000 "in11" 0.500000 "in13" 0.300000 } } 
+connections { 
+"counter" "o" "select" "sel" 
+"select" "out" "math" "in0" 
+"counter" "o" "select1" "sel" 
+"select1" "out" "math1" "in0" 
+"counter" "o" "select3" "sel" 
+"counter" "o" "select4" "sel" 
+"select3" "out" "math3" "in0" 
+"select4" "out" "math4" "in0" 
+"math3" "out" "oscillator table" "p" 
+"clipper soft" "o" "rotate" "x" 
+"math4" "out" "oscillator table1" "p" 
+"clipper soft1" "o" "rotate" "y" 
+"delay1 (1 sample)" "out" "math" "in1" 
+"math" "out" "oscillator table" "p" 
+"delay1 (1 sample)" "out" "math1" "in1" 
+"math1" "out" "oscillator table1" "p" 
+"delay1 (1 sample)1" "out" "counter (sample)" "max" 
+"counter (sample)" "o" "math2" "in0" 
+"delay1 (1 sample)1" "out" "math2" "in1" 
+"math2" "out" "delay1 (1 sample)" "in" 
+"counter (sample)" "om" "counter" "gate" 
+"delay1 (1 sample)2" "out" "counter" "max" 
+"rotate" "outx" "container output" "in" 
+"rotate" "outy" "container output1" "in" 
+"counter" "o" "math5" "in0" 
+"delay1 (1 sample)2" "out" "math6" "in0" 
+"delay (sample)" "out" "rotate" "z" 
+"math6" "out" "math5" "in1" 
+"math5" "out" "delay (sample)" "in" 
+"oscillator table" "osin" "clipper soft" "in" 
+"oscillator table1" "osin" "clipper soft1" "in" 
+"delay1 (1 sample)3" "out" "oscillator table" "a" 
+"delay1 (1 sample)3" "out" "oscillator table1" "a" 
+"counter" "o" "select2" "sel" 
+"select2" "out" "delay1 (1 sample)3" "in" 
+} } 
+} 
+module { "select" "select" "select" 1 589 557 120 105 properties { "modname" "select" "nrin" 2 } val { } } 
+module { "select" "select1" "select" 1 587 669 120 105 properties { "modname" "select" "nrin" 2 } val { } } 
+module { "select" "select2" "select" 1 590 785 120 105 properties { "modname" "select" "nrin" 2 } val { } } 
+module { "constant" "constant3" "MORPH" 1 -79 381 120 105 properties { "modname" "MORPH" } val { } } 
+module { "oscillator table" "oscillator table4" "oscillator table" 1 -384 344 120 155 properties { "modname" "oscillator table" } val { "f" 0.060000 "a" 2.000000 } } 
+module { "clipper soft" "clipper soft" "clipper soft" 1 -231 346 120 55 properties { "modname" "clipper soft" } val { } } 
+module { "math" "math3" "math" 1 -231 409 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 0.500000 } } 
+module { "oscillator" "oscillator" "oscillator" 1 991 539 120 230 properties { "modname" "oscillator" } val { "f" 0.013000 } } 
+connections { 
+"container1" "out2" "select1" "in0" 
+"select" "out" "scope 3d" "x" 
+"select1" "out" "scope 3d" "y" 
+"select2" "out" "scope 3d" "z" 
+"constant3" "out" "select" "sel" 
+"constant3" "out" "select1" "sel" 
+"constant3" "out" "select2" "sel" 
+"clipper soft" "o" "math3" "in0" 
+"math3" "out" "scope 3d" "b" 
+"oscillator table4" "osin" "clipper soft" "in" 
+"container1" "out1" "select" "in0" 
+"oscillator" "osaw" "scope 3d" "rz" 
+} } 

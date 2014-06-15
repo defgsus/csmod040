@@ -1,0 +1,10 @@
+container { 4 227 28 1.710002 1 
+module { "liquid state machine" "liquid state machine" "liquid state machine" 1 260 115 120 375 properties { "modname" "liquid state machine" "nrin" 3 "nrincon" 50 "nrhidw" 2 "nrhidh" 10 "nrhidcon" 250 "nrout" 4 "act" 1 } val { "see" 14.000000 "ral" 13.340000 "in0" 1.000000 "des0" 1.000000 } } 
+module { "oscillator" "oscillator2" "oscillator" 1 82 314 120 230 properties { "modname" "oscillator" } val { } } 
+module { "switch" "switch" "switch" 1 90 28 152 105 properties { "modname" "switch" "mode" 1 } val { } val { 0 } } 
+module { "counter" "counter" "counter" 1 114 150 120 180 properties { "modname" "counter" } val { } } 
+connections { 
+"switch" "out" "counter" "gate" 
+"counter" "o" "liquid state machine" "see" 
+"switch" "out" "liquid state machine" "rst" 
+} } 

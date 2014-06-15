@@ -1,0 +1,12 @@
+container { 4 0 0 1.000000 1 
+module { "liquid state machine" "liquid state machine" "liquid state machine" 1 386 165 120 275 properties { "modname" "liquid state machine" "nrin" 2 "nrincon" 5 "nrhid" 20 "nrhidcon" 50 "nrout" 1 "act" 2 } val { "see" 6.000000 "lr" 0.100000 "in1" 1.000000 } } 
+module { "oscillator" "oscillator" "oscillator" 1 135 229 120 230 properties { "modname" "oscillator" } val { "pw" 0.100000 } } 
+module { "scope2d" "scope2d" "scope 2d" 1 708 218 400 180 properties { "modname" "scope 2d" "nrin" 2 } val { } } 
+module { "scope2d" "scope2d1" "scope 2d" 1 709 34 400 180 properties { "modname" "scope 2d" "nrin" 2 } val { } } 
+connections { 
+"oscillator" "ocos" "scope2d" "in0" 
+"liquid state machine" "e" "scope2d1" "in0" 
+"liquid state machine" "out0" "scope2d" "in1" 
+"oscillator" "ocos" "liquid state machine" "des0" 
+"oscillator" "osqr" "liquid state machine" "in0" 
+} } 

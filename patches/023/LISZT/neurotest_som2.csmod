@@ -1,0 +1,40 @@
+container { 4 -232 546 0.950000 1 
+module { "midi file" "midi file" "midi file" 1 260 -400 120 205 properties { "modname" "midi file" "maxpoly" 1 "polytick" 24 "shift" 1 "fname" "d:\samples\mid\liszt\gretchen.mid" } val { "rstp" 2000.000000 } } 
+module { "oscillator" "oscillator" "oscillator" 1 80 -463 120 230 properties { "modname" "oscillator" } val { "f" 0.000000 } } 
+module { "audio out" "audio out" "audio out" 1 1088 -443 80 130 properties { "modname" "audio out" "nrchan" 2 } val { "a" 0.200000 } } 
+module { "math" "math" "math" 1 78 -213 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 10.000000 } } 
+module { "start gate" "start gate" "start gate" 1 262 -474 84 55 properties { "modname" "start gate" } val { } } 
+module { "s & h (multi)" "s & h (multi)" "s & h (multi)" 1 867 -165 120 230 properties { "modname" "s & h (multi)" "nrout" 8 } val { } } 
+module { "modulo" "modulo" "modulo" 1 498 -136 120 80 properties { "modname" "modulo" } val { "b" 12.000000 } } 
+module { "synth (multi)" "synth (multi)" "synth (multiwave)" 1 691 -567 120 305 properties { "modname" "synth (multiwave)" "nrout" 4 "imienv" 0 } val { "amp" 0.300000 } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)" "delay (1 sample)" 1 496 -249 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "note to freq" "note to freq" "note to freq" 1 498 -490 120 155 properties { "modname" "note to freq" } val { } } 
+module { "self organizing map" "self organizing map" "self organizing map" 1 1045 -299 465 400 properties { "modname" "self organizing map" "nrp" 5 "nrx" 16 "nry" 16 } val { "ram" 0.100000 } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)1" "delay (1 sample)" 1 868 -250 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)2" "delay (1 sample)" 1 695 -243 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "math" "math1" "math" 1 690 -129 120 80 properties { "modname" "math" "mop" 3 "nrin" 2 } val { "in1" 12.000000 } } 
+module { "oscillator" "oscillator1" "oscillator" 1 682 -32 120 230 properties { "modname" "oscillator" } val { "f" 100.000000 } } 
+connections { 
+"oscillator" "osqr" "midi file" "g" 
+"midi file" "bpm" "math" "in0" 
+"math" "out" "oscillator" "f" 
+"start gate" "o" "midi file" "rst" 
+"start gate" "o" "oscillator" "rst" 
+"midi file" "g0_0" "delay1 (1 sample)" "in" 
+"midi file" "n0_0" "modulo" "a" 
+"midi file" "n0_0" "note to freq" "n" 
+"note to freq" "out" "synth (multi)" "f" 
+"synth (multi)" "om" "audio out" "inm" 
+"delay1 (1 sample)" "out" "synth (multi)" "g" 
+"delay1 (1 sample)" "out" "delay1 (1 sample)2" "in" 
+"delay1 (1 sample)1" "out" "self organizing map" "gs" 
+"modulo" "out" "math1" "in0" 
+"synth (multi)" "om" "s & h (multi)" "in" 
+"oscillator1" "osqr" "delay1 (1 sample)1" "in" 
+"oscillator1" "osqr" "s & h (multi)" "rst" 
+"s & h (multi)" "out0" "self organizing map" "pi0" 
+"s & h (multi)" "out1" "self organizing map" "pi1" 
+"s & h (multi)" "out2" "self organizing map" "pi2" 
+"s & h (multi)" "out3" "self organizing map" "pi3" 
+"s & h (multi)" "out4" "self organizing map" "pi4" 
+} } 

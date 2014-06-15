@@ -1,0 +1,14 @@
+container { 4 13 53 1.000000 1 
+module { "self organizing map" "self organizing map" "self organizing map" 1 489 173 426 400 properties { "modname" "self organizing map" "nrp" 5 "nrx" 16 "nry" 16 } val { "opa" 0.010000 } } 
+module { "oscillator" "oscillator" "oscillator" 1 133 319 120 230 properties { "modname" "oscillator" } val { "f" 1000.000000 } } 
+module { "audio in" "audio in" "audio in" 1 12 46 120 80 properties { "modname" "audio in" "nrchan" 1 } val { } } 
+module { "fourier transform" "fourier transform" "fourier transform" 1 164 -46 443 180 properties { "modname" "fourier transform" "buflen" 1024 "nrchan" 5 } val { "a" 1000.000000 "end" 0.200000 } } 
+connections { 
+"oscillator" "osqr" "self organizing map" "gs" 
+"fourier transform" "out0" "self organizing map" "pi0" 
+"fourier transform" "out1" "self organizing map" "pi1" 
+"fourier transform" "out2" "self organizing map" "pi2" 
+"fourier transform" "out3" "self organizing map" "pi3" 
+"fourier transform" "out4" "self organizing map" "pi4" 
+"audio in" "outm" "fourier transform" "in" 
+} } 

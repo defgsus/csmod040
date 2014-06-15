@@ -1,0 +1,37 @@
+container { 4 -87 -8 1.000000 1 
+module { "container" "container" "container" 2 352 109 120 130 properties { "modname" "container" }  c0n { 7 0 0 "act" "active" 0 0 "in1" "A" 0 0 "in3" "C" 0 0 "in4" "D" 1 0 "out1" "E" 1 0 "out3" "G" 1 0 "out4" "H"  } val { "in1" 1.000000 "in3" 3.000000 "in4" 4.000000 } 
+container { 4 0 0 1.000000 0 
+module { "container input" "in1" "container input" "A" 1 198 113 80 55 properties { "modname" "A" } val { } } 
+module { "container input" "in3" "container input2" "C" 1 196 259 80 55 properties { "modname" "C" } val { } } 
+module { "container input" "in4" "container input3" "D" 1 196 331 80 55 properties { "modname" "D" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)" "1" 1 333 122 120 55 properties { "modname" "1" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)2" "3" 1 337 262 120 55 properties { "modname" "3" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)3" "4" 1 339 333 120 55 properties { "modname" "4" } val { } } 
+module { "container output" "out1" "container output" "E" 1 497 114 80 55 properties { "modname" "E" } val { } } 
+module { "container output" "out3" "container output2" "G" 1 504 272 80 55 properties { "modname" "G" } val { } } 
+module { "container output" "out4" "container output3" "H" 1 505 342 80 55 properties { "modname" "H" } val { } } 
+connections { 
+"container input" "out" "delay1 (1 sample)" "in" 
+"container input2" "out" "delay1 (1 sample)2" "in" 
+"container input3" "out" "delay1 (1 sample)3" "in" 
+"delay1 (1 sample)" "out" "container output" "in" 
+"delay1 (1 sample)2" "out" "container output2" "in" 
+"delay1 (1 sample)3" "out" "container output3" "in" 
+} } 
+} 
+module { "delay1 (1 sample)" "delay1 (1 sample)" "1" 1 155 136 120 55 properties { "modname" "1" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)1" "2" 1 159 203 120 55 properties { "modname" "2" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)2" "3" 1 160 271 120 55 properties { "modname" "3" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)3" "4" 1 161 332 120 55 properties { "modname" "4" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)4" "5" 1 551 145 120 55 properties { "modname" "5" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)5" "6" 1 555 212 120 55 properties { "modname" "6" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)6" "7" 1 556 280 120 55 properties { "modname" "7" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)7" "8" 1 557 341 120 55 properties { "modname" "8" } val { } } 
+connections { 
+"delay1 (1 sample)" "out" "container" "in1" 
+"delay1 (1 sample)2" "out" "container" "in3" 
+"delay1 (1 sample)3" "out" "container" "in4" 
+"container" "out1" "delay1 (1 sample)4" "in" 
+"container" "out3" "delay1 (1 sample)6" "in" 
+"container" "out4" "delay1 (1 sample)7" "in" 
+} } 

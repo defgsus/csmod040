@@ -1,0 +1,1 @@
+container { 3 0 0 1.000000 1 module { "synth (multi)" "synth (multi)" "synth (multi)" 1 260 87 120 305 properties { "modname" "synth (multi)" "nrout" 4 "imienv" 0 } val { } } module { "synth (multi/quadpos)" "synth (multi/quadpos)" "synth (multi/quadpos)" 1 421 57 120 355 properties { "modname" "synth (multi/quadpos)" "nrout" 4 "imienv" 0 } val { } } connections { } } 

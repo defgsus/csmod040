@@ -1,0 +1,48 @@
+container { 4 243 134 0.900000 1 
+module { "scope 3d" "scope 3d" "scope 3d" 1 802 -110 120 609 properties { "modname" "scope 3d" "camera" 1 "w" 512 "h" 512 "imode" 0 "serverstr" "" "clientstr" "" "sendbuf" 0 } val { "zd" 14.700000 "per" 0.000000 } } 
+module { "star sphere" "star sphere" "star sphere" 1 -523 -138 120 155 properties { "modname" "star sphere" } val { "vrad" 0.000000 } } 
+module { "follower (multi)" "follower (multi)" "follower (multi)" 1 279 464 120 155 properties { "modname" "follower (multi)" "nrin" 3 } val { } } 
+module { "distance factor" "distance factor" "distance factor" 1 -249 118 120 230 properties { "modname" "distance factor" } val { "x2" 10.000000 } } 
+module { "compare" "compare" "compare" 1 74 96 120 130 properties { "modname" "compare" } val { } } 
+module { "sample & hold" "sample & hold" "sample & hold" 1 418 277 120 80 properties { "modname" "sample & hold" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)" "delay (1 sample)" 1 77 388 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "start gate" "start gate" "start gate" 1 -97 362 84 55 properties { "modname" "start gate" } val { } } 
+module { "select" "select" "multiplex in" 1 76 264 120 105 properties { "modname" "multiplex in" "nrin" 2 } val { } } 
+module { "math" "math" "math" 1 -6 566 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { } } 
+module { "sample gate" "sample gate" "sample gate" 1 -95 74 84 55 properties { "modname" "sample gate" } val { } } 
+module { "sample & hold" "sample & hold1" "sample & hold" 1 587 -163 120 80 properties { "modname" "sample & hold" } val { } } 
+module { "sample & hold" "sample & hold2" "sample & hold" 1 591 -71 120 80 properties { "modname" "sample & hold" } val { } } 
+module { "sample & hold" "sample & hold3" "sample & hold" 1 592 18 120 80 properties { "modname" "sample & hold" } val { } } 
+module { "oscillator" "oscillator" "oscillator" 1 -463 260 120 230 properties { "modname" "oscillator" } val { "f" 0.100000 "a" 10.000000 } } 
+module { "oscillator" "oscillator1" "oscillator" 1 -213 433 120 230 properties { "modname" "oscillator" } val { "a" 0.500000 "o" 0.500000 } } 
+module { "gate hold" "gate hold" "gate hold" 1 243 124 120 105 properties { "modname" "gate hold" } val { "hs" 2.000000 } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)1" "delay (1 sample)" 1 242 381 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)2" "delay (1 sample)" 1 252 285 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+connections { 
+"star sphere" "x" "sample & hold1" "in" 
+"star sphere" "y" "sample & hold2" "in" 
+"star sphere" "z" "sample & hold3" "in" 
+"star sphere" "x" "distance factor" "x1" 
+"star sphere" "y" "distance factor" "y1" 
+"star sphere" "z" "distance factor" "z1" 
+"sample & hold" "o" "compare" "b" 
+"distance factor" "out" "compare" "a" 
+"gate hold" "out" "sample & hold" "rst" 
+"distance factor" "out" "select" "in0" 
+"start gate" "o" "delay1 (1 sample)" "in" 
+"delay1 (1 sample)1" "out" "sample & hold" "rst" 
+"start gate" "o" "select" "sel" 
+"delay1 (1 sample)2" "out" "sample & hold" "in" 
+"sample & hold1" "o" "scope 3d" "x" 
+"sample & hold2" "o" "scope 3d" "y" 
+"sample & hold3" "o" "scope 3d" "z" 
+"gate hold" "out" "sample & hold2" "rst" 
+"gate hold" "out" "sample & hold3" "rst" 
+"oscillator" "osin" "distance factor" "x2" 
+"oscillator" "ocos" "distance factor" "y2" 
+"gate hold" "out" "sample & hold1" "rst" 
+"compare" "og" "gate hold" "g" 
+"select" "out" "delay1 (1 sample)2" "in" 
+"delay1 (1 sample)" "out" "delay1 (1 sample)1" "in" 
+"distance factor" "out" "select" "in1" 
+} } 

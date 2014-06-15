@@ -1,0 +1,63 @@
+container { 4 -463 506 0.870000 1 
+module { "midi file" "midi file" "midi file" 1 260 -400 120 205 properties { "modname" "midi file" "maxpoly" 1 "polytick" 24 "shift" 1 "fname" "d:\samples\mid\liszt\gretchen.mid" } val { "rstp" 2000.000000 } } 
+module { "oscillator" "oscillator" "oscillator" 1 80 -463 120 230 properties { "modname" "oscillator" } val { "f" 0.000000 } } 
+module { "audio out" "audio out" "audio out" 1 1088 -443 80 130 properties { "modname" "audio out" "nrchan" 2 } val { "a" 0.200000 } } 
+module { "math" "math" "math" 1 78 -213 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 10.000000 } } 
+module { "start gate" "start gate" "start gate" 1 262 -474 84 55 properties { "modname" "start gate" } val { } } 
+module { "s & h (multi)" "s & h (multi)" "s & h (multi)" 1 867 -165 120 230 properties { "modname" "s & h (multi)" "nrout" 8 } val { } } 
+module { "modulo" "modulo" "modulo" 1 498 -136 120 80 properties { "modname" "modulo" } val { "b" 12.000000 } } 
+module { "synth (multi)" "synth (multi)" "synth (multiwave)" 1 691 -567 120 305 properties { "modname" "synth (multiwave)" "nrout" 4 "imienv" 0 } val { "nv" 12.000000 "amp" 0.300000 "de" 5.000000 "wf" 4.000000 "pw" 0.200000 } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)" "delay (1 sample)" 1 496 -249 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "note to freq" "note to freq" "note to freq" 1 498 -490 120 155 properties { "modname" "note to freq" } val { } } 
+module { "self organizing map" "self organizing map" "self organizing map" 1 1045 -299 465 400 properties { "modname" "self organizing map" "nrp" 5 "nrx" 16 "nry" 16 } val { "clr" 1.000000 "opa" 0.000000 "rad" 2.000000 } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)1" "delay (1 sample)" 1 868 -250 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)2" "delay (1 sample)" 1 695 -243 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "math" "math1" "math" 1 690 -129 120 80 properties { "modname" "math" "mop" 3 "nrin" 2 } val { "in1" 12.000000 } } 
+module { "oscillator" "oscillator1" "oscillator" 1 682 -32 120 230 properties { "modname" "oscillator" } val { "f" 3000.000000 } } 
+module { "scope 3d" "scope 3d" "scope 3d" 1 1788 -510 120 609 properties { "modname" "scope 3d" "camera" 0 "w" 512 "h" 512 "imode" 0 "serverstr" "" "clientstr" "" "sendbuf" 0 } val { "x" -7.500000 "y" -7.500000 "zd" 16.500000 "br" 0.200000 "suba" 0.060000 } } 
+module { "follower (multi)" "follower (multi)" "follower (multi)" 1 1591 -368 120 255 properties { "modname" "follower (multi)" "nrin" 7 } val { "up" 0.600000 "dn" 0.600000 } } 
+module { "abs" "abs" "abs" 1 870 87 120 55 properties { "modname" "abs" } val { } } 
+module { "math" "math2" "math" 1 942 164 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 0.100000 } } 
+connections { 
+"oscillator" "osqr" "midi file" "g" 
+"midi file" "bpm" "math" "in0" 
+"math" "out" "oscillator" "f" 
+"start gate" "o" "midi file" "rst" 
+"start gate" "o" "oscillator" "rst" 
+"midi file" "g1_0" "delay1 (1 sample)" "in" 
+"midi file" "n1_0" "modulo" "a" 
+"midi file" "n1_0" "note to freq" "n" 
+"note to freq" "out" "synth (multi)" "f" 
+"synth (multi)" "om" "audio out" "inm" 
+"delay1 (1 sample)" "out" "synth (multi)" "g" 
+"delay1 (1 sample)" "out" "delay1 (1 sample)2" "in" 
+"delay1 (1 sample)1" "out" "self organizing map" "gs" 
+"modulo" "out" "math1" "in0" 
+"synth (multi)" "om" "s & h (multi)" "in" 
+"oscillator1" "osqr" "delay1 (1 sample)1" "in" 
+"oscillator1" "osqr" "s & h (multi)" "rst" 
+"s & h (multi)" "out0" "self organizing map" "pi0" 
+"s & h (multi)" "out1" "self organizing map" "pi1" 
+"s & h (multi)" "out2" "self organizing map" "pi2" 
+"s & h (multi)" "out3" "self organizing map" "pi3" 
+"s & h (multi)" "out4" "self organizing map" "pi4" 
+"self organizing map" "ox" "follower (multi)" "in0" 
+"self organizing map" "oy" "follower (multi)" "in1" 
+"follower (multi)" "out0" "scope 3d" "x" 
+"follower (multi)" "out1" "scope 3d" "y" 
+"synth (multi)" "om" "abs" "in" 
+"math2" "out" "self organizing map" "opa" 
+"abs" "out" "math2" "in0" 
+"delay1 (1 sample)1" "out" "self organizing map" "gm" 
+"self organizing map" "po0" "follower (multi)" "in2" 
+"follower (multi)" "out2" "scope 3d" "r" 
+"self organizing map" "po1" "follower (multi)" "in3" 
+"follower (multi)" "out3" "scope 3d" "g" 
+"self organizing map" "po2" "follower (multi)" "in4" 
+"follower (multi)" "out4" "scope 3d" "b" 
+"self organizing map" "po3" "follower (multi)" "in5" 
+"self organizing map" "po4" "follower (multi)" "in6" 
+"follower (multi)" "out5" "scope 3d" "x" 
+"follower (multi)" "out6" "scope 3d" "y" 
+"synth (multi)" "om" "scope 3d" "z" 
+} } 

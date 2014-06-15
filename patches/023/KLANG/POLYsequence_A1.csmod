@@ -1,0 +1,4 @@
+container { 4 0 0 1.000000 1 
+module { "audio out" "audio out" "audio out" 1 939 139 80 130 properties { "modname" "audio out" "nrchan" 2 } val { } } 
+connections { 
+} } 

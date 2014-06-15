@@ -1,0 +1,138 @@
+container { 4 -34 -205 0.741418 1 
+module { "audio in" "audio in" "audio in" 1 220 175 120 105 properties { "modname" "audio in" "nrchan" 2 } val { "a" 2.400000 } } 
+module { "scope2d" "scope2d" "scope 2d" 1 434 61 400 180 properties { "modname" "scope 2d" "nrin" 2 } val { } } 
+module { "audio out" "audio out" "audio out" 1 494 253 80 130 properties { "modname" "audio out" "nrchan" 2 } val { } } 
+module { "self organizing map" "self organizing map" "self organizing map" 1 834 246 504 475 properties { "modname" "self organizing map" "nrp" 7 "nrx" 48 "nry" 48 } val { "ram" 0.200000 "opa" 0.004000 "rad" 1.300000 "x" 24.000000 "y" 24.000000 } } 
+module { "oscillator" "oscillator" "oscillator" 1 483 863 120 230 properties { "modname" "oscillator" } val { "f" 1500.000000 } } 
+module { "scope 3d" "scope 3d" "scope 3d" 1 1848 246 120 609 properties { "modname" "scope 3d" "w" 512 "h" 512 "serverstr" "scope" "clientstr" "" "camera" 0 "imode" 0 "sendbuf" 0 } val { "zd" 58.500000 "r" 0.000000 "g" 0.000000 "b" 0.000000 "br" 0.000000 "opc" 0.100000 "ra" 2.000000 "f" 0.004000 } } 
+module { "s & h (multi)" "s & h (multi)" "s & h (multi)" 1 627 254 120 230 properties { "modname" "s & h (multi)" "nrout" 8 } val { } } 
+module { "follower (multi)" "follower (multi)" "follower (multi)" 1 305 631 120 255 properties { "modname" "follower (multi)" "nrin" 7 } val { "up" 0.200000 "dn" 0.030000 } } 
+module { "math" "math" "math" 1 1289 45 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 7.000000 } } 
+module { "math" "math1" "math" 1 1288 138 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 7.000000 } } 
+module { "math" "math2" "math" 1 -103 332 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 10.300000 } } 
+module { "oscillator" "oscillator2" "oscillator" 1 636 835 120 230 properties { "modname" "oscillator" } val { "f" 17998.099609 "a" 7.500000 } } 
+module { "oscillator" "oscillator3" "oscillator" 1 1984 405 120 230 properties { "modname" "oscillator" } val { "f" 0.030000 "a" 0.500000 } } 
+module { "point matrix" "point matrix" "point matrix" 1 892 756 120 180 properties { "modname" "point matrix" } val { "nrx" 24.000000 "nry" 24.000000 "nrz" 0.000000 } } 
+module { "delay (sample)" "delay (sample)" "delay (sample)" 1 1187 800 120 80 properties { "modname" "delay (sample)" "nrsam" 16000 } val { } } 
+module { "delay (sample)" "delay (sample)1" "delay (sample)" 1 1185 894 120 80 properties { "modname" "delay (sample)" "nrsam" 16000 } val { } } 
+module { "HSB 2 RGB" "HSB 2 RGB" "HSB 2 RGB" 1 1530 520 120 105 properties { "modname" "HSB 2 RGB" } val { "s" 0.300000 "b" 0.100000 } } 
+module { "math" "math3" "math" 1 1476 357 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 30.000000 } } 
+module { "math" "math4" "math" 1 1352 507 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 7.800000 } } 
+module { "abs" "abs" "abs" 1 42 337 120 55 properties { "modname" "abs" } val { } } 
+module { "distance factor" "distance factor3" "distance factor" 1 1684 250 120 230 properties { "modname" "distance factor" } val { "amp" 0.100000 "pow" 0.212000 } } 
+module { "delay (sample)" "delay (sample)2" "delay (sample)" 1 1675 519 120 80 properties { "modname" "delay (sample)" "nrsam" 16000 } val { "sam" 0.000000 } } 
+module { "delay (sample)" "delay (sample)3" "delay (sample)" 1 1677 605 120 80 properties { "modname" "delay (sample)" "nrsam" 16000 } val { "sam" 0.000000 } } 
+module { "delay (sample)" "delay (sample)4" "delay (sample)" 1 1676 693 120 80 properties { "modname" "delay (sample)" "nrsam" 16000 } val { "sam" 0.000000 } } 
+module { "math" "math5" "math" 1 471 401 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 8.200000 } } 
+module { "scope 3d" "scope 3d1" "scope 3d" 1 1528 671 120 484 properties { "modname" "scope 3d" "w" 512 "h" 512 "serverstr" "" "clientstr" "scope" "camera" 0 "imode" 0 "sendbuf" 0 } val { "x" -24.000000 "y" -24.000000 "zd" 58.500000 "br" 1.000000 "opc" 1.000000 "ra" 2.000000 "f" 0.005000 } } 
+module { "band detector" "band detector" "band detector" 1 137 543 120 80 properties { "modname" "band detector" } val { "f" 0.000000 } } 
+module { "math" "math6" "math" 1 -16 542 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in0" 150.000000 } } 
+module { "band detector" "band detector1" "band detector" 1 139 628 120 80 properties { "modname" "band detector" } val { "f" 0.000000 } } 
+module { "math" "math7" "math" 1 -14 627 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { } } 
+module { "band detector" "band detector2" "band detector" 1 141 710 120 80 properties { "modname" "band detector" } val { "f" 0.000000 } } 
+module { "math" "math8" "math" 1 -12 709 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { } } 
+module { "band detector" "band detector3" "band detector" 1 140 795 120 80 properties { "modname" "band detector" } val { "f" 0.000000 } } 
+module { "math" "math9" "math" 1 -13 794 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { } } 
+module { "band detector" "band detector4" "band detector" 1 140 880 120 80 properties { "modname" "band detector" } val { "f" 0.000000 } } 
+module { "math" "math10" "math" 1 -13 879 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { } } 
+module { "band detector" "band detector5" "band detector" 1 140 966 120 80 properties { "modname" "band detector" } val { "f" 0.000000 } } 
+module { "math" "math11" "math" 1 -13 965 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { } } 
+module { "band detector" "band detector6" "band detector" 1 142 1052 120 80 properties { "modname" "band detector" } val { "f" 0.000000 } } 
+module { "math" "math12" "math" 1 -11 1051 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { } } 
+module { "value meter" "value meter" "value meter" 1 514 558 160 205 properties { "modname" "value meter" "min" 0.000000 "max" 1.000000 "abs" 0 "nrchan" 7 } val { } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)" "FMUL" 1 -223 569 120 55 properties { "modname" "FMUL" } val { "in" 1.267000 } } 
+module { "clipper soft" "clipper soft" "clipper soft" 1 186 335 120 55 properties { "modname" "clipper soft" } val { } } 
+module { "math" "math13" "math" 1 265 401 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 3.300000 } } 
+connections { 
+"audio in" "out0" "scope2d" "in0" 
+"oscillator" "osqr" "s & h (multi)" "rst" 
+"audio in" "out0" "math2" "in0" 
+"audio in" "out0" "audio out" "in0" 
+"audio in" "out0" "math" "in0" 
+"audio in" "out1" "math1" "in0" 
+"math13" "out" "s & h (multi)" "in" 
+"point matrix" "x" "self organizing map" "x" 
+"point matrix" "y" "self organizing map" "y" 
+"point matrix" "x" "delay (sample)" "in" 
+"delay (sample)" "out" "distance factor3" "x1" 
+"point matrix" "y" "delay (sample)1" "in" 
+"delay (sample)1" "out" "distance factor3" "y1" 
+"oscillator2" "osqr" "self organizing map" "gr" 
+"oscillator2" "osqr" "point matrix" "g" 
+"oscillator" "osqr" "self organizing map" "gs" 
+"delay (sample)2" "out" "scope 3d" "r" 
+"delay (sample)3" "out" "scope 3d" "g" 
+"delay (sample)4" "out" "scope 3d" "b" 
+"self organizing map" "po2" "HSB 2 RGB" "b" 
+"self organizing map" "po5" "math3" "in0" 
+"math2" "out" "abs" "in" 
+"self organizing map" "po6" "math4" "in0" 
+"math4" "out" "HSB 2 RGB" "h" 
+"distance factor3" "ox" "scope 3d" "x" 
+"distance factor3" "oy" "scope 3d" "y" 
+"distance factor3" "oz" "scope 3d" "z" 
+"HSB 2 RGB" "r" "delay (sample)2" "in" 
+"HSB 2 RGB" "g" "delay (sample)3" "in" 
+"HSB 2 RGB" "bl" "delay (sample)4" "in" 
+"self organizing map" "ox" "distance factor3" "x2" 
+"self organizing map" "oy" "distance factor3" "y2" 
+"distance factor3" "out" "scope 3d" "br" 
+"math5" "out" "self organizing map" "rad" 
+"self organizing map" "ox" "scope 3d1" "x" 
+"self organizing map" "oy" "scope 3d1" "y" 
+"math6" "out" "band detector" "f" 
+"math7" "out" "band detector1" "f" 
+"math8" "out" "band detector2" "f" 
+"math9" "out" "band detector3" "f" 
+"math10" "out" "band detector4" "f" 
+"math11" "out" "band detector5" "f" 
+"math12" "out" "band detector6" "f" 
+"follower (multi)" "out0" "value meter" "in0" 
+"follower (multi)" "out1" "value meter" "in1" 
+"follower (multi)" "out2" "value meter" "in2" 
+"follower (multi)" "out3" "value meter" "in3" 
+"follower (multi)" "out4" "value meter" "in4" 
+"follower (multi)" "out5" "value meter" "in5" 
+"follower (multi)" "out6" "value meter" "in6" 
+"follower (multi)" "out0" "self organizing map" "pi0" 
+"follower (multi)" "out1" "self organizing map" "pi1" 
+"follower (multi)" "out2" "self organizing map" "pi2" 
+"follower (multi)" "out3" "self organizing map" "pi3" 
+"follower (multi)" "out4" "self organizing map" "pi4" 
+"follower (multi)" "out5" "self organizing map" "pi5" 
+"follower (multi)" "out6" "self organizing map" "pi6" 
+"math6" "out" "math7" "in0" 
+"math7" "out" "math8" "in0" 
+"math8" "out" "math9" "in0" 
+"math9" "out" "math10" "in0" 
+"math10" "out" "math11" "in0" 
+"math11" "out" "math12" "in0" 
+"delay1 (1 sample)" "out" "math6" "in1" 
+"delay1 (1 sample)" "out" "math7" "in1" 
+"delay1 (1 sample)" "out" "math8" "in1" 
+"delay1 (1 sample)" "out" "math9" "in1" 
+"delay1 (1 sample)" "out" "math10" "in1" 
+"delay1 (1 sample)" "out" "math11" "in1" 
+"delay1 (1 sample)" "out" "math12" "in1" 
+"math13" "out" "band detector" "in" 
+"math13" "out" "band detector1" "in" 
+"math13" "out" "band detector2" "in" 
+"math13" "out" "band detector3" "in" 
+"math13" "out" "band detector4" "in" 
+"math13" "out" "band detector5" "in" 
+"math13" "out" "band detector6" "in" 
+"abs" "out" "clipper soft" "in" 
+"clipper soft" "o" "math13" "in0" 
+"clipper soft" "o" "math5" "in0" 
+"self organizing map" "po3" "delay (sample)3" "in" 
+"self organizing map" "po1" "scope 3d" "b" 
+"self organizing map" "po5" "HSB 2 RGB" "s" 
+"self organizing map" "po4" "scope 3d" "r" 
+"band detector" "o" "follower (multi)" "in0" 
+"band detector1" "o" "follower (multi)" "in1" 
+"band detector2" "o" "follower (multi)" "in2" 
+"band detector3" "o" "follower (multi)" "in3" 
+"band detector4" "o" "follower (multi)" "in4" 
+"band detector5" "o" "follower (multi)" "in5" 
+"band detector6" "o" "follower (multi)" "in6" 
+} } 

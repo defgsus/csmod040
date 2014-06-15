@@ -1,0 +1,11 @@
+container { 4 352 197 1.000000 1 
+module { "scope 3d" "scope 3d" "scope 3d" 1 260 -64 120 609 properties { "modname" "scope 3d" "w" 512 "h" 512 "serverstr" "" "clientstr" "" "camera" 0 "imode" 0 "sendbuf" 0 } val { } } 
+module { "oscillator" "oscillator" "oscillator" 1 -151 -111 120 230 properties { "modname" "oscillator" } val { } } 
+module { "quantizer" "quantizer" "quantizer" 1 76 -71 120 80 properties { "modname" "quantizer" } val { "q" 0.250000 } } 
+module { "quantizer" "quantizer1" "quantizer" 1 76 19 120 80 properties { "modname" "quantizer" } val { "q" 0.250000 } } 
+connections { 
+"quantizer" "out" "scope 3d" "x" 
+"quantizer1" "out" "scope 3d" "y" 
+"oscillator" "osin" "quantizer" "in" 
+"oscillator" "ocos" "quantizer1" "in" 
+} } 

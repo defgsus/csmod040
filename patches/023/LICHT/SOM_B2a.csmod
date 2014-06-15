@@ -1,0 +1,82 @@
+container { 4 -29 -83 0.661418 1 
+module { "audio in" "audio in" "audio in" 1 220 175 120 105 properties { "modname" "audio in" "nrchan" 2 } val { "a" 2.400000 } } 
+module { "scope2d" "scope2d" "scope 2d" 1 434 61 400 180 properties { "modname" "scope 2d" "nrin" 2 } val { } } 
+module { "audio out" "audio out" "audio out" 1 494 253 80 130 properties { "modname" "audio out" "nrchan" 2 } val { } } 
+module { "self organizing map" "self organizing map" "self organizing map" 1 834 246 504 475 properties { "modname" "self organizing map" "nrp" 7 "nrx" 48 "nry" 48 } val { "ram" 0.100000 "opa" 0.199000 "rad" 3.300000 "x" 24.000000 "y" 24.000000 } } 
+module { "oscillator" "oscillator" "oscillator" 1 303 712 120 230 properties { "modname" "oscillator" } val { "f" 2500.000000 } } 
+module { "scope 3d" "scope 3d" "scope 3d" 1 1848 246 120 609 properties { "modname" "scope 3d" "w" 512 "h" 512 "serverstr" "scope" "clientstr" "" "camera" 0 "imode" 0 "sendbuf" 0 } val { "y" -0.600000 "zd" 58.500000 "r" 0.000000 "g" 0.000000 "b" 0.000000 "br" 0.000000 "opc" 0.500000 "ra" 2.000000 "f" 0.030000 } } 
+module { "s & h (multi)" "s & h (multi)" "s & h (multi)" 1 627 254 120 230 properties { "modname" "s & h (multi)" "nrout" 8 } val { } } 
+module { "follower (multi)" "follower (multi)" "follower (multi)" 1 1491 123 120 205 properties { "modname" "follower (multi)" "nrin" 5 } val { "up" 0.200000 "dn" 0.200000 } } 
+module { "oscillator" "oscillator1" "oscillator" 1 716 779 120 230 properties { "modname" "oscillator" } val { "f" 133.699997 } } 
+module { "math" "math" "math" 1 1289 45 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 7.000000 } } 
+module { "math" "math1" "math" 1 1288 138 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 7.000000 } } 
+module { "math" "math2" "math" 1 308 303 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 1.300000 } } 
+module { "fourier transform" "fourier transform" "fourier transform" 1 225 507 443 180 properties { "modname" "fourier transform" "buflen" 256 "nrchan" 8 } val { "a" 83.699997 } } 
+module { "oscillator" "oscillator2" "oscillator" 1 577 721 120 230 properties { "modname" "oscillator" } val { "f" 17998.099609 "a" 7.500000 } } 
+module { "oscillator" "oscillator3" "oscillator" 1 1984 405 120 230 properties { "modname" "oscillator" } val { "f" 0.030000 "a" 0.500000 } } 
+module { "point matrix" "point matrix" "point matrix" 1 892 756 120 180 properties { "modname" "point matrix" } val { "nrx" 24.000000 "nry" 24.000000 "nrz" 0.000000 } } 
+module { "delay (sample)" "delay (sample)" "delay (sample)" 1 1187 800 120 80 properties { "modname" "delay (sample)" "nrsam" 16000 } val { } } 
+module { "delay (sample)" "delay (sample)1" "delay (sample)" 1 1185 894 120 80 properties { "modname" "delay (sample)" "nrsam" 16000 } val { } } 
+module { "HSB 2 RGB" "HSB 2 RGB" "HSB 2 RGB" 1 1530 520 120 105 properties { "modname" "HSB 2 RGB" } val { "s" 0.200000 "b" 0.100000 } } 
+module { "math" "math3" "math" 1 1476 357 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 30.000000 } } 
+module { "math" "math4" "math" 1 1352 507 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 0.800000 } } 
+module { "abs" "abs" "abs" 1 317 406 120 55 properties { "modname" "abs" } val { } } 
+module { "distance factor" "distance factor3" "distance factor" 1 1684 250 120 230 properties { "modname" "distance factor" } val { "amp" 1.400000 "pow" 0.325000 } } 
+module { "delay (sample)" "delay (sample)2" "delay (sample)" 1 1675 519 120 80 properties { "modname" "delay (sample)" "nrsam" 16000 } val { "sam" 0.000000 } } 
+module { "delay (sample)" "delay (sample)3" "delay (sample)" 1 1677 605 120 80 properties { "modname" "delay (sample)" "nrsam" 16000 } val { "sam" 0.000000 } } 
+module { "delay (sample)" "delay (sample)4" "delay (sample)" 1 1676 693 120 80 properties { "modname" "delay (sample)" "nrsam" 16000 } val { "sam" 0.000000 } } 
+module { "math" "math5" "math" 1 471 401 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 2.300000 } } 
+module { "scope 3d" "scope 3d1" "scope 3d" 1 1528 671 120 484 properties { "modname" "scope 3d" "w" 512 "h" 512 "serverstr" "" "clientstr" "scope" "camera" 0 "imode" 0 "sendbuf" 0 } val { "x" -24.000000 "y" -24.000000 "zd" 58.500000 "opc" 1.000000 "ra" 2.000000 "f" 0.005000 } } 
+connections { 
+"audio in" "out0" "scope2d" "in0" 
+"self organizing map" "ox" "follower (multi)" "in0" 
+"self organizing map" "oy" "follower (multi)" "in1" 
+"oscillator" "osqr" "s & h (multi)" "rst" 
+"audio in" "out0" "math2" "in0" 
+"audio in" "out0" "audio out" "in0" 
+"self organizing map" "po0" "follower (multi)" "in2" 
+"self organizing map" "po1" "follower (multi)" "in3" 
+"self organizing map" "po4" "follower (multi)" "in4" 
+"audio in" "out0" "math" "in0" 
+"audio in" "out1" "math1" "in0" 
+"abs" "out" "s & h (multi)" "in" 
+"audio in" "outm" "fourier transform" "in" 
+"point matrix" "x" "self organizing map" "x" 
+"point matrix" "y" "self organizing map" "y" 
+"point matrix" "x" "delay (sample)" "in" 
+"delay (sample)" "out" "distance factor3" "x1" 
+"point matrix" "y" "delay (sample)1" "in" 
+"delay (sample)1" "out" "distance factor3" "y1" 
+"oscillator2" "osqr" "self organizing map" "gr" 
+"oscillator2" "osqr" "point matrix" "g" 
+"oscillator" "osqr" "self organizing map" "gs" 
+"delay (sample)2" "out" "scope 3d" "r" 
+"delay (sample)3" "out" "scope 3d" "g" 
+"delay (sample)4" "out" "scope 3d" "b" 
+"self organizing map" "po0" "HSB 2 RGB" "s" 
+"self organizing map" "po2" "HSB 2 RGB" "b" 
+"self organizing map" "po5" "math3" "in0" 
+"math2" "out" "abs" "in" 
+"self organizing map" "po6" "math4" "in0" 
+"math4" "out" "HSB 2 RGB" "h" 
+"distance factor3" "ox" "scope 3d" "x" 
+"distance factor3" "oy" "scope 3d" "y" 
+"distance factor3" "oz" "scope 3d" "z" 
+"HSB 2 RGB" "r" "delay (sample)2" "in" 
+"HSB 2 RGB" "g" "delay (sample)3" "in" 
+"HSB 2 RGB" "bl" "delay (sample)4" "in" 
+"self organizing map" "ox" "distance factor3" "x2" 
+"self organizing map" "oy" "distance factor3" "y2" 
+"distance factor3" "out" "scope 3d" "br" 
+"math5" "out" "self organizing map" "rad" 
+"abs" "out" "math5" "in0" 
+"self organizing map" "ox" "scope 3d1" "x" 
+"self organizing map" "oy" "scope 3d1" "y" 
+"fourier transform" "out1" "self organizing map" "pi3" 
+"fourier transform" "out4" "self organizing map" "pi4" 
+"fourier transform" "out5" "self organizing map" "pi5" 
+"fourier transform" "out6" "self organizing map" "pi6" 
+"s & h (multi)" "out0" "self organizing map" "pi0" 
+"s & h (multi)" "out1" "self organizing map" "pi1" 
+"s & h (multi)" "out2" "self organizing map" "pi2" 
+} } 

@@ -1,0 +1,41 @@
+container { 4 -582 -49 0.990000 1 
+module { "audio in" "audio in" "audio in" 1 220 175 120 105 properties { "modname" "audio in" "nrchan" 2 } val { "a" 2.400000 } } 
+module { "scope2d" "scope2d" "scope 2d" 1 434 61 400 180 properties { "modname" "scope 2d" "nrin" 2 } val { } } 
+module { "audio out" "audio out" "audio out" 1 494 253 80 130 properties { "modname" "audio out" "nrchan" 2 } val { } } 
+module { "self organizing map" "self organizing map" "self organizing map" 1 834 246 504 475 properties { "modname" "self organizing map" "nrp" 7 "nrx" 5 "nry" 5 } val { "opa" 0.003000 "rad" 2.100000 } } 
+module { "oscillator" "oscillator" "oscillator" 1 470 452 120 230 properties { "modname" "oscillator" } val { "f" 1000.000000 } } 
+module { "scope 3d" "scope 3d" "scope 3d" 1 1655 100 120 609 properties { "modname" "scope 3d" "w" 512 "h" 512 "serverstr" "" "clientstr" "" "camera" 0 "imode" 0 "sendbuf" 0 } val { "x" -2.000000 "y" -2.100000 "zd" 4.200000 "br" 0.020000 "suba" 0.600000 } } 
+module { "s & h (multi)" "s & h (multi)" "s & h (multi)" 1 627 254 120 230 properties { "modname" "s & h (multi)" "nrout" 8 } val { } } 
+module { "follower (multi)" "follower (multi)" "follower (multi)" 1 1491 123 120 205 properties { "modname" "follower (multi)" "nrin" 5 } val { "up" 0.200000 "dn" 0.200000 } } 
+module { "oscillator" "oscillator1" "oscillator" 1 626 512 120 230 properties { "modname" "oscillator" } val { "f" 133.699997 } } 
+module { "math" "math" "math" 1 1289 45 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 2.000000 } } 
+module { "math" "math1" "math" 1 1288 138 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 2.000000 } } 
+module { "math" "math2" "math" 1 387 394 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 10.000000 } } 
+connections { 
+"audio in" "out0" "scope2d" "in0" 
+"oscillator" "osqr" "self organizing map" "gs" 
+"self organizing map" "ox" "follower (multi)" "in0" 
+"self organizing map" "oy" "follower (multi)" "in1" 
+"oscillator" "osqr" "s & h (multi)" "rst" 
+"s & h (multi)" "out0" "self organizing map" "pi0" 
+"s & h (multi)" "out1" "self organizing map" "pi1" 
+"s & h (multi)" "out2" "self organizing map" "pi2" 
+"follower (multi)" "out0" "scope 3d" "x" 
+"follower (multi)" "out1" "scope 3d" "y" 
+"audio in" "out0" "math2" "in0" 
+"audio in" "out0" "audio out" "in0" 
+"s & h (multi)" "out3" "self organizing map" "pi3" 
+"s & h (multi)" "out4" "self organizing map" "pi4" 
+"self organizing map" "po0" "follower (multi)" "in2" 
+"self organizing map" "po1" "follower (multi)" "in3" 
+"self organizing map" "po4" "follower (multi)" "in4" 
+"follower (multi)" "out2" "scope 3d" "r" 
+"follower (multi)" "out3" "scope 3d" "g" 
+"follower (multi)" "out4" "scope 3d" "b" 
+"oscillator" "osqr" "self organizing map" "gr" 
+"math1" "out" "follower (multi)" "in1" 
+"math" "out" "follower (multi)" "in0" 
+"audio in" "out0" "math" "in0" 
+"audio in" "out1" "math1" "in0" 
+"math2" "out" "s & h (multi)" "in" 
+} } 

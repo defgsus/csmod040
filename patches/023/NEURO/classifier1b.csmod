@@ -1,0 +1,33 @@
+container { 4 -12 -4 1.000000 1 
+module { "random trigger" "random trigger" "random trigger" 1 569 53 120 180 properties { "modname" "random trigger" } val { "pr" 0.200000 "s0" 585.000000 } } 
+module { "oscillator" "oscillator" "oscillator" 1 38 44 120 230 properties { "modname" "oscillator" } val { "f" 100.000000 } } 
+module { "counter" "counter" "counter" 1 360 257 120 180 properties { "modname" "counter" } val { "max" 3.000000 } } 
+module { "counter" "counter1" "counter" 1 177 233 120 180 properties { "modname" "counter" } val { "max" 30.000000 } } 
+module { "delay1 (1 sample)" "delay1 (1 sample)" "delay (1 sample)" 1 361 185 120 55 properties { "modname" "delay (1 sample)" } val { } } 
+module { "envelope D" "envelope D" "envelope D" 1 747 48 120 130 properties { "modname" "envelope D" } val { "d" 0.010000 } } 
+module { "scope2d" "scope2d" "scope 2d" 1 820 206 400 205 properties { "modname" "scope 2d" "nrin" 3 } val { "width" 1.000000 "in1" -0.900000 "in2" -0.900000 } } 
+module { "math" "math" "math" 1 576 271 120 80 properties { "modname" "math" "mop" 3 "nrin" 2 } val { "in1" 3.000000 } } 
+module { "liquid state machine" "liquid state machine" "liquid state machine" 1 744 431 120 275 properties { "modname" "liquid state machine" "act" 2 "nrin" 2 "nrout" 1 "nrincon" 4 "nrhidw" 2 "nrhidh" 10 "nrhidcon" 130 "conrad" 3.000000 "fpow" 1.000000 } val { "see" 9.000000 "ral" 1.600000 "lr" 0.100000 "in1" 0.500000 } } 
+module { "oscillator" "oscillator1" "oscillator" 1 238 557 120 230 properties { "modname" "oscillator" } val { "f" 1000.000000 } } 
+module { "switch" "switch" "switch" 1 373 458 152 105 properties { "modname" "switch" "mode" 1 } val { } val { 0 } } 
+module { "counter" "counter2" "counter" 1 577 532 120 180 properties { "modname" "counter" } val { } } 
+module { "compare" "compare" "compare" 1 576 383 120 130 properties { "modname" "compare" } val { "b" 2.000000 } } 
+connections { 
+"oscillator" "osqr" "random trigger" "g" 
+"counter" "o" "random trigger" "s0" 
+"oscillator" "osqr" "counter1" "gate" 
+"counter1" "om" "counter" "gate" 
+"counter1" "om" "delay1 (1 sample)" "in" 
+"delay1 (1 sample)" "out" "random trigger" "r" 
+"random trigger" "out" "envelope D" "rst" 
+"envelope D" "out" "scope2d" "in0" 
+"counter" "o" "math" "in0" 
+"math" "out" "scope2d" "in1" 
+"liquid state machine" "out0" "scope2d" "in2" 
+"envelope D" "out" "liquid state machine" "in0" 
+"switch" "out" "counter2" "gate" 
+"counter2" "o" "liquid state machine" "see" 
+"switch" "out" "liquid state machine" "rst" 
+"counter" "o" "compare" "a" 
+"compare" "oe" "liquid state machine" "des0" 
+} } 

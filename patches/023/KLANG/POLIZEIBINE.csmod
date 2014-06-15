@@ -1,0 +1,54 @@
+container { 4 226 141 0.511874 1 
+module { "scope 3d" "scope 3d" "scope 3d" 1 1130 40 120 609 properties { "modname" "scope 3d" "camera" 0 "w" 512 "h" 512 "imode" 0 "serverstr" "" "clientstr" "" "sendbuf" 0 } val { "r" 0.300000 "g" 0.300000 "b" 0.300000 "br" 1.000000 "opc" 0.500000 "f" 0.400000 "suba" 0.500000 "subsam" 2.000000 } } 
+module { "oscillator" "oscillator" "oscillator" 1 -209 323 120 230 properties { "modname" "oscillator" } val { "a" 2.000000 } } 
+module { "select" "select" "multiplex in" 1 593 -53 120 105 properties { "modname" "multiplex in" "nrin" 2 } val { } } 
+module { "microphone 3d" "microphone 3d" "microphone 3d" 1 861 539 150 605 properties { "modname" "microphone 3d" "nrs" 2 "nrin" 2 "delay" 1 "mdelay" 2.000000 } val { "fo" 3.000000 "mx0" -1.000000 "mx1" 1.000000 "mx2" 1.000000 "mz2" 1.000000 "mx3" -1.000000 "mz3" 1.000000 "my4" 1.000000 "mz5" -1.000000 } } 
+module { "audio out" "audio out" "audio out" 1 1266 708 80 130 properties { "modname" "audio out" "nrchan" 2 } val { } } 
+module { "oscillator" "oscillator1" "oscillator" 1 251 420 120 230 properties { "modname" "oscillator" } val { "f" 357.100006 "a" 0.000000 } } 
+module { "oscillator" "oscillator2" "oscillator" 1 256 661 120 230 properties { "modname" "oscillator" } val { "f" 266.500000 "a" 0.000000 } } 
+module { "math" "math" "math" 1 26 503 120 80 properties { "modname" "math" "mop" 1 "nrin" 2 } val { "in0" 1.000000 } } 
+module { "clipper soft" "clipper soft" "clipper soft" 1 -67 373 120 55 properties { "modname" "clipper soft" } val { } } 
+module { "math" "math1" "math" 1 87 373 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in0" 1.000000 "in1" 0.500000 } } 
+module { "select" "select1" "multiplex in" 1 595 60 120 105 properties { "modname" "multiplex in" "nrin" 2 } val { } } 
+module { "sample gate" "sample gate" "sample gate" 1 370 -33 84 55 properties { "modname" "sample gate" } val { } } 
+module { "view 7" "view 7" "view 7" 1 800 -12 120 430 properties { "modname" "view 7" "nrin" 3 } val { "d" 0.900000 } } 
+module { "select out" "select out" "multiplex out" 1 599 179 120 80 properties { "modname" "multiplex out" "nrout" 2 } val { "in" 1.000000 } } 
+module { "math" "math2" "math" 1 303 192 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" 0.500000 } } 
+module { "math" "math3" "math" 1 304 103 120 80 properties { "modname" "math" "mop" 2 "nrin" 2 } val { "in1" -0.500000 } } 
+connections { 
+"microphone 3d" "o0" "audio out" "in0" 
+"oscillator1" "otri" "microphone 3d" "in0" 
+"oscillator2" "otri" "microphone 3d" "in1" 
+"math" "out" "oscillator2" "a" 
+"oscillator" "osin" "clipper soft" "in" 
+"clipper soft" "o" "math1" "in0" 
+"math1" "out" "math" "in1" 
+"math1" "out" "oscillator1" "a" 
+"oscillator1" "osin" "select" "in0" 
+"sample gate" "o" "select" "sel" 
+"sample gate" "o" "select1" "sel" 
+"oscillator2" "osin" "select" "in1" 
+"oscillator1" "ocos" "select1" "in0" 
+"oscillator2" "ocos" "select1" "in1" 
+"select" "out" "view 7" "X1" 
+"select1" "out" "view 7" "Y1" 
+"view 7" "OX1" "scope 3d" "x" 
+"view 7" "OY1" "scope 3d" "y" 
+"view 7" "OZ1" "scope 3d" "z" 
+"sample gate" "o" "select out" "sel" 
+"select out" "out0" "scope 3d" "r" 
+"select out" "out1" "scope 3d" "b" 
+"math1" "out" "math2" "in0" 
+"math2" "out" "select" "in1" 
+"math3" "out" "select" "in0" 
+"math" "out" "math3" "in0" 
+"view 7" "OX2" "microphone 3d" "ax0" 
+"view 7" "OY2" "microphone 3d" "ay0" 
+"view 7" "OZ2" "microphone 3d" "az0" 
+"view 7" "OX3" "microphone 3d" "ax1" 
+"view 7" "OY3" "microphone 3d" "ay1" 
+"view 7" "OZ3" "microphone 3d" "az1" 
+"microphone 3d" "o1" "audio out" "in1" 
+"math3" "out" "view 7" "X2" 
+"math2" "out" "view 7" "X3" 
+} } 

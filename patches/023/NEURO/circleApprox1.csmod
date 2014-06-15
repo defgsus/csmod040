@@ -1,0 +1,19 @@
+container { 4 227 28 1.000000 1 
+module { "liquid state machine" "liquid state machine" "liquid state machine" 1 260 115 120 375 properties { "modname" "liquid state machine" "act" 2 "nrin" 3 "nrout" 4 "nrincon" 10 "nrhidw" 3 "nrhidh" 5 "nrhidcon" 200 "conrad" 4.000000 "fpow" 1.020000 } val { "see" 0.000000 "ral" 1.340000 "lr" 0.000000 "in0" 1.000000 } } 
+module { "oscillator" "oscillator2" "oscillator" 1 -44 417 120 230 properties { "modname" "oscillator" } val { "f" 10.200000 } } 
+module { "switch" "switch" "switch" 1 90 28 152 105 properties { "modname" "switch" "mode" 1 } val { } val { 0 } } 
+module { "counter" "counter" "counter" 1 114 150 120 180 properties { "modname" "counter" } val { } } 
+module { "scope 3d" "scope 3d" "scope 3d" 1 532 29 120 609 properties { "modname" "scope 3d" "camera" 0 "w" 512 "h" 512 "imode" 0 "serverstr" "" "clientstr" "" "sendbuf" 0 } val { "r" 0.000000 "g" 0.400000 "b" 0.200000 "opc" 0.500000 } } 
+module { "switch" "switch1" "LEARN" 1 -76 285 152 105 properties { "modname" "LEARN" "mode" 0 } val { "on" 0.400000 } val { 1 } } 
+connections { 
+"switch" "out" "counter" "gate" 
+"counter" "o" "liquid state machine" "see" 
+"switch" "out" "liquid state machine" "rst" 
+"liquid state machine" "out0" "scope 3d" "x" 
+"liquid state machine" "out1" "scope 3d" "y" 
+"oscillator2" "osin" "liquid state machine" "des0" 
+"oscillator2" "ocos" "liquid state machine" "des1" 
+"oscillator2" "osin" "liquid state machine" "in1" 
+"switch1" "out" "liquid state machine" "lr" 
+"liquid state machine" "e" "scope 3d" "r" 
+} } 

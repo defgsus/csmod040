@@ -1,0 +1,19 @@
+intro
+
+
+~150	mond radius größer
+~200	fade out
+
+//167.2	KNALL
+
+
+
+ballade2
+(beats)
+3	start
+51	erste auflösung
+60	teil2
+
+90	restart
+~695	ende
+
