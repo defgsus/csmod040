@@ -1,3 +1,4 @@
+#include <algorithm>
 #include "csmodule_scope2d.h"
 
 char *CSmodule_Scope2d::docString()

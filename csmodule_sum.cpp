@@ -1,3 +1,4 @@
+#include <algorithm>
 #include "math.h"
 #include "csmodule_sum.h"
 
@@ -325,7 +326,7 @@ void CSmodule_QuadMixMod::step()
 	// init outputs
 	*_A = *_B = *_C = *_D = 0.0;
 
-	*_amt = max(0, *_amt);
+    *_amt = std::max((csfloat)0, *_amt);
 
 	#define shape(exp) ( (*_amt<1.0)? ( 1.0 - *_amt + *_amt * (exp) ) : ( pow(exp, *_amt) ) )
 

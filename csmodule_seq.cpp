@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <math.h>
 #include "csmodule_seq.h"
 
@@ -576,7 +577,7 @@ void CSmodule_Timeline::step()
 		if (k>=nrp-1) return;
 
 		// linear
-		csfloat t = ( *_pos - X[k] ) / max(0.0001, X[k+1] - X[k]);
+        csfloat t = ( *_pos - X[k] ) / std::max((csfloat)0.0001, X[k+1] - X[k]);
 		*_outL = *_out * (1.0-t) + t * (*_off + *_amp * Y[k+1]);
 
 		// cubic out
@@ -731,7 +732,7 @@ bool CSmodule_Timeline::mouseDown(int mx, int my, int mk)
 	return false;
 }
 
-bool CSmodule_Timeline::mouseMove(int mx, int my, int mk)
+bool CSmodule_Timeline::mouseMove(int mx, int my, int /*mk*/)
 {
 	mx -= x+sx;
 	my -= y+sy;
@@ -788,13 +789,13 @@ bool CSmodule_Timeline::mouseMove(int mx, int my, int mk)
 	{
 		Y[focusPoint] = getRY(my);
 		if ((focusPoint==0) && (nrp>1))
-			X[0] = min(getRX(mx), X[1]-0.001);
+            X[0] = min(getRX(mx), X[1]-(csfloat)0.001);
 		else
 		if ((focusPoint==nrp-1) && (nrp>1))
-			X[focusPoint] = max(X[focusPoint-1]+0.001, getRX(mx));
+            X[focusPoint] = max(X[focusPoint-1]+(csfloat)0.001, getRX(mx));
 		else
 		if ((focusPoint>0) && (focusPoint<nrp-1))
-			X[focusPoint] = max(X[focusPoint-1]+0.001, min(getRX(mx), X[focusPoint+1]-0.001 ));
+            X[focusPoint] = max(X[focusPoint-1]+(csfloat)0.001, min(getRX(mx), X[focusPoint+1]-(csfloat)0.001 ));
 		else
 			X[focusPoint] = getRX(mx);
 
@@ -813,7 +814,7 @@ bool CSmodule_Timeline::mouseMove(int mx, int my, int mk)
 }
 
 
-bool CSmodule_Timeline::mouseUp(int mx, int my)
+bool CSmodule_Timeline::mouseUp(int /*mx*/, int /*my*/)
 {
 	editMode = 0;
 	return true;
@@ -847,7 +848,7 @@ void CSmodule_Timeline::draw(int offx, int offy, float zoom)
 
 	// x lines
 	int rx = getRX(0);
-	int st = max(1, getRX(10)-getRX(0));
+    int st = max((csfloat)1, getRX(10)-getRX(0));
 	int bb = -20, bbb = 0;
 	bool doo = true;
 	while (doo)
@@ -873,7 +874,7 @@ void CSmodule_Timeline::draw(int offx, int offy, float zoom)
 	}
 	// y lines
 	int ry = getRY(0);
-	st = max(1, getRY(0)-getRY(10));
+    st = max((csfloat)1, getRY(0)-getRY(10));
 	doo = true;
 	bb = -20;
 	while (doo)
@@ -909,10 +910,10 @@ void CSmodule_Timeline::draw(int offx, int offy, float zoom)
 
 		if (i==focusPoint)
 		{
-			r = max(3, 3*zoom);
+            r = max((csfloat)3, (csfloat)3*zoom);
 			fl_color( FL_GREEN );
 		} else {
-			r = max(2, 2*zoom);
+            r = max((csfloat)2, (csfloat)2*zoom);
 			fl_color( FL_WHITE );
 		}
 		fl_rectf(bx+px-r,by+py-r,r<<1,r<<1);
@@ -1079,13 +1080,13 @@ csfloat CSmodule_Timeline::getValue(csfloat x)
 
 		case 1:
 			// linear interpolate
-			t = ( x - X[k] ) / max(0.0001, X[k+1] - X[k]);
+            t = ( x - X[k] ) / max((csfloat)0.0001, X[k+1] - X[k]);
 			return Y[k] * (1.0-t) + t * Y[k+1];
 			break;
 
 		case 2:
 			// smooth interpolate
-			t = ( x - X[k] ) / max(0.0001, X[k+1] - X[k]);
+            t = ( x - X[k] ) / max((csfloat)0.0001, X[k+1] - X[k]);
 			t = *_smth*t*t*(1-t) + pow(t, *_smth);
 			return Y[k] * (1.0-t) + t * Y[k+1];
 			break;
@@ -1097,7 +1098,7 @@ csfloat CSmodule_Timeline::getValue(csfloat x)
 			if (nrp<4)
 			{
 				// linear interpolate
-				t = ( x - X[k] ) / max(0.0001, X[k+1] - X[k]);
+                t = ( x - X[k] ) / max((csfloat)0.0001, X[k+1] - X[k]);
 				return Y[k] * (1.0-t) + t * Y[k+1];
 			}
 			if (doLoop)
@@ -1118,7 +1119,7 @@ csfloat CSmodule_Timeline::getValue(csfloat x)
 			ys1 = (y2-y0) * 0.5;
 			ys2 = (y3-y1) * 0.5;
 			a1 = y2-y1;
-			t = ( x - X[k] ) / max(0.0001, X[k+1] - X[k]);
+            t = ( x - X[k] ) / max((csfloat)0.0001, X[k+1] - X[k]);
 			return y1 + (a1 + ( a1 - ys1 + (ys2-a1)*t) * (t-1) ) * t;
 
 			break;

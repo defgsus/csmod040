@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <math.h>
 #include "csmodule_panning.h"
 
@@ -155,14 +156,14 @@ void CSmodule_Pos2D::setBuf(float sec)
 	if (usebuf==2)
 	{
 		if (buf1) free(buf1);
-		newbuflen = max(4, sec*sampleRate);
+        newbuflen = max(4, (int)(sec*sampleRate));
 		buf1 = (csfloat*) calloc(newbuflen*nrIn, sizeof(csfloat));
 		bufpos=0;
 		changebuf = 1;
 	} else
 	{
 		if (buf2) free(buf2);
-		newbuflen = max(4, sec*sampleRate);
+        newbuflen = max(4, (int)(sec*sampleRate));
 		buf2 = (csfloat*) calloc(newbuflen*nrIn, sizeof(csfloat));
 		bufpos=0;
 		changebuf = 2;
@@ -568,14 +569,14 @@ void CSmodule_Pos3D::setBuf(float sec)
 	if (usebuf==2)
 	{
 		if (buf1) free(buf1);
-		newbuflen = max(4, sec*sampleRate);
+        newbuflen = max(4, (int)(sec*sampleRate));
 		buf1 = (csfloat*) calloc(newbuflen*nrIn, sizeof(csfloat));
 		bufpos=0;
 		changebuf = 1;
 	} else
 	{
 		if (buf2) free(buf2);
-		newbuflen = max(4, sec*sampleRate);
+        newbuflen = max(4, (int)(sec*sampleRate));
 		buf2 = (csfloat*) calloc(newbuflen*nrIn, sizeof(csfloat));
 		bufpos=0;
 		changebuf = 2;

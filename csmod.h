@@ -175,7 +175,7 @@
 
 /* FLTK specific stuff */
 #include "FL/Fl.H"
-#include "FL/Filename.H"
+#include "FL/filename.H"
 #ifdef CSMOD_GLGUI
 #	include "FL/gl.H"
 #endif
@@ -201,9 +201,10 @@
 /* for render output */
 #include "csmod_wavewriter.h"
 
+#include "csmod_midi.h"
 /* this is included cause it defines min() and max() within std::
    the FLTK widgets override min/max names. :( */
-#include "c++/bits/stl_algobase.h"
+#include <algorithm>
 
 
 #define CSMOD_TITLE "CS Modular Editor"
@@ -220,13 +221,13 @@ void CSmodInit();
 /** call this on exit of your program */
 void CSmodDestroy();
 
-
-static CSmidiDevices
+#ifdef CSMOD_USE_MIDI
+extern CSmidiDevices
 	/** list of available midi devices */
 	*CSmidiInDevices,
 	/** list of available midi devices */
 	*CSmidiOutDevices;
-
+#endif
 
 //////////////////////////// CSaudioWindow ///////////////////////////////////////////////////
 
@@ -625,11 +626,11 @@ class CSmod : public
 	void enableExternalWindows();
 
 	// ------------------------- midi ------------------------------------------------
-
+#ifdef CSMOD_USE_MIDI
 	void setMidiInDevice(int deviceId);
 
 	void onMidiIn(DWORD data1, DWORD data2);
-
+#endif
 	// ------------------------ audio ------------------------------------------------
 
 	/** setup/initialize the audio devices and streams,
@@ -666,11 +667,12 @@ class CSmod : public
 };
 
 /** the default csmod class */
-static CSmod *theCSmod = 0;
+extern CSmod * theCSmod;
 
+#ifdef CSMOD_USE_MIDI
 /** callback for midi in messages */
 void CALLBACK CSmidiInCallback(HMIDIIN handle, UINT msg, DWORD data, DWORD par1, DWORD par2);
-
+#endif
 
 /** callback from installedModulesPopUp */
 void CSonAddModule(void *userData1, void *userData2);

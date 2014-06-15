@@ -1,6 +1,8 @@
 #include "csmod_midi.h"
 #include <stdio.h>
 
+#ifdef CSMOD_USE_MIDI
+
 CSmidiDevices *CSmidi_newDeviceList()
 {
 	CSmidiDevices *d = new CSmidiDevices;
@@ -81,3 +83,4 @@ void CSmidi_closeInput(int handle)
 #endif
 }
 
+#endif // #ifdef CSMOD_USE_MIDI

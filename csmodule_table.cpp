@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <math.h>
 #include "csmodule_table.h"
 
@@ -83,7 +84,8 @@ void CSmodule_Table::init()
 }
 
 
-void CSmodule_Table::getValue(int bank, csfloat *_out, csfloat *_outL, csfloat *_outS, csfloat *_outC)
+//void CSmodule_Table::getValue(int bank, csfloat *_out, csfloat *_outL, csfloat *_outS, csfloat *_outC)
+void CSmodule_Table::getValue(int , csfloat *, csfloat *, csfloat *, csfloat *)
 {
 
 }

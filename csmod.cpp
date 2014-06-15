@@ -3,6 +3,12 @@
 
 #include <math.h> // only debug
 
+CSmod * theCSmod = 0;
+#ifdef CSMOD_USE_MIDI
+CSmidiDevices * CSmidiInDevices = 0;
+CSmidiDevices * CSmidiOutDevices = 0;
+#endif
+
 char *CSmod::docString()
 {
 	size_t len = 1000000;
@@ -324,12 +330,14 @@ void CSmodInit()
 	printf("checking modules...\n");
 	initInstalledModules();
 
+#ifdef CSMOD_USE_MIDI
 	printf("checking midi... ");
 	CSmidiInDevices = CSmidi_newDeviceList();
 	CSmidi_getDevices(CSmidiInDevices, true);
 	CSmidiOutDevices = CSmidi_newDeviceList();
 	CSmidi_getDevices(CSmidiInDevices, false);
 	printf("%d ins, %d outs\n", CSmidiInDevices->nr, CSmidiOutDevices->nr);
+#endif
 
 	printf("initializing audio engine...\n");
 	Pa_Initialize();
@@ -348,9 +356,10 @@ void CSmodDestroy()
 	printf("closing audio...\n");
 	Pa_Terminate();
 
+#ifdef CSMOD_USE_MIDI
 	CSmidi_deleteDeviceList(CSmidiInDevices);
 	CSmidi_deleteDeviceList(CSmidiOutDevices);
-
+#endif
 
 	releaseInstalledModules();
 }
@@ -402,7 +411,7 @@ void CSaudioWindow::checkAudioDevices()
 	int num = Pa_GetDeviceCount();
 
 	// get device infos
-	for (int i=0;i<num;i++)
+    for (ptrdiff_t i=0;i<num;i++)
 	{
 		// get each device info (has to be const)
 		const PaDeviceInfo *inf = Pa_GetDeviceInfo(i);
@@ -425,14 +434,15 @@ void CSaudioWindow::checkAudioDevices()
 		}
 	}
 
-
+#ifdef CSMOD_USE_MIDI
 	// midi devices
 	CSmidiDevices *md = CSmidi_newDeviceList();
 	CSmidi_getDevices(md);
-	for (int i=0;i<md->nr;i++)
+    for (ptrdiff_t i=0;i<md->nr;i++)
 	{
 		browserMidiIn->add(md->name[i], (void*)i);
 	}
+#endif
 
 }
 
@@ -445,20 +455,23 @@ int CSaudioWindow::handle(int event)
 
 		int inDevice = -1;
 		if ( (browserIn->value()>0) && (browserIn->value()<=browserIn->size()) )
-			inDevice = (int)browserIn->data(browserIn->value());
+            inDevice = (ptrdiff_t)browserIn->data(browserIn->value());
 
 		int outDevice = -1;
 		if ( (browserOut->value()>0) && (browserOut->value()<=browserOut->size()) )
-			outDevice = (int)browserOut->data(browserOut->value());
+            outDevice = (ptrdiff_t)browserOut->data(browserOut->value());
 
 		parent->setAudioDevice(inDevice, outDevice, sampleRate->value());
 
+#ifdef CSMOD_USE_MIDI
 		int midiInDevice = -1;
 		if ( (browserMidiIn->value()>0) && (browserMidiIn->value()<=browserMidiIn->size()) )
 		{
 			midiInDevice = browserMidiIn->value()-1;
 			parent->setMidiInDevice(midiInDevice);
 		}
+#endif
+
 	}
 	return Fl_Window::handle(event);
 }
@@ -574,17 +587,17 @@ void CSpropertyWindow::assignModule(CSmodule *mod)
 		box->box(FL_EMBOSSED_BOX);
 
 		// appropiate input/edit
-		CSPinteger *inpi;
-		CSPfloat *inpf;
-		CSPstring *inps;
+        //CSPinteger *inpi;
+        //CSPfloat *inpf;
+        //CSPstring *inps;
 		switch (mod->property[i]->typ)
 		{
 			case CS_PROP_INT:
-				inpi = new CSPinteger(wi+wi1, yo, wi,he, "integer", mod->property[i]); break;
+                /*inpi =*/ new CSPinteger(wi+wi1, yo, wi,he, "integer", mod->property[i]); break;
 			case CS_PROP_FLOAT:
-				inpf = new CSPfloat(wi+wi1, yo, wi,he, "float", mod->property[i]); break;
+                /*inpf =*/ new CSPfloat(wi+wi1, yo, wi,he, "float", mod->property[i]); break;
 			case CS_PROP_STRING:
-				inps = new CSPstring(wi+wi1, yo, wi,he, "string", mod->property[i]); break;
+                /*inps =*/ new CSPstring(wi+wi1, yo, wi,he, "string", mod->property[i]); break;
 		}
 
 		yo += he+5;
@@ -1238,7 +1251,7 @@ void CSmod::enableExternalWindows()
 
 
 	// ------------------------- midi ------------------------------------------------
-
+#ifdef CSMOD_USE_MIDI
 void CSmod::setMidiInDevice(int deviceId)
 {
 	#ifdef CSMOD_DEBUG
@@ -1250,7 +1263,7 @@ void CSmod::setMidiInDevice(int deviceId)
 	if (deviceId<0) return;
 
 	printf("opening midi input...\n");
-	midiInHandle = CSmidi_openInput(0*deviceId, (DWORD)CSmidiInCallback, (DWORD)this);
+    midiInHandle = CSmidi_openInput(deviceId, (DWORD)CSmidiInCallback, (DWORD)this);
 	if (midiInHandle==0)
 	{
 		printf("error opening midi device...\n");
@@ -1272,7 +1285,7 @@ void CALLBACK CSmidiInCallback(HMIDIIN handle, UINT msg, DWORD data, DWORD par1,
 	if (c) c->onMidiIn(par1, par2);
 }
 
-
+#endif
 	// ------------------------ audio ------------------------------------------------
 
 
@@ -1380,7 +1393,10 @@ void CSmod::closeAudioDevice()
 	if (streamIn) Pa_CloseStream(streamIn); streamIn = 0;
 	if (streamOut) Pa_CloseStream(streamOut); streamOut = 0;
 
-	CSmidi_closeInput(midiInHandle);
+#ifdef CSMOD_USE_MIDI
+    CSmidi_closeInput(midiInHandle);
+#endif
+
 }
 
 
@@ -1706,7 +1722,7 @@ void CSmod::render(const char *pathname, float sec, int nrChan, int sr, int fps,
 
 
 
-void CSonAddModule(void *userData1, void *userData2)
+void CSonAddModule(void *userData1, void * /* userData2 */)
 {
 	//printf("yes");
 	theCSmod->addModule((CSmodule*)userData1);
@@ -1732,11 +1748,11 @@ void CSscreenCallback(void *userData)
 
 
 int CSaudioOutCallback (
-    const void *input,
+    const void *,//input,
     void *output,
     unsigned long frameCount,
-    const PaStreamCallbackTimeInfo* timeInfo,
-    PaStreamCallbackFlags statusFlags,
+    const PaStreamCallbackTimeInfo* ,//timeInfo,
+    PaStreamCallbackFlags, // statusFlags,
     void *userData )
 {
 
@@ -1749,10 +1765,10 @@ int CSaudioOutCallback (
 
 int CSaudioInCallback (
     const void *input,
-    void *output,
+    void *,//output,
     unsigned long frameCount,
-    const PaStreamCallbackTimeInfo* timeInfo,
-    PaStreamCallbackFlags statusFlags,
+    const PaStreamCallbackTimeInfo*,// timeInfo,
+    PaStreamCallbackFlags,// statusFlags,
     void *userData )
 {
 
@@ -1768,8 +1784,8 @@ int CSaudioInOutCallback (
     const void *input,
     void *output,
     unsigned long frameCount,
-    const PaStreamCallbackTimeInfo* timeInfo,
-    PaStreamCallbackFlags statusFlags,
+    const PaStreamCallbackTimeInfo*,// timeInfo,
+    PaStreamCallbackFlags,// statusFlags,
     void *userData )
 {
 

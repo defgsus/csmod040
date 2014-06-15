@@ -9,7 +9,7 @@
 #ifndef CSMOD_WAVEREADER_H_INCLUDED
 #define CSMOD_WAVEREADER_H_INCLUDED
 
-#include "c++/bits/stl_algobase.h" // only there for min() max()
+#include <algorithm> // only there for min() max()
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>

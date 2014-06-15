@@ -1,3 +1,4 @@
+#include <algorithm>
 #include "math.h"
 #include "csmodule_sh.h"
 
@@ -108,7 +109,7 @@ void CSmodule_SHfollow::step()
 	if ((lrst<=0.0) && (*_rst>0.0)) { sam = *_in; samo = *_out; frame = 0; }
 	lrst = *_rst;
 
-	mframe = max(1, *_time * sampleRate);
+    mframe = max((csfloat)1, *_time * sampleRate);
 	csfloat t = min((csfloat)1, (csfloat)frame / mframe);
 
 	*_out = samo * (1-t) + t * sam;

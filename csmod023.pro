@@ -10,6 +10,7 @@ CONFIG   -= app_bundle
 
 TEMPLATE = app
 
+LIBS += -lfftw3f -lportaudio -lpng -lfltk
 
 HEADERS += \
     csmodcontainer.h \
@@ -52,7 +53,6 @@ HEADERS += \
     csmodule_sampler.h \
     csmodule_scope2d.h \
     csmodule_scope3d.h \
-    csmodule_scopeGl.h \
     csmodule_select.h \
     csmodule_seq.h \
     csmodule_sh.h \
@@ -61,7 +61,9 @@ HEADERS += \
     csmodule_system.h \
     csmodule_table.h \
     csmod_wavereader.h \
-    csmod_wavewriter.h
+    csmod_wavewriter.h \
+    system.h \
+    csmodule_scopegl.h
 
 SOURCES += \
     main.cpp \
@@ -114,5 +116,6 @@ SOURCES += \
     csmodule_system.cpp \
     csmodule_table.cpp \
     csmod_wavereader.cpp \
-    csmod_wavewriter.cpp
+    csmod_wavewriter.cpp \
+    system.cpp
 

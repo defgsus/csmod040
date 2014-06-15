@@ -13,9 +13,11 @@
 #ifndef CSMODULE_SCOPEGL_H_INCLUDED
 #define CSMODULE_SCOPEGL_H_INCLUDED
 
+#ifdef CSMOD_USE_GL
+
 #include "csmodule.h"
 
-#include <FL/gl.H>
+#include <FL/gl.h>
 #include <GL/glu.h>
 
 #define CSMOD_SCOPEGL_MAX 0x10000
@@ -72,6 +74,6 @@ class CSmodule_ScopeGl: public CSmodule
 
 };
 
-
+#endif // #ifdef CSMOD_USE_GL
 
 #endif // CSMODULE_SCOPEGL_H_INCLUDED

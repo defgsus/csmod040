@@ -1,3 +1,5 @@
+#ifdef CSMOD_USE_MIDI
+
 #include <math.h>
 #include "csmodule_midi.h"
 
@@ -1056,3 +1058,5 @@ void CSmodule_MidiMerge::step()
 	}
 
 }
+
+#endif // #ifdef CSMOD_USE_MIDI

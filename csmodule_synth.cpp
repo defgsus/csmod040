@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <math.h>
 #include "csmodule_synth.h"
 

@@ -1,3 +1,4 @@
+#include <algorithm>
 #include "math.h"
 #include "csmodule_analyze.h"
 
@@ -91,13 +92,13 @@ void CSmodule_ValueMeter::propertyCallback(CSmodProperty *prop)
 	if (strcmp(prop->name,"min")==0)
 	{
 		rangemin = prop->fvalue;
-		range = 1.0 / max((csfloat)0.0001, rangemax - rangemin);
+        range = 1.0 / std::max((csfloat)0.0001, rangemax - rangemin);
 	}
 	else
 	if (strcmp(prop->name,"max")==0)
 	{
 		rangemax = prop->fvalue;
-		range = 1.0 / max((csfloat)0.0001, rangemax - rangemin);
+        range = 1.0 / std::max((csfloat)0.0001, rangemax - rangemin);
 	}
 	else
 	if (strcmp(prop->name,"abs")==0)
@@ -114,9 +115,9 @@ void CSmodule_ValueMeter::step()
 	for (int i=0;i<nrIn;i++)
 	{
 		csfloat f = (absolute)?
-			max((csfloat)0,min((csfloat)1, (fabs(*_in[i]) - rangemin) * range ))
+            std::max((csfloat)0,std::min((csfloat)1, ((csfloat)fabs(*_in[i]) - rangemin) * range ))
 			:
-			max((csfloat)0,min((csfloat)1, (*_in[i] - rangemin) * range ));
+            std::max((csfloat)0,std::min((csfloat)1, (*_in[i] - rangemin) * range ));
 		if (*_in[i]>temp[i])
 			temp[i] += 100*isampleRate*( f - temp[i]);
 		else

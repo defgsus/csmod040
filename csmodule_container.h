@@ -47,7 +47,7 @@ class CSmodule_Container: public CSmodule
 
 	char *docString();
 
-	~CSmodule_Container();
+    ~CSmodule_Container();
 
 	CSmodule_Container* newOne();
 	/** override copyFrom method to copy all the container contents */

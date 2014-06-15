@@ -1,3 +1,4 @@
+#include <algorithm>
 #include "math.h"
 #include "csmodule_nn.h"
 
@@ -357,14 +358,14 @@ void CSmodule_NN::draw(int offx, int offy, float zoom)
 	if (nrHidden<1) return;
 
 	// draw hidden cell states
-	int a = max(2, zoom*(width - 10));
+    int a = std::max(2, (int)(zoom*(width - 10)));
 	int x1 = offx+zoom*(x+5);
 	int y1 = offy+zoom*(y+(headerHeight>>1));
 	int y2 = offy+zoom*(y+headerHeight*2/3);
 	for (int i=0;i<a;i++)
 	{
 		int ci = i*nrHidden/a;
-		uchar c = min(255,max(0, abs(cell[ci]*255) ));
+        uchar c = std::min(255,std::max(0, abs((int)(cell[ci]*255)) ));
 		if (cell[ci]>0)
 			fl_color(c << 16);
 		else
@@ -381,7 +382,7 @@ void CSmodule_NN::draw(int offx, int offy, float zoom)
 		int ci = i*CSMOD_NN_MAX*CSMOD_NN_MAX_IN / a;
 		int cj = ci % CSMOD_NN_MAX_IN;
 			ci = ci / CSMOD_NN_MAX_IN;
-		uchar c = min(255,max(0, abs(weightIn[ci][cj]*255) ));
+        uchar c = std::min(255,std::max(0, abs((int)(weightIn[ci][cj]*255)) ));
 		if (weightIn[ci][cj]>0)
 			fl_color(c << 16);
 		else
@@ -804,7 +805,7 @@ void CSmodule_NNLSM::brainWash()
 		weightHidFromIndex[i] = &cell[cj];
 		weightHidToIndex[i] = &celltemp[ci];
 		// set weight according to distance
-		d = 1.0-min(0.99, d/connectRad);
+        d = 1.0-std::min((csfloat)0.99, d/connectRad);
 		weightHid[i] = d * (csfloat)(rand()-rand())/RAND_MAX * *_rampl;
 
 		//printf("%d,%d,%d - %d,%d,%d w:%g\n",x1,y1,z1,x2,y2,z2,weightHid[i]);
@@ -833,14 +834,14 @@ void CSmodule_NNLSM::draw(int offx, int offy, float zoom)
 	if (nrHid<1) return;
 
 	// draw hidden cell states
-	int a = max(2, zoom*(width - 10));
+    int a = std::max(2, (int)(zoom*(width - 10)));
 	int x1 = offx+zoom*(x+5);
 	int y1 = offy+zoom*(y+(headerHeight>>1));
 	int y2 = offy+zoom*(y+headerHeight*2/3);
 	for (int i=0;i<a;i++)
 	{
 		int ci = i*nrHid/a;
-		uchar c = min(255,max(0, abs(cell[ci]*255) ));
+        uchar c = std::min(255,std::max(0, abs((int)(cell[ci]*255)) ));
 		if (cell[ci]>0)
 			fl_color(c << 16);
 		else
@@ -1061,7 +1062,7 @@ void CSmodule_SOM::step()
 		else
 		// draw circle
 		{
-			int rad = min(CSMOD_SOM_MAX_WIDTH, *_rad);
+            int rad = std::min(CSMOD_SOM_MAX_WIDTH, (int)*_rad);
 			for (int j1=0;j1<rad*2+1;j1++)
 			{
 				int j = j1+y-rad;

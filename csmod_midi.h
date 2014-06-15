@@ -12,10 +12,17 @@
 #ifndef CSMOD_MIDI_H_INCLUDED
 #define CSMOD_MIDI_H_INCLUDED
 
+#ifdef CSMOD_USE_MIDI
 
 #ifdef WIN32
 #	include <windows.h>
 #	include <mmsystem.h>
+#else
+#   include <inttypes.h>
+#   include "system.h"
+#   define CALLBACK
+#   define HMIDIIN int
+#   define HMIDIOUT int
 #endif
 
 /** structure to hold device list with names */
@@ -45,6 +52,6 @@ int CSmidi_openInput(int deviceId, DWORD callback, DWORD data);
 
 void CSmidi_closeInput(int handle);
 
-
+#endif // CSMOD_USE_MIDI
 
 #endif // CSMOD_MIDI_H_INCLUDED

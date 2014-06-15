@@ -1,3 +1,4 @@
+#include <algorithm>
 #include "math.h"
 #include "csmodule_osc.h"
 
@@ -1413,7 +1414,7 @@ void CSmodule_Osc3::step()
 	// soft sync
 	/*
 	if ((lsoftsync<=0.0)&&(*_softsync>0.0))
-	{	/*
+    {	/ *
 		if (phase1>=0.5) phase1b = 1.0-phase1; else
 			if (phase1<=-0.5) phase1b = -1.0-phase1; else
 				phase1b	= -phase1;

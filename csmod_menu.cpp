@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "csmod_menu.h"
 
+CSmodPopUp * CSactivePopUp = 0;
 
 CSmodPopUp::CSmodPopUp()
 {

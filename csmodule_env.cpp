@@ -1,3 +1,4 @@
+#include <algorithm>
 #include "math.h"
 #include "csmodule_env.h"
 
@@ -462,7 +463,7 @@ void CSmodule_Fade::step()
 	if ((lrst<=0.0)&&(*_rst>0.0))
 	{
 		samplesPassed = 0;
-		samples2Pass = max(0, *_sec * sampleRate);
+        samples2Pass = std::max(0, (int)(*_sec * sampleRate));
 	}
 	lrst = *_rst;
 
@@ -559,7 +560,7 @@ void CSmodule_FadeFF::step()
 	// gate reset
 	if ((lrst<=0.0)&&(*_rst>0.0))
 	{
-		samples2Pass = max(0, *_sec * sampleRate);
+        samples2Pass = std::max(0, (int)(*_sec * sampleRate));
 
 		dir = 1-dir;
 		if (dir==0)
@@ -735,7 +736,7 @@ void CSmodule_FadeMulti::step()
 	if ((lrst<=0.0)&&(*_rst>0.0))
 	{
 		samplesPassed = 0;
-		samples2Pass = max(0, *_sec * sampleRate);
+        samples2Pass = std::max(0, (int)(*_sec * sampleRate));
 	}
 	lrst = *_rst;
 
@@ -827,7 +828,7 @@ void CSmodule_FadeMultiFF::step()
 	// gate reset
 	if ((lrst<=0.0)&&(*_rst>0.0))
 	{
-		samples2Pass = max(0, *_sec * sampleRate);
+        samples2Pass = std::max(0, (int)(*_sec * sampleRate));
 
 		dir = 1-dir;
 		if (dir==0)

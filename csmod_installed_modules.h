@@ -95,7 +95,9 @@ static CSmodule
 		new CSmodule_Container(),
 		new CSmodule_ContainerInput(),
 		new CSmodule_ContainerOutput(),
+    #ifdef CSMOD_USE_MIDI
 		new CSmodule_ControllerIn(),
+    #endif
 		new CSmodule_Comp(),
 		new CSmodule_Counter(),
 		new CSmodule_CounterFloat(),
@@ -136,15 +138,19 @@ static CSmodule
 		new CSmodule_MathDiv(),
 		new CSmodule_MathMul(),
 		new CSmodule_Merge(),
-		new CSmodule_MidiMerge(),
+#ifdef CSMOD_USE_MIDI
+        new CSmodule_MidiMerge(),
 		new CSmodule_MidiFile(),
+#endif
 		new CSmodule_Mixer(),
 		new CSmodule_Modulo(),
 		new CSmodule_MultiSin(),
 		new CSmodule_NN(),
 		new CSmodule_NNLSM(),
+#ifdef CSMOD_USE_MIDI
 		new CSmodule_NoteIn(),
 		new CSmodule_NoteInPoly(),
+#endif
 		new CSmodule_NoiseWhite(),
 		new CSmodule_NoisePitch(),
 		new CSmodule_OnChange(),
@@ -179,8 +185,10 @@ static CSmodule
 		new CSmodule_SamplerPoly(),
 		new CSmodule_Scope2d(),
 		new CSmodule_Scope3d(),
-		new CSmodule_ScopeGl(),
-		new CSmodule_Select(),
+#ifdef CSMOD_USE_GL
+        new CSmodule_ScopeGl(),
+#endif
+        new CSmodule_Select(),
 		new CSmodule_SelectInNN(),
 		new CSmodule_SelectOut(),
 		new CSmodule_Seq(),
@@ -221,22 +229,22 @@ void initInstalledModules();
 /** call this before program termination */
 void releaseInstalledModules();
 
-static int
+extern int
 	/** the number of different modules in @see installedModules[] */
-	nrInstalledModules = sizeof(installedModules)/sizeof(*installedModules),
+    nrInstalledModules,
 
 	csNrGroups,
 	csNrModulesGroup[CSMOD_MAX_GROUP];
 
-static const char
+extern const char
 	*csGroupName[CSMOD_MAX_GROUP],
-	*csUngroupedString = "---";
+    *csUngroupedString;
 
-static CSmodule
+extern CSmodule
 	*csGroup[CSMOD_MAX_GROUP][CSMOD_MAX_MODULE];
 
 
-static CSmodPopUp
+extern CSmodPopUp
 	/** the main popup menu for holding modules */
 	*CSmodulePopUp,
 	/** popups for each group */

@@ -1,5 +1,23 @@
 #include "csmod_installed_modules.h"
 
+/** the number of different modules in @see installedModules[] */
+int nrInstalledModules = sizeof(installedModules)/sizeof(*installedModules);
+
+int csNrGroups = 0;
+int csNrModulesGroup[CSMOD_MAX_GROUP];
+
+const char * csGroupName[CSMOD_MAX_GROUP];
+const char * csUngroupedString = "---";
+
+CSmodule * csGroup[CSMOD_MAX_GROUP][CSMOD_MAX_MODULE];
+
+
+CSmodPopUp * CSmodulePopUp = 0;
+CSmodPopUp * CSmoduleSubPopUp[1024];
+
+
+
+
 
 int getNrInstalledModuleGroups()
 {

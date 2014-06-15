@@ -135,7 +135,9 @@ void CSmodContainer::clear()
 	for (int i=0;i<CSMOD_MAX_NRPN_CONTROLLER;i++)
 		controller14Value[i] = 0;
 
-	midi_panic();
+#ifdef CSMOD_USE_MIDI
+    midi_panic();
+#endif
 
 	// calculation can begin
 
@@ -309,8 +311,8 @@ int CSmodContainer::restore(FILE *buf)
 	while (doit)
 	{
 		// save file position
-		fpos_t oldpos;
-		fgetpos(buf, &oldpos);
+        fpos_t oldpos;
+        fgetpos(buf, &oldpos);
 
 		// see what's next
 		str = readString(buf);
@@ -347,7 +349,7 @@ int CSmodContainer::restore(FILE *buf)
 				mod = addModule(mod1);
 			}
 			if (nam) free(nam);
-			fseek(buf, oldpos, SEEK_SET);
+            fsetpos(buf, &oldpos);
 
 			// set CSmod parent for container modules
 			if (strcmp(mod->bname,"container")==0)
@@ -360,7 +362,7 @@ int CSmodContainer::restore(FILE *buf)
 		else
 		if (strcmp(str, "connections")==0)
 		{
-			fseek(buf, oldpos, SEEK_SET);
+            fsetpos(buf, &oldpos);
 			restoreConnections(buf);
 		}
 
@@ -1790,6 +1792,7 @@ bool CSmodContainer::keyDown(int key)
 		}
 	}
 
+#ifdef CSMOD_USE_MIDI
 	// midi keyboard
 	if ((!alt)&&(!ctrl))
 	{
@@ -1830,6 +1833,7 @@ bool CSmodContainer::keyDown(int key)
 		if (wantKey) return true;
 		wantKey = true;
 	}
+#endif
 
 	// general keys
 	switch (key)
@@ -2233,7 +2237,9 @@ CSmodContainer *CSmodContainer::m_contain(CSmodule *m)
 
 	//-------------------------------- midi ------------------------------------
 
-void CSmodContainer::onMidiIn(DWORD data1, DWORD data2)
+#ifdef CSMOD_USE_MIDI
+
+void CSmodContainer::onMidiIn(DWORD data1, DWORD /*data2*/)
 {
 	if ((parent)&&(!parent->running)) return;
 
@@ -2369,7 +2375,7 @@ void CSmodContainer::midi_control14Change(int controller, int value)
 }
 
 
-
+#endif // #ifdef CSMOD_USE_MIDI
 
 
 	//---------------------------- calculation ---------------------------------
@@ -2420,7 +2426,9 @@ void CSmodContainer::setStart(CSmodContainer *c)
 		if (mc) setStart(mc->container);
 	}
 
-	midi_panic();
+#ifdef CSMOD_USE_MIDI
+    midi_panic();
+#endif
 }
 
 

@@ -461,23 +461,29 @@ void CSmodule::storeConnectors(FILE *buf)
 	fprintf(buf, " } ");
 }
 
+#if defined(CSMOD_DEBUGE) || (CSMOD_DEBUGF)
 void CSmodule::storeAddBeforeValue(FILE *buf)
 {
-	#if defined(CSMOD_DEBUGE) || (CSMOD_DEBUGF)
 	printf("CSmodule::storeAddBeforeValue(0x%p) in base class\n",buf);
-	#endif
+}
+#endif
 
-	// do nothing here
+void CSmodule::storeAddBeforeValue(FILE *)
+{
+    // do nothing here
 }
 
 
+#if defined(CSMOD_DEBUGE) || (CSMOD_DEBUGF)
 void CSmodule::storeAdd(FILE *buf)
 {
-	#if defined(CSMOD_DEBUGE) || (CSMOD_DEBUGF)
 	printf("CSmodule::storeAdd(0x%p) in base class\n",buf);
-	#endif
+}
+#endif
 
-	// do nothing here
+void CSmodule::storeAdd(FILE *)
+{
+    // do nothing here
 }
 
 
@@ -642,22 +648,28 @@ void CSmodule::restoreConnectors(FILE *buf)
 	arrangeConnectors();
 }
 
+#if defined(CSMOD_DEBUGE) || (CSMOD_DEBUGF)
 void CSmodule::restoreAdd(FILE *buf)
 {
-	#if defined(CSMOD_DEBUGE) || (CSMOD_DEBUGF)
 	printf("CSmodule::restoreAdd(0x%p) in base class\n",buf);
-	#endif
+}
+#endif
 
-	// do nothing here
+void CSmodule::restoreAdd(FILE *)
+{
+    // do nothing here
 }
 
+#if defined(CSMOD_DEBUGE) || (CSMOD_DEBUGF)
 void CSmodule::restoreAddBeforeValue(FILE *buf)
 {
-	#if defined(CSMOD_DEBUGE) || (CSMOD_DEBUGF)
 	printf("CSmodule::restoreAddBeforeValue(0x%p) in base class\n",buf);
-	#endif
+}
+#endif
 
-	// do nothing here
+void CSmodule::restoreAddBeforeValue(FILE *)
+{
+    // do nothing here
 }
 
 
@@ -1305,28 +1317,42 @@ bool CSmodule::isInBox(int x1,int y1, int x2, int y2)
 
 
 
+#ifdef CSMOD_DEBUGG
 bool CSmodule::mouseDown(int mx, int my, int mk)
 {
-	#ifdef CSMOD_DEBUGG
 	printf("CSmodule::mouseDown(%d, %d, %d) in base class\n",mx,my,mk);
-	#endif
-	return false;
+}
+#endif
+
+bool CSmodule::mouseDown(int , int , int )
+{
+    return false;
 }
 
+#ifdef CSMOD_DEBUGG
 bool CSmodule::mouseMove(int mx, int my, int mk)
 {
-	#ifdef CSMOD_DEBUGG
 	printf("CSmodule::mouseMove(%d, %d, %d) in base class\n",mx,my,mk);
-	#endif
-	return false;
+    return false;
+}
+#endif
+
+bool CSmodule::mouseMove(int , int , int )
+{
+    return false;
 }
 
+#ifdef CSMOD_DEBUGG
 bool CSmodule::mouseUp(int mx, int my)
 {
-	#ifdef CSMOD_DEBUGG
 	printf("CSmodule::mouseUp(%d, %d) in base class\n",mx,my);
-	#endif
-	return false;
+    return false;
+}
+#endif
+
+bool CSmodule::mouseUp(int , int )
+{
+    return false;
 }
 
 
@@ -1358,22 +1384,28 @@ void CSmodule::drawWindow()
 	// do nothing here
 }
 
+#ifdef CSMOD_DEBUGG
 void CSmodule::drawAndSaveWindow(const char *filename)
 {
-	#ifdef CSMOD_DEBUGG
 	printf("CSmodule::drawAndSaveWindow(\"%s\") in base class!!\n", filename);
-	#endif
+}
+#endif
 
-	// do nothing here
+void CSmodule::drawAndSaveWindow(const char * /*filename*/)
+{
+    // do nothing here
 }
 
+#ifdef CSMOD_DEBUGG
 void CSmodule::onResizeWindow(int newW, int newH)
 {
-	#ifdef CSMOD_DEBUGG
 	printf("CSmodule::onResizeWindow(%d, %d) in base class!!\n",newW,newH);
-	#endif
+}
+#endif
 
-	// do nothing here
+void CSmodule::onResizeWindow(int /*newW*/, int /*newH*/)
+{
+    // do nothing here
 }
 
 
@@ -1422,10 +1454,11 @@ void CSmodule::storeWindow(const char *filename)
 	fl_read_image(img, 0,0,w,h);
 
 	// and save scanline pointers
-	int *scanline = (int*) calloc(h, sizeof(int)), *s = scanline;
+    png_byte** scanline = (png_byte**) calloc(h, sizeof(png_byte*)),
+                **s = scanline;
 	for (int i=0;i<h;i++)
 	{
-		*s = (int)img + i*w*3;
+        *s = (png_byte*)img + i*w*3;
 		s++;
 	}
 
@@ -1473,10 +1506,11 @@ void CSmodule::storePNG(const char *filename, unsigned char *img, int w, int h, 
 		);
 
 	// save scanline pointers
-	int *scanline = (int*) calloc(h, sizeof(int)), *s = scanline;
+    png_byte **scanline = (png_byte**) calloc(h, sizeof(png_byte*)),
+             **s = scanline;
 	for (int i=0;i<h;i++)
 	{
-		*s = (int)img + i*w*spacing;
+        *s = (png_byte*)img + i*w*spacing;
 		s++;
 	}
 

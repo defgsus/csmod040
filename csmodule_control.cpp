@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <math.h>
 #include "csmodule_control.h"
 
@@ -133,7 +134,7 @@ void CSmodule_Switch::draw(int offx, int offy, float zoom)
 	wasScreenUpdate = 0;
 }
 
-bool CSmodule_Switch::mouseDown(int mx, int my, int mk)
+bool CSmodule_Switch::mouseDown(int mx, int my, int /*mk*/)
 {
 	mx -= x+sx;
 	my -= y+sy;
@@ -568,10 +569,10 @@ void CSmodule_SwitchMatrix::step()
 {
 	// update read/write bank index
 	if (curReadBank != *_bankRead)
-		curReadBank = max(0,min(CSMOD_SWITCH_MAX_BANK-1, *_bankRead ));
+        curReadBank = std::max(0,std::min(CSMOD_SWITCH_MAX_BANK-1, (int)*_bankRead ));
 	if (curWriteBank != *_bankWrite)
 		{
-		curWriteBank = max(0,min(CSMOD_SWITCH_MAX_BANK-1, *_bankWrite ));
+        curWriteBank = std::max(0,std::min(CSMOD_SWITCH_MAX_BANK-1, (int)*_bankWrite ));
 		doValDrag = false;
 		}
 
@@ -666,7 +667,7 @@ void CSmodule_SwitchMatrix::draw(int offx, int offy, float zoom)
 			x1 = bx+zoom*(sz+editX*sz + ((this->offx)? (editX/this->offx)*4:0));
 			y1 = by+zoom*(10+editY*sz + ((this->offy)? (editY/this->offy)*4:0));
 			fl_color(FL_WHITE);
-			fl_font(FL_HELVETICA_BOLD, max(10,10*zoom));
+            fl_font(FL_HELVETICA_BOLD, std::max(10,(int)(10*zoom)));
 			char v[128];
 			sprintf(v, "%g", state[curWriteBank][editY][editX]);
 			fl_draw(v, x1,y1);
@@ -725,7 +726,7 @@ bool CSmodule_SwitchMatrix::mouseDown(int mx, int my, int mk)
 	return true;
 }
 
-bool CSmodule_SwitchMatrix::mouseMove(int mx, int my, int mk)
+bool CSmodule_SwitchMatrix::mouseMove(int /*mx*/, int my, int /*mk*/)
 {
 	if ((doValDrag)&&(useFloat))
 	{
@@ -744,7 +745,7 @@ bool CSmodule_SwitchMatrix::mouseMove(int mx, int my, int mk)
 	return false;
 }
 
-bool CSmodule_SwitchMatrix::mouseUp(int mx, int my)
+bool CSmodule_SwitchMatrix::mouseUp(int /*mx*/, int /*my*/)
 {
 	doValDrag = false;
 	return true;

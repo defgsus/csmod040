@@ -1,5 +1,5 @@
 #include <math.h>
-#include "csmodule_FFT.h"
+#include "csmodule_fft.h"
 #include "csmodcontainer.h"
 
 char *CSmodule_FFT::docString()

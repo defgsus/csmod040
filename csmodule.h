@@ -25,8 +25,8 @@ using namespace std;
 
 #include "FL/Fl.H"
 #include "FL/x.H"
-#include "FL/gl.H"
-#include "FL/Fl_Draw.H"
+#include "FL/gl.h"
+#include "FL/fl_draw.H"
 #include "FL/Fl_Window.H"
 
 

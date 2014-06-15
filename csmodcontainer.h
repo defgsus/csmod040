@@ -20,6 +20,7 @@ using namespace std;
 
 #include "csmod_menu.h"
 #include "csmodule.h"
+#include "system.h"
 
 /* need this to swap containers with CSmodule_Container */
 #include "csmodule_container.h"
@@ -322,7 +323,7 @@ class CSmodContainer
 	CSmodContainer();
 
 	/** destructor */
-	~CSmodContainer();
+    virtual ~CSmodContainer();
 
 	/** reset all fields / DONT CALL */
 	virtual void clear();
@@ -517,7 +518,7 @@ class CSmodContainer
 	CSmodContainer *m_contain(CSmodule *m);
 
 	//-------------------------------- midi ------------------------------------
-
+#ifdef CSMOD_USE_MIDI
 	void onMidiIn(DWORD data1, DWORD data2);
 
 	/** simply reset everything */
@@ -528,7 +529,7 @@ class CSmodContainer
 	void midi_controlChange(int controller, int value);
 
 	void midi_control14Change(int controller, int value);
-
+#endif
 	//---------------------------- calculation ---------------------------------
 
 	/** set a sampleRate for all modules and sub-modules */

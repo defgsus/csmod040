@@ -1,3 +1,4 @@
+#include <algorithm>
 #include "math.h"
 #include "csmodule_p2f.h"
 
@@ -71,7 +72,7 @@ void CSmodule_P2F::step()
 	lnoteoct = *_noteoct;
 
 	// get frequency
-	*_out = *_rootfreq * pow( base, MODULO(n, max((csfloat)1, fabs(*_modulo)) ) );
+    *_out = *_rootfreq * pow( base, MODULO(n, max((csfloat)1, (csfloat)fabs(*_modulo)) ) );
 
 }
 

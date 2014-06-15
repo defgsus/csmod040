@@ -1,3 +1,4 @@
+#include <algorithm>
 #include "csmodule_ca.h"
 
 char *CSmodule_CA::docString()
@@ -106,8 +107,8 @@ void CSmodule_CA::step()
 
 	// write onto map
 	if ((lwriteGate<=0.0)&&(*_writeGate>0.0))
-		map[ (max(0,min(he-1, (int)*_iny )) << CSMOD_CA_SHIFT ) +
-			 max(0,min(wi-1, (int)*_inx )) ] = *_in;
+        map[ (std::max(0,std::min(he-1, (int)*_iny )) << CSMOD_CA_SHIFT ) +
+             std::max(0,std::min(wi-1, (int)*_inx )) ] = *_in;
 	lwriteGate = *_writeGate;
 
 	// step map

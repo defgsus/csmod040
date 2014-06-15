@@ -1,3 +1,4 @@
+#include <algorithm>
 #include "math.h"
 #include "csmodule_filter.h"
 
@@ -81,8 +82,8 @@ void CSmodule_Filter::step()
 	if (lfreq!=*_freq)
 	{
 		coeff1 =
-			max((csfloat)0, min((csfloat)2,
-				2.0 * *_freq * isampleRate
+            std::max((csfloat)0, min((csfloat)2,
+                (csfloat)2 * *_freq * isampleRate
 			));
 	}
 	lfreq = *_freq;
@@ -91,7 +92,7 @@ void CSmodule_Filter::step()
 	if (lreso!=*_reso)
 	{
 		coeff2 =
-			max((csfloat)0, min((csfloat)0.999999999, *_reso ));
+            std::max((csfloat)0, min((csfloat)0.999999999, *_reso ));
 	}
 	lreso = *_reso;
 
@@ -101,7 +102,7 @@ void CSmodule_Filter::step()
 	prevsam0 = *_outLP;
 
 	// scale and clip input
-	csfloat inp = max((csfloat)-10,min((csfloat)10, *_amp * *_in ));
+    csfloat inp = std::max((csfloat)-10,min((csfloat)10, *_amp * *_in ));
 
 	// get lowpass with reso
 	*_outLP =
@@ -255,12 +256,12 @@ void CSmodule_Filter24::step()
 	lout1 = lout0;
 	lout0 = *_outLP;
 
-	stage1 = max((csfloat)-1,min((csfloat)1, b0*inp + state0 ));
-	state0 = max((csfloat)-1,min((csfloat)1, b1*inp + a1*stage1 + state1 ));
-	state1 = max((csfloat)-1,min((csfloat)1, b2*inp + a2*stage1 ));
+    stage1 = max((double)-1,min((double)1, b0*inp + state0 ));
+    state0 = max((double)-1,min((double)1, b1*inp + a1*stage1 + state1 ));
+    state1 = max((double)-1,min((double)1, b2*inp + a2*stage1 ));
 	*_outLP = b3*stage1 + state2;
-	state2 = max((csfloat)-1,min((csfloat)1, b4*stage1 + a4* *_outLP + state3 ));
-	state3 = max((csfloat)-1,min((csfloat)1, b5*stage1 + a5* *_outLP ));
+    state2 = max((double)-1,min((double)1, b4*stage1 + a4* *_outLP + state3 ));
+    state3 = max((double)-1,min((double)1, b5*stage1 + a5* *_outLP ));
 
 	// high pass is simply the input signal minus low pass
 	*_outHP = inp - *_outLP;
@@ -524,7 +525,7 @@ void CSmodule_Eq::setNrIn(int newNrIn)
 	arrangeConnectors();
 }
 
-void CSmodule_Eq::setSampleRate(int sr)
+void CSmodule_Eq::setSampleRate(int /*sr*/)
 {
 	for (int i=0;i<CSMOD_MAX_CHAN;i++)
 	{
@@ -552,8 +553,8 @@ void CSmodule_Eq::step()
 		if (lfreq[i]!=*_freq[i])
 		{
 			coeff1[i] =
-				max((csfloat)0, min((csfloat)2,
-					2.0 * *_freq[i] * isampleRate
+                std::max((csfloat)0, min((csfloat)2,
+                    (csfloat)2 * *_freq[i] * isampleRate
 				))	;
 		}
 		lfreq[i] = *_freq[i];

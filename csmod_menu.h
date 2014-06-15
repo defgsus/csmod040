@@ -14,7 +14,7 @@
 #include <string.h>
 
 #include "FL/Fl.H"
-#include "FL/Fl_Draw.H"
+#include "FL/fl_draw.H"
 #include "FL/Enumerations.H"
 
 //////////////////////////// CSmodPopUp //////////////////////////////////////////////////////
@@ -114,9 +114,9 @@ class CSmodPopUp
 
 ///////////////////////////// GLOBALS ////////////////////////////////////////////////////////
 
-static CSmodPopUp
+extern CSmodPopUp
 	/** the current active menu, or nil */
-	*CSactivePopUp = 0;
+    *CSactivePopUp;
 
 
 /** draw the active popup */

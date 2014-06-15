@@ -1,3 +1,4 @@
+#include <algorithm>
 #include "math.h"
 #include "csmodule_delay.h"
 
@@ -88,7 +89,7 @@ void CSmodule_Delay::setBuf(float sec)
 	buflensec = sec;
 
 	if (buf) free(buf);
-	buflen = max(4, sec*sampleRate);
+    buflen = std::max(4, (int)(sec*sampleRate));
 	buf = (csfloat*) calloc(buflen, sizeof(csfloat));
 	bufpos = 0;
 
@@ -487,7 +488,7 @@ void CSmodule_RoomDelay::setBuf(float sec)
 	ready = false;
 
 	if (buf) free(buf);
-	buflen = max(4, sec*sampleRate);
+    buflen = std::max(4, (int)(sec*sampleRate));
 	buf = (csfloat*) calloc(buflen, sizeof(csfloat));
 	bufpos = 0;
 
@@ -668,7 +669,7 @@ void CSmodule_Reverb::setBuf(int po)
 	ready = false;
 
 	if (buf) free(buf);
-	buflen = max(4, pow(2, po));
+    buflen = std::max(4, (int)pow(2, po));
 	buflenand = buflen-1;
 	buf = (csfloat*) calloc(buflen, sizeof(csfloat));
 	bufpos = 0;
@@ -736,8 +737,8 @@ void CSmodule_Reverb::step()
 			coeff1 = 1.0;
 		else
 			coeff1 =
-				max((csfloat)0, min((csfloat)2,
-					2.0 * *_freq * isampleRate
+                std::max((csfloat)0, min((csfloat)2,
+                    (csfloat)2 * *_freq * isampleRate
 				));
 	}
 	lfreq = *_freq;

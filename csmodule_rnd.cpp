@@ -1,3 +1,4 @@
+#include <algorithm>
 #include "math.h"
 #include "csmodule_rnd.h"
 
@@ -319,7 +320,7 @@ void CSmodule_NoisePitch::step()
 	lrst = *_rst;
 
 	// determine sample length
-	unsigned int frames = sampleRate / max((csfloat)0.001, *_freq);
+    unsigned int frames = sampleRate / std::max((csfloat)0.001, *_freq);
 
 	if (frame>=frames)
 	{

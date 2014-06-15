@@ -14,6 +14,8 @@
 #ifndef CSMODULE_MIDI_H_INCLUDED
 #define CSMODULE_MIDI_H_INCLUDED
 
+#ifdef CSMOD_USE_MIDI
+
 #include "csmodule.h"
 #include "csmodcontainer.h"
 
@@ -186,8 +188,7 @@ class CSmodule_MidiFile: public CSmodule
 
 	int nrOut, oldNrOut,
 		/** counter till note-off */
-		lencount[CSMOD_MIDIMOD_MAX_CH][CSMOD_MIDIMOD_MAX_POLY],
-;
+        lencount[CSMOD_MIDIMOD_MAX_CH][CSMOD_MIDIMOD_MAX_POLY];
 
 	// ---
 
@@ -286,6 +287,6 @@ class CSmodule_MidiMerge: public CSmodule
 
 };
 
-
+#endif // #ifdef CSMOD_USE_MIDI
 
 #endif // CSMODULE_MIDI_H_INCLUDED

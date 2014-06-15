@@ -1,3 +1,5 @@
+#ifdef CSMOD_USE_GL
+
 #include "math.h"
 
 #include "csmodcontainer.h"
@@ -213,7 +215,7 @@ void CSmodule_ScopeGl::drawWindow()
 	isStep = false;
 }
 
-void CSmodule_ScopeGl::drawAndSaveWindow(const char *filename)
+void CSmodule_ScopeGl::drawAndSaveWindow(const char * /*filename*/)
 {
 	/*
 	// be sure user don't changes the buffer-size
@@ -226,3 +228,5 @@ void CSmodule_ScopeGl::drawAndSaveWindow(const char *filename)
 	isStep = false;
 	*/
 }
+
+#endif // #ifdef CSMOD_USE_GL
