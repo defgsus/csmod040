@@ -378,10 +378,10 @@ CSaudioWindow::CSaudioWindow(CSmod *parent)
 	#endif
 	this->parent = parent;
 
-//	make_current();
-	browserIn = new Fl_Hold_Browser(10,10,400,150, "input devices");
-	browserOut = new Fl_Hold_Browser(410,10,400,150, "output devices");
-	browserMidiIn = new Fl_Hold_Browser(10,175, 400,100, "midi input devices");
+    browser = new Fl_Hold_Browser(10,10,600,150, "audio devices");
+#ifdef CSMOD_USE_MIDI
+    browserMidiIn = new Fl_Hold_Browser(10,175, 400,100, "midi input devices");
+#endif
 	sampleRate = new Fl_Value_Input(370,h()-30,100,25, "sample rate");
 	sampleRate->value(44100);
 
@@ -407,8 +407,7 @@ void CSaudioWindow::checkAudioDevices()
 	printf("CSaudioWindow::checkAudioDevices()\n");
 	#endif
 
-	browserIn->clear();
-	browserOut->clear();
+    browser->clear();
 
 	int num = Pa_GetDeviceCount();
 
@@ -422,17 +421,10 @@ void CSaudioWindow::checkAudioDevices()
 		char dname[1024];
 
 		// store the device name and the id as browser items
-		if (inf->maxInputChannels>0)
-		{
-			// is input device
-			sprintf(dname,"%s: %d ch. %s\n",apiinf->name,inf->maxInputChannels,inf->name);
-			browserIn->add(dname, (void*)i);
-		}
 		if (inf->maxOutputChannels>0)
 		{
-			// is (also) output device
 			sprintf(dname, "%s: %d ch. %s\n",apiinf->name,inf->maxOutputChannels,inf->name);
-			browserOut->add(dname, (void*)i);
+            browser->add(dname, (void*)i);
 		}
 	}
 
@@ -455,15 +447,11 @@ int CSaudioWindow::handle(int event)
 	{
 		// get the device indexes
 
-		int inDevice = -1;
-		if ( (browserIn->value()>0) && (browserIn->value()<=browserIn->size()) )
-            inDevice = (ptrdiff_t)browserIn->data(browserIn->value());
+        int device = -1;
+        if ( (browser->value()>0) && (browser->value()<=browser->size()) )
+            device = (ptrdiff_t)browser->data(browser->value());
 
-		int outDevice = -1;
-		if ( (browserOut->value()>0) && (browserOut->value()<=browserOut->size()) )
-            outDevice = (ptrdiff_t)browserOut->data(browserOut->value());
-
-		parent->setAudioDevice(inDevice, outDevice, sampleRate->value());
+        parent->setAudioDevice(device, sampleRate->value());
 
 #ifdef CSMOD_USE_MIDI
 		int midiInDevice = -1;
@@ -801,10 +789,8 @@ void CSmod::clear()
 	nrChannelsIn = 1;
 	nrChannelsOut = 1;
 	sampleRate = 44100;
-	streamIn = 0;
-	streamOut = 0;
-	bufferSizeIn = 64*16;
-	bufferSizeOut = 64;
+    stream = 0;
+    bufferSize = 64*16;
 
 }
 
@@ -1298,10 +1284,10 @@ void CALLBACK CSmidiInCallback(HMIDIIN handle, UINT msg, DWORD data, DWORD par1,
 	// ------------------------ audio ------------------------------------------------
 
 
-void CSmod::setAudioDevice(int inDevice, int outDevice, int rate)
+void CSmod::setAudioDevice(int deviceIdx, int rate)
 {
 	#ifdef CSMOD_DEBUG
-	printf("CSmod::setAudioDevice(%d, %d, %d)\n", inDevice, outDevice, rate);
+    printf("CSmod::setAudioDevice(%d, %d)\n", deviceIdx, outDevice, rate);
 	#endif
 
 	stop();
@@ -1314,45 +1300,56 @@ void CSmod::setAudioDevice(int inDevice, int outDevice, int rate)
 	if (rootContainer) rootContainer->setSampleRate(sampleRate);
 
 	// close any open stream
-	if (streamOut) Pa_CloseStream(streamOut);
-	streamOut = 0;
-
-	// close any open stream
-	if (streamIn) Pa_CloseStream(streamIn);
-	streamIn = 0;
+    if (stream) Pa_CloseStream(stream);
+    stream = 0;
 
 
-	// setup output
-	if (outDevice>=0)
+    // setup device
+    if (deviceIdx>=0)
 	{
-		dinf = Pa_GetDeviceInfo(outDevice);
-		PaStreamParameters param;
-		param.device = outDevice;
-		param.channelCount = dinf->maxOutputChannels;
-		param.sampleFormat = paFloat32;
-		param.suggestedLatency = dinf->defaultLowOutputLatency;
-		param.hostApiSpecificStreamInfo = 0;
+        dinf = Pa_GetDeviceInfo(deviceIdx);
+
+        PaStreamParameters paramIn, paramOut;
+        paramIn.device = deviceIdx;
+        paramIn.channelCount = dinf->maxInputChannels;
+        paramIn.sampleFormat = paFloat32;
+        paramIn.suggestedLatency = dinf->defaultLowInputLatency;
+        paramIn.hostApiSpecificStreamInfo = 0;
+
+        paramOut.device = deviceIdx;
+        paramOut.channelCount = dinf->maxOutputChannels;
+        paramOut.sampleFormat = paFloat32;
+        paramOut.suggestedLatency = dinf->defaultLowOutputLatency;
+        paramOut.hostApiSpecificStreamInfo = 0;
 
 		PaError err = Pa_OpenStream(
-			&streamOut,
-			0, // no input
-			&param,
+            &stream,
+            &paramIn,
+            &paramOut,
 			sampleRate,
-			bufferSizeOut, // buffer size
+            bufferSize, // buffer size
 			paClipOff,
-			CSaudioOutCallback,
+            CSaudioInOutCallback,
 			// pass the CSmod class as user data
 			(void*)this);
 
 		if (err!=paNoError) {
-			printf("error setting up output device...\n");
-			streamOut = 0;
+            printf("error setting up audio device...\n");
+            stream = 0;
 			return;
 		}
-		nrChannelsOut = param.channelCount;
-	}
+        nrChannelsIn = paramIn.channelCount;
+        nrChannelsOut = paramOut.channelCount;
 
+        // create root container's input buffer
+        if (rootContainer->inputSamples) free(rootContainer->inputSamples);
+        rootContainer->inputSampleSize = nrChannelsIn * bufferSize * 16;
+        rootContainer->inputSamples = (float*) calloc(rootContainer->inputSampleSize, sizeof(float));
+        rootContainer->inputSamplePos = 0;
+        rootContainer->inputSampleReadPos = 0;
+    }
 
+#if (0)
 	// ----- setup input ------
 
 	if (inDevice>=0)
@@ -1390,6 +1387,7 @@ void CSmod::setAudioDevice(int inDevice, int outDevice, int rate)
 		rootContainer->inputSamplePos = 0;
 		rootContainer->inputSampleReadPos = 0;
 	}
+#endif
 
 }
 
@@ -1399,8 +1397,7 @@ void CSmod::closeAudioDevice()
 	printf("CSmod::closeAudioDevice()\n");
 	#endif
 
-	if (streamIn) Pa_CloseStream(streamIn); streamIn = 0;
-	if (streamOut) Pa_CloseStream(streamOut); streamOut = 0;
+    if (stream) Pa_CloseStream(stream); stream = 0;
 
 #ifdef CSMOD_USE_MIDI
     CSmidi_closeInput(midiInHandle);
@@ -1416,26 +1413,19 @@ void CSmod::start()
 	printf("CSmod::start()\n");
 	#endif
 
-	if (streamOut) {
+    if (stream) {
 
 		if (rootContainer) rootContainer->start();
 
-		if (streamIn) {
-			Pa_StartStream(streamIn);
-			printf("start audio input..\n");
-		} else printf("no input device selected...\n");
+        Pa_StartStream(stream);
+        printf("start audio input/output..\n");
 
-		Pa_StartStream(streamOut);
-		printf("start audio output..\n");
+        running = true;
+        label(CSMOD_TITLE " running...");
+        Fl::add_timeout(screenUpdateTime, CSscreenCallback, (void*)this);
 
 	} else printf("no output device selected..\n");
 
-	if (streamIn||streamOut)
-	{
-		running = true;
-		label(CSMOD_TITLE " running...");
-		Fl::add_timeout(screenUpdateTime, CSscreenCallback, (void*)this);
-	}
 }
 
 void CSmod::stop()
@@ -1444,8 +1434,7 @@ void CSmod::stop()
 	printf("CSmod::stop()\n");
 	#endif
 
-	if (streamIn) { printf("stop audio in..\n"); Pa_StopStream(streamIn); }
-	if (streamOut) { printf("stop audio out..\n"); Pa_StopStream(streamOut); }
+    if (stream) { printf("stop audio ..\n"); Pa_StopStream(stream); }
 	Fl::remove_timeout(CSscreenCallback);
 	running = false;
 	label(CSMOD_TITLE);
@@ -1489,7 +1478,7 @@ void CSmod::passInput(const void *input, unsigned long frameCount)
 	printf("CSmod::passInput(0x%p, %li)\n",input,frameCount);
 	#endif
 
-	if (!streamIn) return;
+    if (!stream) return;
 
 	// we write to the root container's inputSamples* buffer
 	if (!rootContainer) return;

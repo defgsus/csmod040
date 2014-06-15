@@ -243,12 +243,13 @@ class CSaudioWindow : public Fl_Window
 	public:
 
 	Fl_Hold_Browser
-		/** browser for input devices */
-		*browserIn,
-		/** browser for output devices */
-		*browserOut,
+        /** browser for audio devices */
+        *browser
+#ifdef CSMOD_USE_MIDI
 		/** midi in */
-		*browserMidiIn;
+        ,*browserMidiIn
+#endif
+    ;
 
 	Fl_Value_Input
 		*sampleRate;
@@ -490,16 +491,12 @@ class CSmod : public
 		nrChannelsOut,
 		/** the current samplerate, default 44100 */
 		sampleRate,
-		/** the size of the input audio buffer */
-		bufferSizeIn,
-		/** the size of the output audio buffer */
-		bufferSizeOut;
+        /** the size of the input & output audio buffer */
+        bufferSize;
 
 	PaStream
-		/** portaudio input stream */
-		*streamIn,
-		/** portaudio output stream */
-		*streamOut;
+        /** portaudio input/output stream */
+        *stream;
 
 
 	// ------ gui -------
@@ -640,9 +637,9 @@ class CSmod : public
 	// ------------------------ audio ------------------------------------------------
 
 	/** setup/initialize the audio devices and streams,
-		inDevice and outDevice are devices indexes as returned by portaudio.
+        deviceIdx as returned by portaudio.
 		use -1 to ignore. */
-	void setAudioDevice(int inDevice, int outDevice, int rate);
+    void setAudioDevice(int deviceIdx, int rate);
 
 	/** disable the audio */
 	void closeAudioDevice();
