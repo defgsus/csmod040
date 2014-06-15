@@ -182,7 +182,11 @@
 #include "FL/Fl_Box.H"
 #include "FL/Fl_Button.H"
 #include "FL/Fl_Check_Button.H"
-#include "FL/Fl_Double_Window.H"
+#ifdef CSMOD_USE_DOUBLE_WINDOW
+#   include "FL/Fl_Double_Window.H"
+#else
+#   include "FL/Fl_Window.H"
+#endif
 #include "FL/Fl_File_Chooser.H"
 #include "FL/Fl_Hold_Browser.H"
 #include "FL/Fl_Menu_Button.H"
@@ -429,8 +433,10 @@ class CSmoduleWindow;
 class CSmod : public
 	#ifdef CSMOD_GLGUI
 	Fl_Window
-	#else
+    #elif defined(CSMOD_USE_DOUBLE_WINDOW)
 	Fl_Double_Window
+    #else
+    Fl_Window
 	#endif
 {
 	public:

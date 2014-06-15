@@ -188,7 +188,14 @@ int CSmoduleWindowButton::handle(int event)
 
 
 CSmoduleWindow::CSmoduleWindow(CSmod *parent)
-	: Fl_Double_Window(200,480,"installed modules")
+    :
+    #ifdef CSMOD_USE_DOUBLE_WINDOW
+      Fl_Double_Window
+    #else
+      Fl_Window
+    #endif
+      (200,480,"installed modules")
+
 {
 	#ifdef CSMOD_DEBUGE
 	printf("CSmoduleWindow::CSmoduleWindow(0x%p)\n", parent);

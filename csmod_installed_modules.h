@@ -23,7 +23,11 @@
 #define CSMOD_INSTALLED_MODULES_H_INCLUDED
 
 #include "FL/Fl.H"
-#include "FL/Fl_Double_Window.H"
+#ifdef CSMOD_USE_DOUBLE_WINDOW
+#   include "FL/Fl_Double_Window.H"
+#else
+#   include "FL/Fl_Window.H"
+#endif
 #include "FL/Fl_Scroll.H"
 #include "FL/Fl_Button.H"
 
@@ -260,7 +264,12 @@ int getNrInstalledModuleGroups();
 
 
 /** a window displaying the installed modules */
-class CSmoduleWindow : public Fl_Double_Window
+class CSmoduleWindow : public
+#ifdef CSMOD_USE_DOUBLE_WINDOW
+        Fl_Double_Window
+#else
+        Fl_Window
+#endif
 {
 	/** parent CSmod handler */
 	CSmod *parent;

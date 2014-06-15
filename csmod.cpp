@@ -324,7 +324,7 @@ void CSmodInit()
 	printf("-> opengl GUI\n");
 	Fl::gl_visual(FL_RGB);
 	#else
-	Fl::visual(FL_RGB|FL_DOUBLE|FL_INDEX);
+    Fl::visual(/*FL_RGB|*/FL_DOUBLE|FL_INDEX);
 	#endif
 
 	printf("checking modules...\n");
@@ -715,8 +715,10 @@ int CSrenderWindow::handle(int event)
 CSmod::CSmod() :
 	#ifdef CSMOD_GLGUI
 	Fl_Window
-	#else
+    #elif defined(CSMOD_USE_DOUBLE_WINDOW)
     Fl_Double_Window
+    #else
+    Fl_Window
 	#endif
     (640, 480, CSMOD_TITLE)
 {
@@ -1148,11 +1150,13 @@ int CSmod::handle(int event)
 		refresh();
 		return 1;
 	} else
-	#ifdef CSMOD_GLGUI
+#ifdef CSMOD_GLGUI
 	return Fl_Window::handle(event);
-	#else
+#elif defined(CSMOD_USE_DOUBLE_WINDOW)
 	return Fl_Double_Window::handle(event);
-	#endif
+#else
+    return Fl_Window::handle(event);
+#endif
 }
 
 void CSmod::draw()

@@ -4,6 +4,7 @@
 #include <FL/Fl_Window.H>
 #include <FL/Fl_Double_Window.H>
 #include <FL/Fl_Box.H>
+#include <FL/fl_draw.H>
 
 class MyWindow : public Fl_Double_Window
 {
@@ -11,13 +12,19 @@ public:
     MyWindow(int w, int h, const char * l)
         : Fl_Double_Window(w,h,l)
     {
-        //make_current();
+
     }
-    /*
-    void draw()
+
+    virtual void draw()
     {
-        make_current();
-    }*/
+        //make_current();
+        //Fl_Double_Window::draw();
+
+        fl_color(100,0,0);
+        fl_rectf(0,0,w(),h());
+
+        //flush();
+    }
 };
 
 
@@ -31,6 +38,7 @@ int main(int argc, char **argv)
     box->labelsize(36);
     box->labeltype(FL_SHADOW_LABEL);
     window->end();
+    Fl::visual(FL_DOUBLE|FL_INDEX);
     window->show(argc, argv);
     return Fl::run();
 }
