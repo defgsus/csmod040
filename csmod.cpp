@@ -841,12 +841,12 @@ void CSmod::pushContainer()
 	#endif
 	if (!containerStack)
 	{
-		containerStack = (CSmodContainer**) calloc(1, sizeof(int));
+        containerStack = (CSmodContainer**) calloc(1, sizeof(void*));
 		nrStack = 1;
 	} else {
 		nrStack++;
 		containerStack =
-			(CSmodContainer**) realloc(containerStack, nrStack*sizeof(int));
+            (CSmodContainer**) realloc(containerStack, nrStack*sizeof(void*));
 	}
 	// check for duplicate
 	if ((nrStack>1)&&(containerStack[nrStack-2]==container))

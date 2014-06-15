@@ -462,10 +462,10 @@ CSmodule *CSmodContainer::addModule(CSmodule *m)
 	ready = false;
 
 	if (!module) {
-		module = (CSmodule**) calloc(1,sizeof(int));
+        module = (CSmodule**) calloc(1,sizeof(void*));
 		nr = 1;
 	} else {
-		module = (CSmodule**) realloc(module, (nr+1)*sizeof(int));
+        module = (CSmodule**) realloc(module, (nr+1)*sizeof(void*));
 		nr++;
 	}
 
@@ -668,13 +668,13 @@ void CSmodContainer::getValueUpdateList()
 
 	// alloc list
 	if (valueUpdateList==0)
-		valueUpdateList = (csfloat**) calloc(nrv*2, sizeof(int));
+        valueUpdateList = (csfloat**) calloc(nrv*2, sizeof(void*));
 	else
 	if (nrv*2>=nrValueUpdateListAlloc)
 	{
 		nrValueUpdateListAlloc = nrv*2;
 		valueUpdateList = (csfloat**)
-			realloc(valueUpdateList,nrValueUpdateListAlloc*sizeof(int));
+            realloc(valueUpdateList,nrValueUpdateListAlloc*sizeof(void*));
 	}
 
 	// store
@@ -701,7 +701,7 @@ CSmoduleList *CSmodContainer::getNewModuleList()
 	CSmoduleList *m = new CSmoduleList;
 	m->nrAlloc = 256;
 	m->nr = 0;
-	m->m = (CSmodule**) calloc(m->nrAlloc, sizeof(int));
+    m->m = (CSmodule**) calloc(m->nrAlloc, sizeof(void*));
 	return m;
 }
 
@@ -717,7 +717,7 @@ void CSmodContainer::addModuleList(CSmoduleList *list, CSmodule *m)
 	if (list->nr>=list->nrAlloc)
 	{
 		list->nrAlloc += 256;
-		list->m = (CSmodule**) realloc(list->m, sizeof(int) * list->nrAlloc);
+        list->m = (CSmodule**) realloc(list->m, sizeof(void*) * list->nrAlloc);
 	}
 
 	list->m[list->nr] = m;
@@ -787,11 +787,11 @@ void CSmodContainer::addConnection(CSconnection *conn)
 	ready = false;
 	if (!con)
 	{
-		con = (CSconnection**) calloc(1,sizeof(int));
+        con = (CSconnection**) calloc(1,sizeof(void*));
 		nrCon = 1;
 	} else {
 		nrCon++;
-		con = (CSconnection**) realloc(con, nrCon*sizeof(int));
+        con = (CSconnection**) realloc(con, nrCon*sizeof(void*));
 	}
 	con[nrCon-1] = conn;
 	getValueUpdateList();
@@ -2042,7 +2042,7 @@ void CSmodContainer::m_duplicate(CSmodule *m)
 	}
 
 	// collect all modules
-	CSmodule **mo = (CSmodule**) calloc(nr*2, sizeof(int));
+    CSmodule **mo = (CSmodule**) calloc(nr*2, sizeof(void*));
 
 	int nrd = 0;
 	for (int i=0;i<nr;i++) if (module[i]->isSelected)
@@ -2052,7 +2052,7 @@ void CSmodContainer::m_duplicate(CSmodule *m)
 	}
 
 	// collect connections
-	CSconnection **co = (CSconnection **) calloc(nrCon, sizeof(int));
+    CSconnection **co = (CSconnection **) calloc(nrCon, sizeof(void*));
 	int nrc = 0;
 
 	for (int i=0;i<nrCon;i++)
@@ -2106,7 +2106,7 @@ CSmodContainer *CSmodContainer::m_contain(CSmodule *m)
 	#endif
 
 	// collect all modules
-	CSmodule **mo = (CSmodule**) calloc(nr*2, sizeof(int));
+    CSmodule **mo = (CSmodule**) calloc(nr*2, sizeof(void*));
 	int nrd = 0;
 
 	if (!isMultiSelect)
@@ -2133,9 +2133,9 @@ CSmodContainer *CSmodContainer::m_contain(CSmodule *m)
 
 	// collect connections
 	CSconnection
-		**co = (CSconnection **) calloc(nrCon, sizeof(int)),
-		**coi = (CSconnection **) calloc(nrCon, sizeof(int)),
-		**coo = (CSconnection **) calloc(nrCon, sizeof(int));
+        **co = (CSconnection **) calloc(nrCon, sizeof(void*)),
+        **coi = (CSconnection **) calloc(nrCon, sizeof(void*)),
+        **coo = (CSconnection **) calloc(nrCon, sizeof(void*));
 	int nrc = 0, nrco = 0, nrci = 0;
 
 	for (int i=0;i<nrCon;i++)
@@ -2183,7 +2183,7 @@ CSmodContainer *CSmodContainer::m_contain(CSmodule *m)
 	int x1,y1,x2,y2;
 	c->getExtend(&x1,&y1,&x2,&y2);
 
-	CSmodule_ContainerInput **conin = (CSmodule_ContainerInput**) calloc(nrci, sizeof(int));
+    CSmodule_ContainerInput **conin = (CSmodule_ContainerInput**) calloc(nrci, sizeof(void*));
 	for (int i=0;i<nrci;i++)
 	{
 		conin[i] = (CSmodule_ContainerInput*)
@@ -2191,7 +2191,7 @@ CSmodContainer *CSmodContainer::m_contain(CSmodule *m)
 		conin[i]->setPos(x1-conin[i]->width-24, y1 + i*(conin[i]->height+10));
 	}
 
-	CSmodule_ContainerOutput **conout = (CSmodule_ContainerOutput**) calloc(nrco, sizeof(int));
+    CSmodule_ContainerOutput **conout = (CSmodule_ContainerOutput**) calloc(nrco, sizeof(void*));
 	for (int i=0;i<nrco;i++)
 	{
 		conout[i] = (CSmodule_ContainerOutput*)

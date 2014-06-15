@@ -784,11 +784,11 @@ void CSmodule::addProperty(CSmodProperty *prop)
 	#endif
 	if (!property)
 	{
-		property = (CSmodProperty**) calloc(1,sizeof(int));
+        property = (CSmodProperty**) calloc(1,sizeof(void*));
 		nrProp = 1;
 	} else {
 		nrProp++;
-		property = (CSmodProperty**) realloc(property, nrProp*sizeof(int) );
+        property = (CSmodProperty**) realloc(property, nrProp*sizeof(void*) );
 	}
 	property[nrProp-1] = prop;
 }
@@ -1021,10 +1021,10 @@ void CSmodule::addConnector(CSmoduleConnector *inp)
 	printf("CSmodule::addConnector(0x%p)\n",inp);
 	#endif
 	if (con==0) {
-		con = (CSmoduleConnector**) calloc(1,sizeof(int));
+        con = (CSmoduleConnector**) calloc(1,sizeof(void*));
 		nrCon = 1;
 	} else {
-		con = (CSmoduleConnector**) realloc(con, (nrCon+1)*sizeof(int));
+        con = (CSmoduleConnector**) realloc(con, (nrCon+1)*sizeof(void*));
 		nrCon++;
 	}
 	con[nrCon-1] = inp;
@@ -1040,11 +1040,11 @@ void CSmodule::insertConnector(CSmoduleConnector *inp, int index)
 	ready = false;
 
 	if (con==0) {
-		con = (CSmoduleConnector**) calloc(1,sizeof(int));
+        con = (CSmoduleConnector**) calloc(1,sizeof(void*));
 		con[0] = inp;
 		nrCon = 1;
 	} else {
-		con = (CSmoduleConnector**) realloc(con, (nrCon+1)*sizeof(int));
+        con = (CSmoduleConnector**) realloc(con, (nrCon+1)*sizeof(void*));
 		index = max(0,min(nrCon, index));
 		nrCon++;
 		for (int i=nrCon-1;i>index;i--)

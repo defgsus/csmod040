@@ -31,7 +31,7 @@ int CSmidi_getDevices(CSmidiDevices *d, bool getInputs)
 		d->nr = midiInGetNumDevs();
 		if (d->nr==0) return 1;
 
-		d->name = (char**) calloc(d->nr,sizeof(int));
+        d->name = (char**) calloc(d->nr,sizeof(char*));
 
 		MIDIINCAPS c;
 		memset(&c, 0, sizeof(MIDIINCAPS));

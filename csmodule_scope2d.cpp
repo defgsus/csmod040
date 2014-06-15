@@ -84,7 +84,7 @@ void CSmodule_Scope2d::init()
 
 	// ---- internals -----
 
-	scope = (CStimeline**) calloc(CSMOD_MAX_CHAN, sizeof(int));
+    scope = (CStimeline**) calloc(CSMOD_MAX_CHAN, sizeof(void*));
 	for (int i=0;i<CSMOD_MAX_CHAN;i++)
 		scope[i] = createTimeline(sw*2);
 	dpos = 0.0;
