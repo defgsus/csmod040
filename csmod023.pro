@@ -12,9 +12,20 @@ TEMPLATE = app
 
 #QMAKE_CXXFLAGS += -DCSMOD_DEBUGE
 
+unix {
 LIBS += -L/usr/local/lib \
         -lfftw3f -lportaudio -lpng \
         -lfltk_forms -lfltk -lXext -lXft -lfontconfig -lXinerama -lpthread -ldl -lm -lX11
+}
+
+win32 {
+LIBS += -lportaudio -lpng -lz -lfftw3f \
+        -mwindows -lfltk_forms -lfltk \
+        -lgdi32 -luser32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 \
+        -lole32 -loleaut32 -luuid -lodbc32 -lodbccp32 -lwsock32 -lcomctl32 \
+        -lksuser -lwinmm
+}
+
 
 HEADERS += \
     csmodcontainer.h \

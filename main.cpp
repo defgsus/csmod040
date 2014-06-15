@@ -30,6 +30,7 @@ public:
 
 int main(int argc, char **argv)
 {
+    printf("hello world\n");
     //Fl_Window *window = new Fl_Window(340,180);
     Fl_Window *window = new MyWindow(340,180,"hello window");
     Fl_Box *box = new Fl_Box(20,40,300,100,"Hello, World!");
