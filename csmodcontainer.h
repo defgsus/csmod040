@@ -129,7 +129,7 @@ class CSmodContainer
 		isRendering;
 
 	// --- midi ----
-
+#ifdef CSMOD_USE_MIDI
 	csfloat
 		/** buffer of each midi note's velocity */
 		noteOn[CSMOD_MAX_NOTE],
@@ -168,7 +168,7 @@ class CSmodContainer
 		/** true when controlchange happened during last screen update */
 		onMidiControlChangeScr
 		;
-
+#endif
 	// ---- gui -------
 
 	int
@@ -312,10 +312,11 @@ class CSmodContainer
 		selAreaColor;
 
 	// ---- midi stuff ------
-	CSmodPopUp
+#ifdef CSMOD_USE_MIDI
+    CSmodPopUp
 		/** midi popup menu */
 		*pu_midi;
-
+#endif
 
 	// ...........................
 

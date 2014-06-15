@@ -16,6 +16,10 @@ this module is quite cheap in computational effort and can be used a lot of time
 	return const_cast<char*>(r);
 }
 
+CSmodule_Band::CSmodule_Band()
+    :   buf(0)
+{ }
+
 CSmodule_Band::~CSmodule_Band()
 {
 	if (buf) free(buf);

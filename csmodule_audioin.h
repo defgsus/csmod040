@@ -19,7 +19,7 @@
 
 class CSmodule_AudioIn: public CSmodule
 {
-	// pointers for easy value acces
+    // pointers for easy value access
 	csfloat
 		*_amp,
 		*_outmono,

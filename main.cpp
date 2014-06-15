@@ -57,9 +57,10 @@ using namespace std;
 
 CSmod *csmod;
 
-
+#include "csmodule_beta.h"
 int main( int /*argc*/, char** /*argv*/ )
 {
+
     //printf("%d\n",(int)((float)4.0/3)); return 0;
     /* // wave reader test
 

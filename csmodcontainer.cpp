@@ -120,7 +120,7 @@ void CSmodContainer::clear()
 
 
 	// --- midi stuff ----
-
+#ifdef CSMOD_USE_MIDI
 	pu_midi = 0;
 
 	for (int i=0;i<CSMOD_MAX_NOTE;i++)
@@ -135,7 +135,6 @@ void CSmodContainer::clear()
 	for (int i=0;i<CSMOD_MAX_NRPN_CONTROLLER;i++)
 		controller14Value[i] = 0;
 
-#ifdef CSMOD_USE_MIDI
     midi_panic();
 #endif
 
@@ -177,9 +176,9 @@ void CSmodContainer::release()
 
 
 	// free menus
-
+#ifdef CSMOD_USE_MIDI
 	if (pu_midi) delete pu_midi;
-
+#endif
 	clear();
 }
 
@@ -2493,7 +2492,7 @@ void CSmodContainer::step()
 		module[i]->updateOutputs();
 	}
 
-
+#ifdef CSMOD_USE_MIDI
 	// reset midi stuff
 	lastNoteMonoChanged = false;
 	/*
@@ -2501,6 +2500,7 @@ void CSmodContainer::step()
 	for (int i=0;i<CSMOD_MAX_NOTE;i++)
 		noteGate[i] = -1;
 		*/
+#endif
 }
 
 
@@ -2770,7 +2770,7 @@ void CSmodContainer::draw(int width, int height)
 			}
 
 		}
-
+    #ifdef CSMOD_USE_MIDI
 		// midi in
 		if (onMidiInChangeScr)
 		{
@@ -2801,8 +2801,9 @@ void CSmodContainer::draw(int width, int height)
 		char od[100]; sprintf(od, "%d %d",offx_,offy_);
 		fl_draw(od,20,20);
 		*/
+    #endif // #ifdef CSMOD_USE_MIDI
 
-	#endif
+    #endif // CSMOD_GLGUI
 
 	CSpopup_draw();
 }

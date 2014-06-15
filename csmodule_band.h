@@ -33,6 +33,7 @@ class CSmodule_Band: public CSmodule
 
 	public:
 	char *docString();
+    CSmodule_Band();
 	~CSmodule_Band();
 	CSmodule_Band *newOne();
 	void init();

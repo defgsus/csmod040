@@ -43,11 +43,12 @@ using namespace std;
 #define CSMOD_INIT_EXTWIN_HEIGHT 512
 
 // midi stuff
+#ifdef CSMOD_USE_MIDI
 #define CSMOD_MAX_NOTE 128
 #define CSMOD_MAX_VEL 127
 #define CSMOD_MAX_CONTROLLER 128
 #define CSMOD_MAX_NRPN_CONTROLLER 16384
-
+#endif
 #define CSMOD_MIDI_MAX_POLY 128
 
 

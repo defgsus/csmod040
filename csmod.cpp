@@ -378,7 +378,7 @@ CSaudioWindow::CSaudioWindow(CSmod *parent)
 	#endif
 	this->parent = parent;
 
-    browser = new Fl_Hold_Browser(10,10,600,150, "audio devices");
+    browser = new Fl_Hold_Browser(10,10,800,150, "audio devices");
 #ifdef CSMOD_USE_MIDI
     browserMidiIn = new Fl_Hold_Browser(10,175, 400,100, "midi input devices");
 #endif
@@ -423,7 +423,11 @@ void CSaudioWindow::checkAudioDevices()
 		// store the device name and the id as browser items
 		if (inf->maxOutputChannels>0)
 		{
-			sprintf(dname, "%s: %d ch. %s\n",apiinf->name,inf->maxOutputChannels,inf->name);
+            sprintf(dname, "%s: ch. in %d out %d | %s\n",
+                    apiinf->name,
+                    inf->maxInputChannels,
+                    inf->maxOutputChannels,
+                    inf->name);
             browser->add(dname, (void*)i);
 		}
 	}
@@ -547,7 +551,7 @@ void CSpropertyWindow::assignModule(CSmodule *mod)
 	releaseWidgets();
 
 	// be sure, this window is active
-	make_current();
+//	make_current();
 
 	begin();
 
@@ -1311,13 +1315,13 @@ void CSmod::setAudioDevice(int deviceIdx, int rate)
 
         PaStreamParameters paramIn, paramOut;
         paramIn.device = deviceIdx;
-        paramIn.channelCount = dinf->maxInputChannels;
+        paramIn.channelCount = std::min(dinf->maxInputChannels, CSMOD_MAX_CHAN);
         paramIn.sampleFormat = paFloat32;
         paramIn.suggestedLatency = dinf->defaultLowInputLatency;
         paramIn.hostApiSpecificStreamInfo = 0;
 
         paramOut.device = deviceIdx;
-        paramOut.channelCount = dinf->maxOutputChannels;
+        paramOut.channelCount = std::min(dinf->maxOutputChannels, CSMOD_MAX_CHAN);
         paramOut.sampleFormat = paFloat32;
         paramOut.suggestedLatency = dinf->defaultLowOutputLatency;
         paramOut.hostApiSpecificStreamInfo = 0;

@@ -287,7 +287,10 @@ void releaseInstalledModules()
 	#endif
 
 	for (int i=0;i<nrInstalledModules;i++)
+    {
+        printf("deleting %s\n", installedModules[i]->name);
 		delete installedModules[i];
+    }
 
 }
 

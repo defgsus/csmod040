@@ -32,6 +32,7 @@ class CSmodule_Beta: public CSmodule
 	public:
 	char *docString();
 	CSmodule_Beta *newOne();
+    ~CSmodule_Beta() { }
 	void init();
 	void setDim(int nrDim);
 	void propertyCallback(CSmodProperty *prop);
