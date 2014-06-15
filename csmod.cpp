@@ -387,7 +387,7 @@ CSaudioWindow::CSaudioWindow(CSmod *parent)
 
     end();
 
-	checkAudioDevices();
+    checkAudioDevices();
 }
 
 

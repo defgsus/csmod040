@@ -466,26 +466,26 @@ void CSmodule::storeAddBeforeValue(FILE *buf)
 {
 	printf("CSmodule::storeAddBeforeValue(0x%p) in base class\n",buf);
 }
-#endif
+#else
 
 void CSmodule::storeAddBeforeValue(FILE *)
 {
     // do nothing here
 }
-
+#endif
 
 #if defined(CSMOD_DEBUGE) || (CSMOD_DEBUGF)
 void CSmodule::storeAdd(FILE *buf)
 {
 	printf("CSmodule::storeAdd(0x%p) in base class\n",buf);
 }
-#endif
+#else
 
 void CSmodule::storeAdd(FILE *)
 {
     // do nothing here
 }
-
+#endif
 
 
 
@@ -653,25 +653,26 @@ void CSmodule::restoreAdd(FILE *buf)
 {
 	printf("CSmodule::restoreAdd(0x%p) in base class\n",buf);
 }
-#endif
+#else
 
 void CSmodule::restoreAdd(FILE *)
 {
     // do nothing here
 }
+#endif
 
 #if defined(CSMOD_DEBUGE) || (CSMOD_DEBUGF)
 void CSmodule::restoreAddBeforeValue(FILE *buf)
 {
 	printf("CSmodule::restoreAddBeforeValue(0x%p) in base class\n",buf);
 }
-#endif
+#else
 
 void CSmodule::restoreAddBeforeValue(FILE *)
 {
     // do nothing here
 }
-
+#endif
 
 
 	//------------------- properties -------------------------------------------
@@ -891,7 +892,7 @@ CSmoduleConnector *CSmodule::createInput(const char *name, const char *uname, cs
 CSmoduleConnector *CSmodule::insertInput(int index, const char *name, const char *uname, csfloat defaultValue)
 {
 	#ifdef CSMOD_DEBUGE
-	printf("CSmodule::insertInput(index, \"%s\", \"%s\")\n", index, name,uname);
+    printf("CSmodule::insertInput(%d, \"%s\", \"%s\")\n", index, name,uname);
 	#endif
 	CSmoduleConnector *inp = createConnector(CS_CONDIR_IN, 0,0, name, uname, defaultValue);
 	insertConnector(inp, index);

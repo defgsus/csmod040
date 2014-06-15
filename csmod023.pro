@@ -10,6 +10,7 @@ CONFIG   -= app_bundle
 
 TEMPLATE = app
 
+#QMAKE_CXXFLAGS += -DCSMOD_DEBUGE
 
 LIBS += -L/usr/local/lib \
         -lfftw3f -lportaudio -lpng \
