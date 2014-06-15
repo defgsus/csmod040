@@ -378,12 +378,14 @@ CSaudioWindow::CSaudioWindow(CSmod *parent)
 	#endif
 	this->parent = parent;
 
-	make_current();
+//	make_current();
 	browserIn = new Fl_Hold_Browser(10,10,400,150, "input devices");
 	browserOut = new Fl_Hold_Browser(410,10,400,150, "output devices");
 	browserMidiIn = new Fl_Hold_Browser(10,175, 400,100, "midi input devices");
 	sampleRate = new Fl_Value_Input(370,h()-30,100,25, "sample rate");
 	sampleRate->value(44100);
+
+    end();
 
 	checkAudioDevices();
 }
@@ -714,9 +716,9 @@ CSmod::CSmod() :
 	#ifdef CSMOD_GLGUI
 	Fl_Window
 	#else
-	Fl_Double_Window
+    Fl_Double_Window
 	#endif
-	(640, 480, CSMOD_TITLE)
+    (640, 480, CSMOD_TITLE)
 {
 	#if defined(CSMOD_DEBUGE) || (CSMOD_DEBUGI)
 	printf("CSmod::CSmod()\n");
@@ -755,8 +757,11 @@ CSmod::CSmod() :
 
 	browser = new Fl_File_Chooser(".", "CS Patches (*.csmod)", FL_SINGLE, "select patch");
 
+    // stop adding widgets
+    end();
+
 	// switch back to main window (wont work on _gl or _double window anyway)
-	make_current();
+//	make_current();
 
 	ready = true;
 }

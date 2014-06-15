@@ -59,6 +59,7 @@ class CSmodule_Osc: public CSmodule
 
 	public:
 	char *docString();
+    CSmodule_Osc();
 	~CSmodule_Osc();
 	CSmodule_Osc* newOne();
 	void init();
@@ -79,8 +80,7 @@ class CSmodule_OscPOut: public CSmodule_Osc
 		*_outPhase;
 
 	public:
-	~CSmodule_OscPOut();
-	CSmodule_OscPOut* newOne();
+    CSmodule_OscPOut* newOne();
 	void init();
 
 	void step();
@@ -98,8 +98,7 @@ class CSmodule_OscP: public CSmodule_Osc
 
 	public:
 	char *docString();
-	~CSmodule_OscP();
-	CSmodule_OscP* newOne();
+    CSmodule_OscP* newOne();
 	void init();
 
 	void step();
@@ -180,6 +179,7 @@ class CSmodule_OscSpec: public CSmodule
 
 	public:
 	char *docString();
+    CSmodule_OscSpec();
 	~CSmodule_OscSpec();
 	CSmodule_OscSpec* newOne();
 	void init();

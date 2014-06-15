@@ -1,3 +1,42 @@
+#if (0)
+
+#include <FL/Fl.H>
+#include <FL/Fl_Window.H>
+#include <FL/Fl_Double_Window.H>
+#include <FL/Fl_Box.H>
+
+class MyWindow : public Fl_Double_Window
+{
+public:
+    MyWindow(int w, int h, const char * l)
+        : Fl_Double_Window(w,h,l)
+    {
+        //make_current();
+    }
+    /*
+    void draw()
+    {
+        make_current();
+    }*/
+};
+
+
+int main(int argc, char **argv)
+{
+    //Fl_Window *window = new Fl_Window(340,180);
+    Fl_Window *window = new MyWindow(340,180,"hello window");
+    Fl_Box *box = new Fl_Box(20,40,300,100,"Hello, World!");
+    box->box(FL_UP_BOX);
+    box->labelfont(FL_BOLD+FL_ITALIC);
+    box->labelsize(36);
+    box->labeltype(FL_SHADOW_LABEL);
+    window->end();
+    window->show(argc, argv);
+    return Fl::run();
+}
+
+#else
+
 #include <stdio.h>
 #include <math.h>
 #include "csmod.h"
@@ -112,3 +151,5 @@ int main( int /*argc*/, char** /*argv*/ )
     // quit with FLTK's event loop return code
     return ret;
 }
+
+#endif

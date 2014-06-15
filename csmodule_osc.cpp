@@ -20,9 +20,16 @@ standard RAMP wave (between 0.0 and 1.0), set <amplitude> and <offset> to 0.5 ea
 ";	return const_cast<char*>(r);
 }
 
+CSmodule_Osc::CSmodule_Osc()
+    :   CSmodule(), scope(0)
+{
+
+}
+
 CSmodule_Osc::~CSmodule_Osc()
 {
-	releaseTimeline(scope);
+    if (scope)
+        releaseTimeline(scope);
 }
 
 CSmodule_Osc* CSmodule_Osc::newOne()
@@ -188,10 +195,6 @@ void CSmodule_Osc::step()
 
 
 
-CSmodule_OscPOut::~CSmodule_OscPOut()
-{
-	releaseTimeline(scope);
-}
 
 CSmodule_OscPOut* CSmodule_OscPOut::newOne()
 {
@@ -353,11 +356,6 @@ standard RAMP wave (between 0.0 and 1.0), set <amplitude> and <offset> to 0.5 ea
 a value of 0 means unlimited, a value greater 0 means: run for the number of periods and then \
 stay there until the next gate in <sync>.\
 ";	return const_cast<char*>(r);
-}
-
-CSmodule_OscP::~CSmodule_OscP()
-{
-	releaseTimeline(scope);
 }
 
 CSmodule_OscP* CSmodule_OscP::newOne()
@@ -671,6 +669,9 @@ amplitude will be <amp. mul> times the last voice's amplitude. note that silent 
 amplitude reached zero, will still be calculated.\
 ";	return const_cast<char*>(r);
 }
+
+CSmodule_OscSpec::CSmodule_OscSpec()
+      : scope(0) { }
 
 CSmodule_OscSpec::~CSmodule_OscSpec()
 {

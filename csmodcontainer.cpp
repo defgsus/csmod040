@@ -2674,14 +2674,13 @@ void CSmodContainer::draw(int width, int height)
 		fl_color((active)? backgroundColor:backgroundInactiveColor);
 		fl_rectf(0,0,width,height);
 
-		// draw some grid
+        // draw some grid
 		fl_color(backgroundGridColor);
 		float gs = 50*zoom_;
 		float k = MODULO((offx_+width/2.0)/2.0, gs);
 		for (float i=k;i<width;i+=gs) fl_line(i,0,i-height/32,height);
 		k = MODULO((offy_+height/2.0)/2.0, gs);
 		for (float i=k;i<height;i+=gs) fl_line(0,i,width,i+width/32);
-
 
 		if (!doCableBehind)
 		{

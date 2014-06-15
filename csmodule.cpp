@@ -1163,8 +1163,11 @@ void CSmodule::releaseTimeline(CStimeline *timeline)
 	#ifdef CSMOD_DEBUG
 	printf("CSmodule::releaseTimeline(0x%p)\n",timeline);
 	#endif
-	if (timeline->data) free(timeline->data);
-	free(timeline);
+    if (timeline)
+    {
+        if (timeline->data) free(timeline->data);
+        free(timeline);
+    }
 }
 
 void CSmodule::recordTimeline(CStimeline *tl, csfloat value)

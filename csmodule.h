@@ -353,6 +353,8 @@ struct CStimeline
 	csfloat
 		/** data buffer */
 		*data;
+    CStimeline()
+        :   data(0) { }
 };
 
 
