@@ -186,7 +186,9 @@ void CSwaveReader::readBuffer(unsigned int bytepos)
 	if (e == 0)
 	{
         printf("waveReader: WAVE BUFFER READ ERROR "
-               "(buflength=%d, datalength=%d, bytepos=%d, bufpos=%d, read=%ld)\n",
+               "(buflength=%d, datalength=%d, bytepos=%d, bufpos=%d, read=%"
+               //"l"
+               "d)\n",
 			buflength, datalength, bytepos, p_bufpos, e);
 	}
 	// update position

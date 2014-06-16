@@ -167,7 +167,7 @@ void CSmodule_NoteInPoly::noteOn(unsigned char noteNr, unsigned char velocity)
 	changedScr = true;
 	if (velocity>0)
 	{
-		int k;
+        int k=0;
 		csfloat amp = 1.0;
 		if (nrMidiVoicesActive>=nrMidiVoices)
 		{
@@ -473,8 +473,6 @@ void CSmodule_MidiFile::init()
 			sprintf(n1, "gate (%d)", j+1);
 		__outgate[i][j] = createOutput(n,n1);
 		_outgate[i][j] = &(__outgate[i][j]->value);
-		free(n);
-		free(n1);
 	}
 
 	oldNrOut = 0;

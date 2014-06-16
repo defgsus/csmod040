@@ -169,8 +169,8 @@
 #define CSMOD_H_INCLUDED
 
 #define CSMOD_VERSION_MAJ 0 // this will take a while :)
-#define CSMOD_VERSION_MIN 2 // coolness counter
-#define CSMOD_VERSION_TINY 3 // developer/backup version
+#define CSMOD_VERSION_MIN 4 // coolness counter
+#define CSMOD_VERSION_TINY 0 // development version
 
 
 /* FLTK specific stuff */

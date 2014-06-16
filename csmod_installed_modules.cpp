@@ -45,7 +45,9 @@ CSmodule *installedModules[] =
     new CSmodule_Filter(),
     new CSmodule_Filter24(),
     new CSmodule_Fisheye(),
+#ifdef CSMOD_USE_FFTW
     new CSmodule_FFT(),
+#endif
     new CSmodule_Follow(),
     new CSmodule_FollowMulti(),
     new CSmodule_GateDelay(),
@@ -288,7 +290,7 @@ void releaseInstalledModules()
 
 	for (int i=0;i<nrInstalledModules;i++)
     {
-        printf("deleting %s\n", installedModules[i]->name);
+        //printf("deleting %s\n", installedModules[i]->name);
 		delete installedModules[i];
     }
 

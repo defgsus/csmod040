@@ -1,3 +1,5 @@
+#ifdef CSMOD_USE_FFTW
+
 #include <math.h>
 #include "csmodule_fft.h"
 #include "csmodcontainer.h"
@@ -233,3 +235,5 @@ void CSmodule_FFT::draw(int offx, int offy, float zoom)
 		x2 = x1; y2=y1;
 	}
 }
+
+#endif // #ifdef CSMOD_USE_FFTW

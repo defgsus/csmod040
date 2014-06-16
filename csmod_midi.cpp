@@ -40,7 +40,7 @@ int CSmidi_getDevices(CSmidiDevices *d, bool getInputs)
 		{
 			midiInGetDevCaps(i, &c, sizeof(MIDIINCAPS));
 			d->name[i] = (char*) calloc(MAXPNAMELEN, 1);
-			strcpy(d->name[i], c.szPname);
+            memcpy(d->name[i], c.szPname, MAXPNAMELEN);
 		}
 	}
 #endif

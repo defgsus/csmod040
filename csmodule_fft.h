@@ -17,6 +17,8 @@
 #ifndef CSMODULE_FFT_H_INCLUDED
 #define CSMODULE_FFT_H_INCLUDED
 
+#ifdef CSMOD_USE_FFTW
+
 #include "fftw3.h"
 #include "csmodule.h"
 
@@ -73,6 +75,7 @@ class CSmodule_FFT: public CSmodule
 
 };
 
-
+#endif // #ifdef CSMOD_USE_FFTW
 
 #endif // CSMODULE_FFT_H_INCLUDED
+
