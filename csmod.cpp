@@ -23,7 +23,7 @@ char *CSmod::docString()
                       MODULAR EDITOR - (c) 0x7db def.gsus-\n\
                      ver %d.%d.%d (built %s %s)\n\
 \n\
- developement: cdefsus@gmail.com || jan.ten@cymatrix.org || zeichlicht@gmail.com\n\
+ developement: stefan.berke@modular-audio-graphics.com || jan.ten@cymatrix.org\n\
  project contact: http://cymatrix.org\n\
 \n\
 --------------------------------------------------------------------------------\n\
@@ -44,7 +44,7 @@ to each other. currently provided hardware interfaces are:\n\
     the software uses the portaudio dynamic link library, so it should be\n\
     possible, to compile an individual version for your hardware and use it\n\
     with this software(?). however, the delivered precompiled dll supports\n\
-    WMME, DX and ASIO (currently asio input won't work).\n\
+    WMME, DX and ASIO.\n\
   - midi in\n\
     currently note on/offs, control change and nrpn control change\n\
 \n\
@@ -58,7 +58,7 @@ the numerical value on the module input represents an offset which is always add
 to the incoming signal.\n\
 \n\
 this whole software is written to get in contact with the numbers. please contact me \
-(cdefsus) if anything about a modules internal behaviour is not clear. unless otherwise \
+(stefan) if anything about a module's internal behaviour is not clear. unless otherwise \
 mentioned, all modules calculate anything 'the hard way', f.e. the oscillator uses a \
 FPU sin() function. all significant numbers are always visible on the modules. \
 ranges of the input values are given in the individual module help, \
@@ -315,8 +315,8 @@ void CSmodInit()
 	printf("                  ******************************************\n");
 	printf("                  *    CYMASONICS MODULAR EDITOR v%d.%d.%d    *\n",CSMOD_VERSION_MAJ,CSMOD_VERSION_MIN,CSMOD_VERSION_TINY);
 	printf("                  *      (built %s %s)      *\n", __DATE__, __TIME__);
-	printf("                  * (c)0x7db def.gsus- (cdefsus@gmail.com) *\n");
-	printf("                  ******************************************\n");
+    printf("                  * (c)0x7db def.gsus-  berke@cymatrix.com *\n");
+    printf("                  ******************************************\n");
 	printf("\n\n");
 
 	#ifdef CSMOD_GLGUI
@@ -739,9 +739,13 @@ CSmod::CSmod() :
 	doAssignContainer(rootContainer);
 
 	// create the text window
-	textWindow = new Fl_Window(674,480,"text display");
+    textWindow = new Fl_Window(674,480,"text display");
 	textBox = new Fl_Text_Display(1,20,textWindow->w()-2,textWindow->h()-25, "a text");
-	textBox->wrap_mode(1,80);
+    textBox->wrap_mode(1,80
+#ifndef WIN32
+                       +6 // why-ever?!
+#endif
+                       );
 	textBox->textfont(FL_COURIER);
 	textBox->color(0);
 	textBox->textcolor(FL_WHITE);
