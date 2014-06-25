@@ -19,9 +19,7 @@ CSmodule *installedModules[] =
     new CSmodule_Container(),
     new CSmodule_ContainerInput(),
     new CSmodule_ContainerOutput(),
-#ifdef CSMOD_USE_MIDI
     new CSmodule_ControllerIn(),
-#endif
     new CSmodule_Comp(),
     new CSmodule_Counter(),
     new CSmodule_CounterFloat(),
@@ -64,19 +62,15 @@ CSmodule *installedModules[] =
     new CSmodule_MathDiv(),
     new CSmodule_MathMul(),
     new CSmodule_Merge(),
-#ifdef CSMOD_USE_MIDI
     new CSmodule_MidiMerge(),
     new CSmodule_MidiFile(),
-#endif
     new CSmodule_Mixer(),
     new CSmodule_Modulo(),
     new CSmodule_MultiSin(),
     new CSmodule_NN(),
     new CSmodule_NNLSM(),
-#ifdef CSMOD_USE_MIDI
     new CSmodule_NoteIn(),
     new CSmodule_NoteInPoly(),
-#endif
     new CSmodule_NoiseWhite(),
     new CSmodule_NoisePitch(),
     new CSmodule_OnChange(),

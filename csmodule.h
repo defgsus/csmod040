@@ -20,6 +20,7 @@ typedef float csfloat;
 #include <png.h>
 
 #include <stdio.h>
+#include <iostream>
 
 using namespace std;
 
@@ -43,12 +44,12 @@ using namespace std;
 #define CSMOD_INIT_EXTWIN_HEIGHT 512
 
 // midi stuff
-#ifdef CSMOD_USE_MIDI
+//#ifdef CSMOD_USE_MIDI
 #define CSMOD_MAX_NOTE 128
 #define CSMOD_MAX_VEL 127
 #define CSMOD_MAX_CONTROLLER 128
 #define CSMOD_MAX_NRPN_CONTROLLER 16384
-#endif
+//#endif
 #define CSMOD_MIDI_MAX_POLY 128
 
 
@@ -79,8 +80,8 @@ char *int2char(const char* prefix, int i);
 char *readString(FILE *buf);
 
 /** current *state-of-the-art* error handling */
-#define CSERROR(string) \
-	{ printf("ERROR: %s\n", (string)); exit(1); }
+#define CSERROR(stream_arg__) \
+{ std::cerr << "ERROR: " << stream_arg__ << std::endl; exit(1); }
 
 /** removes the denormals, infinites, and NaNs from a 32 bit float,
 	gotten from musicdsp.org */

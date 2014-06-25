@@ -1,4 +1,3 @@
-#ifdef CSMOD_USE_MIDI
 
 #include <math.h>
 #include "csmodule_midi.h"
@@ -30,6 +29,11 @@ void CSmodule_NoteIn::init()
 	name = copyString(bname);
 	uname = copyString(bname);
 
+#ifndef CSMOD_USE_MIDI
+    CSsetColor(bodyColor, 50,10,10);
+    updateColors();
+#endif
+
 	// --- inputs outputs ----
 
 	_note = &(createOutput("n","note")->value);
@@ -50,11 +54,13 @@ void CSmodule_NoteIn::step()
 {
 	if (parentRoot)
 	{
-		*_note = parentRoot->lastNoteMono;
+#ifdef CSMOD_USE_MIDI
+        *_note = parentRoot->lastNoteMono;
 		*_gate = parentRoot->lastNoteVelMono;
 		if (parentRoot->lastNoteMonoChanged || (parentRoot->lastNoteMono!=lastNote))
 			*_gate = -*_gate;
 		lastNote = parentRoot->lastNoteMono;
+#endif
 	}
 }
 
@@ -95,6 +101,11 @@ void CSmodule_NoteInPoly::init()
 	bname = copyString("note in (poly)");
 	name = copyString(bname);
 	uname = copyString(bname);
+
+#ifndef CSMOD_USE_MIDI
+    CSsetColor(bodyColor, 50,10,10);
+    updateColors();
+#endif
 
 	// --- inputs outputs ----
 
@@ -284,6 +295,11 @@ void CSmodule_ControllerIn::init()
 	name = copyString(bname);
 	uname = copyString(bname);
 
+#ifndef CSMOD_USE_MIDI
+    CSsetColor(bodyColor, 50,10,10);
+    updateColors();
+#endif
+
 	// --- inputs outputs ----
 
 	for (int i=0;i<CSMOD_MAX_CONTROLLER;i++)
@@ -339,14 +355,14 @@ void CSmodule_ControllerIn::setNrIn(int newNrIn)
 }
 
 
-void CSmodule_ControllerIn::controlChange(int controller, int value)
+void CSmodule_ControllerIn::controlChange(int /*controller*/, int /*value*/)
 {
 	if (doNrpn) return;
 	changed = true;
 	changedScr = true;
 }
 
-void CSmodule_ControllerIn::control14Change(int controller, int value)
+void CSmodule_ControllerIn::control14Change(int /*controller*/, int /*value*/)
 {
 	if (!doNrpn) return;
 	changed = true;
@@ -355,6 +371,7 @@ void CSmodule_ControllerIn::control14Change(int controller, int value)
 
 void CSmodule_ControllerIn::step()
 {
+#ifdef CSMOD_USE_MIDI
 	// check for change in controller numbers
 	for (int i=0;i<nrIn;i++)
 	if (*_nr[i]!=oldNr[i])
@@ -382,6 +399,7 @@ void CSmodule_ControllerIn::step()
 				*_out[i] = parentRoot->controllerValue[k];
 		}
 	}
+#endif
 }
 
 
@@ -1057,4 +1075,3 @@ void CSmodule_MidiMerge::step()
 
 }
 
-#endif // #ifdef CSMOD_USE_MIDI

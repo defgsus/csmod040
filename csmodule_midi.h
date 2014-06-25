@@ -14,8 +14,6 @@
 #ifndef CSMODULE_MIDI_H_INCLUDED
 #define CSMODULE_MIDI_H_INCLUDED
 
-#ifdef CSMOD_USE_MIDI
-
 #include "csmodule.h"
 #include "csmodcontainer.h"
 
@@ -287,6 +285,5 @@ class CSmodule_MidiMerge: public CSmodule
 
 };
 
-#endif // #ifdef CSMOD_USE_MIDI
 
 #endif // CSMODULE_MIDI_H_INCLUDED
