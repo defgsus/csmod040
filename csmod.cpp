@@ -1405,7 +1405,12 @@ void CSmod::closeAudioDevice()
 	printf("CSmod::closeAudioDevice()\n");
 	#endif
 
-    if (stream) Pa_CloseStream(stream); stream = 0;
+    if (stream)
+    {
+        Pa_StopStream(stream);
+        Pa_CloseStream(stream);
+    }
+    stream = 0;
 
 #ifdef CSMOD_USE_MIDI
     CSmidi_closeInput(midiInHandle);
