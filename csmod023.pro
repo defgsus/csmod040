@@ -13,6 +13,8 @@ TEMPLATE = app
 
 #DEFINES += CSMOD_DEBUGE
 
+QMAKE_CXXFLAGS_RELEASE += -Wno-unused-result
+
 unix {
 	LIBS += -L/usr/local/lib \
 		-lfftw3f -lportaudio -lpng \
