@@ -40,7 +40,10 @@ int CSmidi_getDevices(CSmidiDevices *d, bool getInputs)
 		for (int i=0;i<d->nr;i++)
 		{
 			midiInGetDevCaps(i, &c, sizeof(MIDIINCAPS));
+            d->name[i] = (char*) calloc(MAXPNAMELEN, 1);
             for (int j=0; j<MAXPNAMELEN; ++j)
+                d->name[i][j] = 0;
+            for (int j=0; j<MAXPNAMELEN && c.szPname[j] != 0; ++j)
                 d->name[i][j] = c.szPname[j];
         }
 	}
@@ -59,6 +62,8 @@ int CSmidi_getDevices(CSmidiDevices *d, bool getInputs)
             midiOutGetDevCaps(i, &c, sizeof(MIDIOUTCAPS));
             d->name[i] = (char*) calloc(MAXPNAMELEN, 1);
             for (int j=0; j<MAXPNAMELEN; ++j)
+                d->name[i][j] = 0;
+            for (int j=0; j<MAXPNAMELEN && c.szPname[j] != 0; ++j)
                 d->name[i][j] = c.szPname[j];
         }
     }
