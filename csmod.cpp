@@ -335,8 +335,8 @@ void CSmodInit()
 	CSmidiInDevices = CSmidi_newDeviceList();
 	CSmidi_getDevices(CSmidiInDevices, true);
 	CSmidiOutDevices = CSmidi_newDeviceList();
-	CSmidi_getDevices(CSmidiInDevices, false);
-	printf("%d ins, %d outs\n", CSmidiInDevices->nr, CSmidiOutDevices->nr);
+    CSmidi_getDevices(CSmidiOutDevices, false);
+    printf("%d ins"/*, %d outs*/"\n", CSmidiInDevices->nr/*, CSmidiOutDevices->nr*/);
 #endif
 
 	printf("initializing audio engine...\n");

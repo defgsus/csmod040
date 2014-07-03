@@ -28,8 +28,8 @@ int CSmidi_getDevices(CSmidiDevices *d, bool getInputs)
 
 	if (getInputs)
 	{
-		d->nr = midiInGetNumDevs();
-		if (d->nr==0) return 1;
+        d->nr = midiInGetNumDevs();
+        if (d->nr==0) return 1;
 
         d->name = (char**) calloc(d->nr,sizeof(char*));
 
