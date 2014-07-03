@@ -287,7 +287,7 @@ int CSmodContainer::restore(FILE *buf)
 	fscanf(buf, " container { ");
 
 	int e = fscanf(buf, "%d ",&readFileVersion);
-	if (e!=1) CSERROR("container::restore (file version)");
+    if (e!=1) CSERROR("container::restore (file version)");
 	e = fscanf(buf, "%d %d %f ",&offx_,&offy_,&zoom_);
 	if (e!=3) CSERROR("container::restore (viewport)");
 	if (readFileVersion>1)
@@ -344,7 +344,7 @@ int CSmodContainer::restore(FILE *buf)
 			else
 			{
 				CSmodule *mod1 = getInstalledModule(nam);
-				if (!mod1) CSERROR("container::restore (unknown module)");
+                if (!mod1) CSERROR("container::restore (unknown module) '" << nam << "'");
 				mod = addModule(mod1);
 			}
 			if (nam) free(nam);

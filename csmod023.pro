@@ -14,6 +14,8 @@ TEMPLATE = app
 #DEFINES += CSMOD_DEBUGE
 DEFINES += CSMOD_USE_DOUBLE_WINDOW
 
+QMAKE_CXXFLAGS_RELEASE += -Wno-unused-result
+
 unix {
 	LIBS += -L/usr/local/lib \
 		-lfftw3f -lportaudio -lpng \
@@ -22,7 +24,7 @@ unix {
 
 win32 {
 	QMAKE_CXXFLAGS += -Wno-unused-parameter # fltk has a lot of them
-        DEFINES += CSMOD_USE_MIDI
+	DEFINES += WIN32 CSMOD_USE_MIDI
 	LIBS += -LC:\Programme\CodeBlocks\MinGW\lib \
 		-lportaudio -lpng -lz \#-lfftw3f \
 		-mwindows -lfltk_forms -lfltk \
