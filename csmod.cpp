@@ -336,7 +336,7 @@ void CSmodInit()
 	CSmidi_getDevices(CSmidiInDevices, true);
 	CSmidiOutDevices = CSmidi_newDeviceList();
     CSmidi_getDevices(CSmidiOutDevices, false);
-    printf("%d ins"/*, %d outs*/"\n", CSmidiInDevices->nr/*, CSmidiOutDevices->nr*/);
+    printf("%d ins, %d outs\n", CSmidiInDevices->nr, CSmidiOutDevices->nr);
 #endif
 
 	printf("initializing audio engine...\n");
@@ -434,11 +434,11 @@ void CSaudioWindow::checkAudioDevices()
 
 #ifdef CSMOD_USE_MIDI
 	// midi devices
-	CSmidiDevices *md = CSmidi_newDeviceList();
-	CSmidi_getDevices(md);
-    for (ptrdiff_t i=0;i<md->nr;i++)
+    //CSmidiDevices *md = CSmidi_newDeviceList();
+    //CSmidi_getDevices(md);
+    for (ptrdiff_t i=0;i<CSmidiInDevices->nr;i++)
 	{
-		browserMidiIn->add(md->name[i], (void*)i);
+        browserMidiIn->add(CSmidiInDevices->name[i], (void*)i);
 	}
 #endif
 

@@ -1,5 +1,6 @@
 #include "csmod_midi.h"
 #include <stdio.h>
+#include <string>
 
 #ifdef CSMOD_USE_MIDI
 
@@ -39,10 +40,28 @@ int CSmidi_getDevices(CSmidiDevices *d, bool getInputs)
 		for (int i=0;i<d->nr;i++)
 		{
 			midiInGetDevCaps(i, &c, sizeof(MIDIINCAPS));
-			d->name[i] = (char*) calloc(MAXPNAMELEN, 1);
-            memcpy(d->name[i], c.szPname, MAXPNAMELEN);
-		}
+            for (int j=0; j<MAXPNAMELEN; ++j)
+                d->name[i][j] = c.szPname[j];
+        }
 	}
+    else
+    {
+        d->nr = midiOutGetNumDevs();
+        if (d->nr==0) return 1;
+
+        d->name = (char**) calloc(d->nr,sizeof(char*));
+
+        MIDIOUTCAPS c;
+        memset(&c, 0, sizeof(MIDIOUTCAPS));
+
+        for (int i=0;i<d->nr;i++)
+        {
+            midiOutGetDevCaps(i, &c, sizeof(MIDIOUTCAPS));
+            d->name[i] = (char*) calloc(MAXPNAMELEN, 1);
+            for (int j=0; j<MAXPNAMELEN; ++j)
+                d->name[i][j] = c.szPname[j];
+        }
+    }
 #endif
 	return 0;
 }
