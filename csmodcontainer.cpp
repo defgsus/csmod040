@@ -1942,7 +1942,7 @@ void CSmodContainer::multiSelect(CSmodule *m)
 	{
 		m->isSelected = false;
 		// see if multiselected modules left
-		int k;
+        int k=0;
 		for (int i=0;i<nr;i++) if (module[i]->isSelected) k++;
 		if (!k) isMultiSelect = false;
 		selModule = 0;
