@@ -3,7 +3,7 @@
  *  CS MODULAR EDITOR
  *  MAIN PROJECT FILE
  *
- *  (c) 0x7da def.gsus- (cdefsus -> gmail.com)
+ *  (c) 0x7da def.gsus- (berke @ cymatrix.org)
  *      http://cymatrix.org
  *
  *  @version 2010/09/25 v0.1.0 (created)

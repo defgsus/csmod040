@@ -189,7 +189,7 @@ void CSwaveReader::readBuffer(unsigned int bytepos)
                "(buflength=%d, datalength=%d, bytepos=%d, bufpos=%d, read=%"
                //"l"
                "d)\n",
-			buflength, datalength, bytepos, p_bufpos, e);
+            buflength, datalength, bytepos, p_bufpos, int(e));
 	}
 	// update position
 	pos = bytepos / nrchan * 8 / bitps;

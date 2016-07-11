@@ -1,10 +1,5 @@
-#-------------------------------------------------
-#
-# Project created by QtCreator 2014-06-15T12:29:35
-#
-#-------------------------------------------------
 
-TARGET = csmod023
+TARGET = csmod040
 CONFIG   += console
 CONFIG   -= app_bundle
 
@@ -12,25 +7,29 @@ TEMPLATE = app
 
 
 #DEFINES += CSMOD_DEBUGE
-DEFINES += CSMOD_USE_DOUBLE_WINDOW
+#DEFINES += CSMOD_USE_DOUBLE_WINDOW
+DEFINES += CSMOD_USE_FFTW
+#only working on windows a.t.m.
+#DEFINES += CSMOD_USE_MIDI
 
 QMAKE_CXXFLAGS_RELEASE += -Wno-unused-result
 
 unix {
-	LIBS += -L/usr/local/lib \
-		-lfftw3f -lportaudio -lpng \
-		-lfltk_forms -lfltk -lXext -lXft -lfontconfig -lXinerama -lpthread -ldl -lm -lX11
+    LIBS += -L/usr/local/lib \
+            -lfftw3f -lportaudio -lpng \
+            -lfltk_forms -lfltk -lXext -lXft -lfontconfig -lXinerama -lpthread -ldl -lm -lX11
 }
 
 win32 {
-	QMAKE_CXXFLAGS += -Wno-unused-parameter # fltk has a lot of them
-	DEFINES += WIN32 CSMOD_USE_MIDI
-	LIBS += -LC:\Programme\CodeBlocks\MinGW\lib \
-		-lportaudio -lpng -lz \#-lfftw3f \
-		-mwindows -lfltk_forms -lfltk \
-		-lgdi32 -luser32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 \
-		-lole32 -loleaut32 -luuid -lodbc32 -lodbccp32 -lwsock32 -lcomctl32 \
-		-lksuser -lwinmm
+    QMAKE_CXXFLAGS += -Wno-unused-parameter # fltk has a lot of them
+    DEFINES += WIN32 CSMOD_USE_MIDI
+    LIBS += -LC:\Programme\CodeBlocks\MinGW\lib \
+            -lportaudio -lpng -lz \
+            #-lfftw3f \
+            -mwindows -lfltk_forms -lfltk \
+            -lgdi32 -luser32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 \
+            -lole32 -loleaut32 -luuid -lodbc32 -lodbccp32 -lwsock32 -lcomctl32 \
+            -lksuser -lwinmm
 }
 
 
